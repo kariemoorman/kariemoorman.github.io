@@ -17,7 +17,7 @@ tagline: "it's all about perception."
   </div>
 
 <p>  <div class="manual-content">
-Language, Culture, and Ideology (political and social); Cognitive and Linguistic Variation across Individuals and Cultures; Computational Linguistics; Behavioral Experimentation; Neural Networks; EEG
+Language, Culture, and Ideology (political and social); Cognitive and Linguistic Variation across Individuals and Cultures; Computational Linguistics; Behavioral Experimentation
 </p>
 </div>
 
