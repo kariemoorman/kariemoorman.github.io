@@ -8,11 +8,26 @@ tagline: "it's all about perception."
 
 <br>
 
-<h2>Research Interests and Current Projects</h2>
-
-<p>Key Interests and Methods: Language, Culture, and Ideology (political and social); Cognitive and Linguistic Variation across Individuals and Cultures; Computational Linguistics; Behavioral Experimentation; Neural Networks; EEG</p>
+<center><p ><strong><span class="manual">Research Interests and Projects</span></strong></p></center>
 <br>
-<h3>Current Projects</h3>
+
+<div class="manual-post">
+  <div class="manual manual-title">
+  <strong>Key Interests and Methods</strong>
+  </div>
+
+<p>  <div class="manual-content">
+Language, Culture, and Ideology (political and social); Cognitive and Linguistic Variation across Individuals and Cultures; Computational Linguistics; Behavioral Experimentation; Neural Networks; EEG
+</p>
+</div>
+
+<br>
+
+<div class="manual-post">
+  <div class="manual manual-title">
+  <strong>Current Projects</strong>
+  </div>
+
 <br>
 <h4>metaphor</h4>
 <div layout="row" layout-sm="column">
@@ -28,6 +43,6 @@ tagline: "it's all about perception."
           </p>
 <br>
 <br>
-<h4>Past projects</h4>
+<h4>Past Projects</h4>
 <h4><a href="https://metanet.icsi.berkeley.edu/metanet/"><b>MetaNet</b></a></h4>
 <h4><a href="http://linguistics.berkeley.edu/~karuk/resources.php"><b>Karuk Language Project</b></a></h4>
