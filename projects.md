@@ -7,7 +7,7 @@ tagline: "it's all about semantics."
 ---
 
 
-
+<br>
 <center><h3>Research Interests and Projects</h3></center>
 
 <br>
