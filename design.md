@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Design
-permalink: /design/
-category: "design"
+title: Projects
+permalink: /projects/
+category: "projects"
 tagline: "it's all about perception."
 ---
