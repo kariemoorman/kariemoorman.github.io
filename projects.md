@@ -54,12 +54,13 @@ Language, Culture, and Ideology (political and social); Cognitive and Linguistic
           
 <br>
 <br>
-<section class="wrapper" style="background-color: #c2d4fb;">
+
+<section class="wrapper" style="background-color: #e7efff;">
 <div class="manual-post">
   <div class="manual manual-title">
   <strong>Past Projects</strong>
   </div>
 <br>
-<h4><a href="https://metanet.icsi.berkeley.edu/metanet/"><b>MetaNet</b></a></h4>
-<h4><a href="http://linguistics.berkeley.edu/~karuk/resources.php"><b>Karuk Language Project</b></a></h4>
+	<h4><a href="https://metanet.icsi.berkeley.edu/metanet/"><b>MetaNet</b></a></h4>
+	<h4><a href="http://linguistics.berkeley.edu/~karuk/resources.php"><b>Karuk Language Project</b></a></h4>
 </section>
