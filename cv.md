@@ -22,4 +22,3 @@ permalink: /cv/
 </div>
 
 
-Cultural Frames of Immigration in “the Land of the Free”
