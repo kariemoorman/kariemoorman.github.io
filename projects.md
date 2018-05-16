@@ -44,7 +44,7 @@ Language, Culture, and Ideology (political and social); Cognitive and Linguistic
 <h3>metaphor and cognition</h3>
 
 <p><div class="manual-content">
-	This project with Ramesh Balasubramaniam, Karen Sullivan, Elise Stickles, and Daniel Comstock uses EEG to measure ERPs related to the comprehension of novel and conventional metaphor. We are interested in how categorical priming affects novel metaphor comprehension, and understanding the degree to which semantically congruent conventional or primary metaphor can faciliate processing of novel metaphors.
+	This project with Ramesh Balasubramaniam, Karen Sullivan, Elise Stickles, and Daniel Comstock uses EEG to measure ERPs related to the comprehension of novel and conventional metaphor. We are interested in how lexical priming affects novel metaphor comprehension, and understanding the degree to which semantically congruent conventional or primary metaphors can faciliate processing of novel metaphors.
           </div></p>
 <br>
 <br>
