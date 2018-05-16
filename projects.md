@@ -3,8 +3,9 @@ layout: page
 title: Projects
 permalink: /projects/
 category: "projects"
-<!--tagline: "it's all about semantics."-->
+tagline: "it's all about semantics."
 ---
+
 
 
 <center><h3>Research Interests and Projects</h3></center>
