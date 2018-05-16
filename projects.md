@@ -41,6 +41,7 @@ Language, Culture, and Ideology (political and social); Cognitive and Linguistic
           target concept (e.g., "immigrants are flooding over the border", "immigrants are trickling over the border") lead to shifts in attitudes and reasoning about
           that target concept (e.g., a social problem such as immigration).
           </div></p>
+      </div>
 </section>
 
 <br>
