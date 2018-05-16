@@ -4,8 +4,13 @@ title : About
 permalink: /about/
 ---
 
-<h2>Gravity</h2>
-<p>Minimal, text based, liberal Jekyll theme<br>for sharing your awesome ideas.</p>
+<br>
+<br>
+<h2 style="padding-bottom: 5px; padding-top:10px;">Research Interests and Current Projects</h2>
+
+<p>Key Interests and Methods: Language, Culture, and Ideology (political and social); Cognitive and Linguistic Variation across Individuals and Cultures; Computational Linguistics; Behavioral Experimentation; Neural Networks</p>
+<br>
+<h3 class="headerclass2">current projects</h3>
 <br>
 <center><p ><strong><span class="manual">Get up and running with</span> Gravity</strong></p></center>
 <br>
