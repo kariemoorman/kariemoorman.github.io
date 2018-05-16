@@ -8,7 +8,7 @@ permalink: /projects/
 
 <br>
 <center><h3>Research Interests and Projects</h3></center>
-
+<br>
 <div class="manual-post">
   <div class="manual manual-title">
   <strong>Key Interests and Methods:</strong>
@@ -23,11 +23,11 @@ Language, Culture, and Ideology (political and social); Cognitive and Linguistic
 
 <div class="manual-post">
   <div class="manual manual-title">
-  <strong>Current Projects</strong>
+  <strong>Some Current Projects:</strong>
   </div>
 
 <br>
-<h4>metaphor and framing</h4>
+<h3>metaphor and framing</h3>
 
 <img class="imageclass" src="https://i.pinimg.com/736x/a6/a5/cc/a6a5cc35323fcfc8634765e96c2f00a8--mexican-american-political-news.jpg" width="35%" height="220"/> <!-- https://3.bp.blogspot.com/-yv27pVFE8B8/V4FmnYhTUKI/AAAAAAAAymY/lS0OLIWl6EsPpbNLNX2kduMuu5nVnn38wCKgB/s1600/similes%2B14.png, https://mortenkamp.files.wordpress.com/2013/03/sports-metaphors-in-hr.gif -->
 <br>
