@@ -15,7 +15,7 @@ permalink: /projects/
   </div>
 
 <p><div class="manual-content">
-Language, Culture, and Ideology (political and social); Cognitive and Linguistic Variation across Individuals and Cultures; Computational Linguistics; Behavioral Experimentation
+Language, Culture, and Ideology (political and social); Cognitive and Linguistic Variation Across Individuals and Cultures; Computational Linguistics; Behavioral Experimentation
 
 </div></p>
 
