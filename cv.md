@@ -2,14 +2,22 @@
 layout: page
 title: CV
 permalink: /cv/
-
 ---
 
 
-<br>
-<center><h3>Research Interests and Projects</h3></center>
-<br>
-<div class="manual-post">
-  <div class="manual manual-title">
-  <strong>Key Interests and Methods:</strong>
-  </div>
+<div layout="vertical" layout-fill>
+
+  <md-content>
+
+    <section class="jumbotron"    style="background-color:#d6b771;">
+      <br />
+      <a href = "https://drive.google.com/file/d/0B_juVjrwiwZvN3BTUzdKbzV1QTA/view?usp=sharing" target="_blank">cv_karie_moorman.pdf</a>
+      <iframe src="https://docs.google.com/document/d/e/2PACX-1vS4fBhyxpftW7-qvSD3FKvPcihEJOLYTUk6D456I5oKvqTtkJzZAY_gTtbsx4DQK9Q6zm-N3RM2AX0h/pub?embedded=true" width="90%" height="900" align="center"> </iframe>
+
+      </p>
+    </section>
+
+
+  </md-content>
+
+</div>
