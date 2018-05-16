@@ -36,7 +36,7 @@ Language, Culture, and Ideology (political and social); Cognitive and Linguistic
           about immigrants and immigration policy in the United States. We are
           interested in the force dynamics in metaphoric framing and understanding how shifts in the force-dynamic construal of a
           target concept (e.g., "immigrants are flooding over the border", "immigrants are trickling over the border") lead to shifts in attitudes and reasoning about
-          that target concept (e.g., a social problem such as immigration).
+          that target concept (e.g., a social problem such as immigration reform).
           </div></p>
 </section>
 
