@@ -9,7 +9,6 @@ permalink: /projects/
 <br>
 <center><h3>Research Interests and Projects</h3></center>
 
-<br>
 <div class="manual-post">
   <div class="manual manual-title">
   <strong>Key Interests and Methods:</strong>
@@ -42,9 +41,8 @@ Language, Culture, and Ideology (political and social); Cognitive and Linguistic
           </div></p>
 
 <br>
-<h4>metaphor and cognition</h4>
+<h3>metaphor and cognition</h3>
 
-<br>
 <p><div class="manual-content">
 	This project with Ramesh Balasubramaniam, Karen Sullivan, Elise Stickles, and Daniel Comstock uses EEG to measure ERPs related to the comprehension of novel and conventional metaphor. We are interested in how categorical priming affects novel metaphor comprehension, and understanding the degree to which semantically congruent conventional or primary metaphor can faciliate processing of novel metaphors.
           </div></p>
@@ -54,7 +52,6 @@ Language, Culture, and Ideology (political and social); Cognitive and Linguistic
   <div class="manual manual-title">
   <strong>Past Projects</strong>
   </div>
-<br>
 <br>
 <h4><a href="https://metanet.icsi.berkeley.edu/metanet/"><b>MetaNet</b></a></h4>
 <h4><a href="http://linguistics.berkeley.edu/~karuk/resources.php"><b>Karuk Language Project</b></a></h4>
