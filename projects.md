@@ -32,6 +32,7 @@ Language, Culture, and Ideology (political and social); Cognitive and Linguistic
       <div layout="row" layout-sm="column">
 		<img class="imageclass" src="https://i.pinimg.com/736x/a6/a5/cc/a6a5cc35323fcfc8634765e96c2f00a8--mexican-american-political-news.jpg" width="35%" height="220"/> <!-- https://3.bp.blogspot.com/-yv27pVFE8B8/V4FmnYhTUKI/AAAAAAAAymY/lS0OLIWl6EsPpbNLNX2kduMuu5nVnn38wCKgB/s1600/similes%2B14.png, https://mortenkamp.files.wordpress.com/2013/03/sports-metaphors-in-hr.gif -->
 		<br>
+		<br>
 		<div class="manual-content">
 		This project uses corpus-based and experimental
           methods to explore how metaphor and grammar can influence attitudes and reasoning
@@ -57,7 +58,7 @@ Language, Culture, and Ideology (political and social); Cognitive and Linguistic
 
 <div class="manual-post">
   <div class="manual manual-title">
-  <strong>Past Projects</strong>
+  <strong>Past Projects:</strong>
   </div>
 <br>
 	<h4><a href="https://metanet.icsi.berkeley.edu/metanet/"><b>MetaNet</b></a></h4>
