@@ -47,7 +47,7 @@ Language, Culture, and Ideology (political and social); Cognitive and Linguistic
 <a href="http://neurocritic.blogspot.com/2006/12/positive-voltage-does-not-equal.html" target="_blank"><img class="imageclass" src="https://photos1.blogger.com/x/blogger/1782/2187/320/22148/N400-P600.jpg" width="40%" height="40%"/></a>
 <br>
 <p><div class="manual-content">
-	This project with Ramesh Balasubramaniam, Karen Sullivan, Elise Stickles, and Daniel Comstock uses EEG to measure ERPs related to the online processing of novel and conventional metaphor. We are interested in how different types of lexical priming (e.g., category-based mappings, comparison-based mappings) affect novel metaphor comprehension. We want to better understand the degree to which semantically congruent conventional, or primary, metaphors can faciliate processing of novel metaphors.
+	This project with uses EEG to measure ERPs related to the online processing of novel and conventional metaphor. We are interested in how different types of lexical priming (e.g., category-based mappings, comparison-based mappings) affect novel metaphor comprehension. We want to better understand the degree to which semantically congruent conventional, or primary, metaphors can facilitate processing of novel metaphors.
           </div></p>
 </section>
           
