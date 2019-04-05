@@ -12,7 +12,7 @@ permalink: /cv/
     <section class="wrapper"    style="background-color:#d6b771;">
       <br />
       <a href = "https://drive.google.com/file/d/1XeZCZsaOTJQO6HQLyFBbUVm_y962RxJj/view?usp=sharing" target="_blank"><strong>cv_karie_moorman.pdf</strong></a>
-      <iframe src="https://docs.google.com/document/d/e/2PACX-1vS4fBhyxpftW7-qvSD3FKvPcihEJOLYTUk6D456I5oKvqTtkJzZAY_gTtbsx4DQK9Q6zm-N3RM2AX0h/pub?embedded=true" width="97%" height="900" align="center"> </iframe>
+      <iframe src="https://docs.google.com/document/d/e/2PACX-1vS4fBhyxpftW7-qvSD3FKvPcihEJOLYTUk6D456I5oKvqTtkJzZAY_gTtbsx4DQK9Q6zm-N3RM2AX0h/pub?embedded=true" width="98%" height="800" align="center"> </iframe>
       <br>
     </section>
 
