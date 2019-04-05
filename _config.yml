@@ -14,7 +14,7 @@ url: "http://kariemoorman.github.io" # the base hostname & protocol for your sit
 #twitter_username: hemang_kumar
 github_username:  kariemoorman
 paginate: 5
-theme-dark: false #Set to true to change to dark website theme
+theme-dark: true #Set to true to change to dark website theme
 
 plugins: [jekyll-paginate, kramdown]
 # Build settings
