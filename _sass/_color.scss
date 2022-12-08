@@ -4,9 +4,7 @@
 
 @charset "utf-8";
 
-/**
- * Light color palette
- */
+/* Light color palette */
 $l-text-color:       #111;
 $l-link-color:       #aaa;
 $l-background-color: #fdfdfd;
@@ -19,9 +17,7 @@ $l-crimson: #DC143C;
 $l-nav: $l-link-color;
 $l-page: $l-link-color;
 
-/**
- * Dark color palette
- */
+/* Dark color palette */
 $d-text-color:       #e7e7e7;
 $d-link-color:       #cccccc;
 $d-background-color: #191919;
@@ -34,16 +30,12 @@ $d-crimson: #DC143C;
 $d-nav: $d-link-color;
 $d-page: $d-link-color;
 
-/**
- * Light theme color definitions
- */
+/* Light theme color definitions */
 body.light {
   color: $l-text-color;
   background-color: $l-background-color;
 
-  /**
-   * Links
-   */
+  /* Links */
   a {
     color: $l-link-color !important;
 
@@ -85,25 +77,19 @@ body.light {
     border-left-color: $l-grey-color-light;
   }
 
-  /**
-   * Code formatting
-   */
+  /* Code formatting */
   pre,
   code {
     border-color: $l-grey-color-light;
     background-color: $l-code;
   }
 
-  /**
-   * Icons
-   */
+  /* Icons */
   .icon > svg path {
     fill: $l-grey-color;
   }
 
-  /**
-   * Site header
-   */
+  /* Site header */
   .site-header {
     border-top-color: $l-grey-color-dark;
     border-bottom-color: $l-grey-color-light;
@@ -139,9 +125,7 @@ body.light {
     }
   }
 
-  /**
-   * Site footer
-   */
+  /* Site footer */
   .site-footer {
     border-top-color: $l-grey-color-light;
   }
@@ -151,16 +135,12 @@ body.light {
   }
 }
 
-/**
- * Dark theme color definitions
- */
+/* Dark theme color definitions */
 body.dark {
   color: $d-text-color;
   background-color: $d-background-color;
 
-  /**
-   * Links
-   */
+  /* Links */
   a {
     color: $d-link-color !important;
 
@@ -202,25 +182,19 @@ body.dark {
     border-left-color: $d-grey-color-light;
   }
 
-  /**
-   * Code formatting
-   */
+  /* Code formatting */
   pre,
   code {
     border-color: $d-grey-color;
     background-color: $d-code;
   }
 
-  /**
-   * Icons
-   */
+  /* Icons */
   .icon > svg path {
     fill: $d-grey-color;
   }
 
-  /**
-   * Site header
-   */
+  /* Site header */
   .site-header {
     border-top-color: $d-grey-color-dark;
     border-bottom-color: $d-grey-color-light;
@@ -256,16 +230,12 @@ body.dark {
     }
   }
 
-  /**
-   * Page content
-   */
+  /* Page content */
   .post-meta {
     color: $d-grey-color;
   }
 
-  /**
-   * Site footer
-   */
+  /* Site footer */
   .site-footer {
     border-top-color: $d-grey-color-light;
   }

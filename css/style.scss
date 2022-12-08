@@ -35,8 +35,7 @@ $on-laptop:        800px;
 }
 
 
-
-// Import partials from `sass_dir` (defaults to `_sass`)
+/*  Import partials from `sass_dir` (defaults to `_sass`) */
 @import
         "base",
         "layout",
@@ -45,9 +44,7 @@ $on-laptop:        800px;
 ;
 
 
-/**
- * Reset some basic elements
- */
+/* Reset some basic elements */
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -57,9 +54,7 @@ dl, dd, ol, ul, figure {
 
 
 
-/**
- * Basic styling
- */
+/* Basic styling */
 body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
     -webkit-text-size-adjust: 100%;
@@ -70,11 +65,7 @@ body {
     font-kerning: normal;
 }
 
-
-
-/**
- * Set `margin-bottom` to maintain vertical rhythm
- */
+/* Set `margin-bottom` to maintain vertical rhythm */
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
@@ -82,21 +73,13 @@ ul, ol, dl, figure,
     margin-bottom: $spacing-unit / 2;
 }
 
-
-
-/**
- * Images
- */
+/* Images */
 img {
     max-width: 100%;
     vertical-align: middle;
 }
 
-
-
-/**
- * Figures
- */
+/* Figures */
 figure > img {
     display: block;
 }
@@ -105,11 +88,7 @@ figcaption {
     font-size: $small-font-size;
 }
 
-
-
-/**
- * Lists
- */
+/* Lists */
 ul, ol {
     margin-left: $spacing-unit;
 }
@@ -121,20 +100,12 @@ li {
     }
 }
 
-
-
-/**
- * Headings
- */
+/* Headings */
 h1, h2, h3, h4, h5, h6 {
     font-weight: $base-font-weight;
 }
 
-
-
-/**
- * Links
- */
+/* Links */
 a {
     text-decoration: none;
 
@@ -153,11 +124,7 @@ a {
     }
 }
 
-
-
-/**
- * Blockquotes
- */
+/* Blockquotes */
 blockquote {
     border-left: 4px solid;
     padding-left: $spacing-unit / 2;
@@ -170,11 +137,7 @@ blockquote {
     }
 }
 
-
-
-/**
- * Code formatting
- */
+/* Code formatting */
 pre,
 code {
     font-size: 15px;
@@ -197,11 +160,7 @@ pre {
     }
 }
 
-
-
-/**
- * Wrapper
- */
+/* Wrapper */
 .wrapper {
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
     max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
@@ -219,10 +178,7 @@ pre {
     }
 }
 
-
-/**
- * Clearfix
- */
+/* Clearfix */
 %clearfix {
 
     &:after {
@@ -232,11 +188,7 @@ pre {
     }
 }
 
-
-
-/**
- * Icons
- */
+/* Icons */
 .icon {
 
     > svg {
@@ -319,9 +271,8 @@ pre {
   letter-spacing: 3px;
   text-indent: 3px;
 }
-/**
- * Site header
- */
+
+/* Site header */
 .site-header {
   border-top: 5px solid;
   border-bottom: 1px solid;
@@ -416,9 +367,8 @@ pre {
     }
   }
 }
-/**
- * Site footer
- */
+
+/* Site footer */
 .site-footer {
   border-top: 1px solid;
   padding: $spacing-unit 0;
@@ -480,9 +430,8 @@ pre {
     width: calc(100% - (#{$spacing-unit} / 2));
   }
 }
-/**
- * Page content
- */
+
+/* Page content */
 .page-content {
   padding: 0;
 }
@@ -506,12 +455,7 @@ pre {
   font-size: 24px;
 }
 
-
-
-
-/**
- * Posts
- */
+/* Posts */
 .post-header {
   margin-bottom: $spacing-unit;
 }
@@ -551,9 +495,7 @@ pre {
   }
 }
 
-/**
- * Pagination
- */
+/* Pagination */
  .pagination {
      padding-top: 3.5em;
      text-align: center;
@@ -599,9 +541,7 @@ pre {
     text-align: right;
 }
 
-/**
- * Syntax highlighting styles
- */
+/* Syntax highlighting styles */
 .highlight {
     @extend %vertical-rhythm;
 
