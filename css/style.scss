@@ -10,6 +10,7 @@ $base-font-family: "PT Sans", Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
+$smaller-font-size:  $base-font-size * 0.75;
 $base-line-height: 1.5;
 
 $spacing-unit:     30px;
@@ -70,7 +71,7 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
+    margin-bottom: calc($spacing-unit / 2);
 }
 
 /* Images */
@@ -114,6 +115,8 @@ a {
     }
 
     &.page-link:hover {
+        font-size: $base-font-size * .9;
+        font-weight: 400;
         border-bottom: 1px dotted;
     }
     &.postLink:hover{
@@ -127,7 +130,7 @@ a {
 /* Blockquotes */
 blockquote {
     border-left: 4px solid;
-    padding-left: $spacing-unit / 2;
+    padding-left: calc($spacing-unit / 2);
     font-size: 18px;
     letter-spacing: -1px;
     font-style: italic;
@@ -162,20 +165,20 @@ pre {
 
 /* Wrapper */
 .wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
-    @extend %clearfix;
+  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * .75 ));
+  max-width: calc(#{$content-width} - (#{$spacing-unit} * .75));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $spacing-unit;
+  padding-left: $spacing-unit;
+  @extend %clearfix;
 
-    @include media-query($on-laptop) {
-        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-        padding-right: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
-    }
+  @include media-query($on-laptop) {
+  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+  max-width: calc(#{$content-width} - (#{$spacing-unit}));
+  padding-right: calc($spacing-unit / 2);
+  padding-left: calc($spacing-unit / 2);
+  }
 }
 
 /* Clearfix */
@@ -280,6 +283,7 @@ pre {
   // Positioning context for the mobile navigation icon
   position: relative;
 }
+
 .site-title {
   font-size: 60px;
   font-weight: 100;
@@ -305,9 +309,18 @@ pre {
   text-indent: 6px;
   font-family: 'Josefin Sans';
   font-weight: 300;
-  padding-top: 5em;
-  padding-left: 30%;
+  padding-top: 2em;
+  /*padding-left: 30%;*/
+  text-align: center;
 }
+
+.header-background {
+  height:120px;
+  width:100%;
+  padding-bottom: 1rem;
+  background:repeating-linear-gradient( -45deg,#eee, #fff 1px,#eee 1px);
+}
+
 .page-title {
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -316,6 +329,15 @@ pre {
   font-size: 12px;
   text-align:center;
 }
+
+.page-description {
+  letter-spacing: 2px;
+  font-family: "PT Sans";
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 50px;
+}
+
 .page-tagline {
   font-size: 18px;
   font-family: "PT Sans";
@@ -333,7 +355,7 @@ pre {
   @include media-query($on-palm) {
     position: absolute;
     top: 9px;
-    right: $spacing-unit / 2;
+    right: calc($spacing-unit / 2);
     border-radius: 5px;
     text-align: right;
     .menu-icon {
@@ -375,30 +397,36 @@ pre {
 }
 .footer-heading {
   font-size: 18px;
-  margin-bottom: $spacing-unit / 2;
+  margin-bottom: calc($spacing-unit / 2);
 }
 .contact-list,
 .social-media-list {
   list-style: none;
   margin-left: 0;
+  z-index: 99;
 }
 .small-site-title {
   font-family: "PT Sans";
 }
 .footer-col-wrapper {
   font-size: 15px;
-  margin-left: -$spacing-unit / 2;
+  margin-left: - calc($spacing-unit / 2);
   @extend %clearfix;
 }
 .footer-content {
   font-family: "Josefin Sans";
   font-weight: 300;
   letter-spacing: 1px;
+  
+  /*display: flex;
+  flex-direction: row;
+  column-gap: 20px;*/
 }
 .footer-col {
-  float: left;
-  margin-bottom: $spacing-unit / 2;
-  padding-left: $spacing-unit / 2;
+  text-align: center;
+  /*float: left;*/
+  margin-bottom: calc($spacing-unit / 2);
+  padding-left: calc($spacing-unit / 2);
 }
 .footer-col-1 {
   width: -webkit-calc(35% - (#{$spacing-unit} / 2));
@@ -457,10 +485,11 @@ pre {
 
 /* Posts */
 .post-header {
+  margin-top: $spacing-unit;
   margin-bottom: $spacing-unit;
 }
 .post-title {
-  font-size: 62px;
+  font-size: 50px;
 
   text-align: center;
   font-family: "PT Sans";
@@ -494,6 +523,162 @@ pre {
     }
   }
 }
+
+/* Home */
+
+.container-wrap {
+  width: 80%;
+  min-height: 200px;
+  margin: 0 auto;
+  background-color: #fbf7e8; /*rgba(172, 170, 170, 0.19);*/
+  border-radius: 35px;
+  box-shadow: 1px 1px 15px 2px lightsteelblue; /* #f3e1e1bb; */
+  margin-top: 4rem;
+  display: block;
+  position: relative;
+  padding: 10px;
+  
+}
+
+.container-grid {
+  display: grid;
+  grid-template-areas: 
+  'one two two';
+  grid-template-columns: 1fr 2fr;
+  vertical-align: middle;
+}
+
+.c-item1 {grid-area: one;}
+.c-item2 {grid-area: two;}
+
+.img-container {
+  display: inline-block;
+  position: relative;
+  height: 200px;
+  width: 170px;
+ /* float: left; */
+  background-color: RGBA(0, 128,128, .5) ;/* RGBA(0, 128, 128, .5); */
+  padding: 7px;
+  border: .2px solid #e3d2d2; 
+  box-shadow: 1px 1px 15px 4px #e3d2d2;
+  border-radius: 35px;
+  margin: 5px 5px;
+}
+
+.img-inset-container {
+  background-color: rgba(68, 85, 136, .4) ;/*RGBA(68, 85, 136, .4);*/
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-shadow: 1px 1px 15px 10px rgba(207, 226, 251, 0.54); /*  #adbce6; #fbf7e8af */
+  border-radius: 32px;
+}
+
+.bio-pic {
+  content: url("/media/images/10374024_10202843681506438_7314239834645129472_n.jpg");
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  display: block;
+  box-shadow: 1px 1px 10px 2px  #adbce6;
+  border-radius: 25px;
+}
+
+.text-container { 
+  text-align: left;
+  display: inline-block;
+  flex-direction: row;
+  position:relative;
+  padding: 10px 5px 0px 10px;
+  font-weight: 300;
+}
+
+
+/* About */
+.manual-container {
+  padding-top: $spacing-unit - 20px;
+  padding-bottom: $spacing-unit - 20px;
+}
+
+.manual-title {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: $base-font-weight;
+  letter-spacing: 2px;
+  padding: 17px 2px 10px 2px;
+}
+
+.manual-subtitle {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: $base-font-weight;
+  letter-spacing: 2px;
+  padding: 5px 2px 10px 2px;
+}
+
+.manual-grid {
+  display: grid;
+  grid-template-areas: 
+  'one one two two'
+  'three three four four'; 
+  gap: $spacing-unit - 10px;
+  /*grid-auto-rows: 1fr;*/
+}
+
+.item1 {grid-area: one;}
+.item2 {grid-area: two;}
+.item3 {grid-area: three;}
+.item4 {grid-area: four;}
+
+.manual-content {
+  padding: 15px 10px;
+  background-color: #fbf7e8; /*  #efefef; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
+}
+
+.manual-content.h-min {
+  min-height: 200px;
+}
+
+.manual-content p {
+  font-size: $small-font-size;
+  font-weight: 300;
+  margin: 2px;
+  padding: 0px 5px 0px 5px;
+}
+
+.manual-content p.wide {
+  letter-spacing: 1.2px;
+}
+
+.manual-content img {
+  float: left;
+  margin-right: 10px; 
+  padding: 5px 2px 5px 2px;
+  position: relative;
+}
+
+.img {
+  max-width: 250px;
+  min-width: 150px;
+  height: auto;
+}
+
+
+#framing {
+  content: url("https://i.pinimg.com/736x/a6/a5/cc/a6a5cc35323fcfc8634765e96c2f00a8--mexican-american-political-news.jpg");
+  height: 150px;
+  width: 200px;
+}
+
+#eeg {
+  content: url('https://photos1.blogger.com/x/blogger/1782/2187/320/22148/N400-P600.jpg');
+  height: 150px;
+  width: 200px;
+}
+
+
 
 /* Pagination */
  .pagination {
