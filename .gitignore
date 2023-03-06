@@ -1,0 +1,28 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# VSCode 
+.vscode/ 
+
+# Credentials files
+credentials.py
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.rbenv
+
+# OS files 
+.DS_Store
+
+# Jekyll
+.jekyll-cache/
+_site/
