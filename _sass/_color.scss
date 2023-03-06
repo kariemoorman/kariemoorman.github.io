@@ -30,6 +30,11 @@ $d-crimson: #DC143C;
 $d-nav: $d-link-color;
 $d-page: $d-link-color;
 
+
+#hr-header {
+  color: $l-grey-color-light !important;
+}
+
 /* Light theme color definitions */
 body.light {
   color: $l-text-color;
@@ -57,18 +62,18 @@ body.light {
     &.postLink{
       color: darken($l-link-color, 50%) !important;
 
-      &:visited {
+      /*&:visited {
           color: $l-crimson !important;
           border-color: $l-crimson;
-      }
+      }*/
     }
     &.post-title-link{
       color: darken($l-link-color, 50%) !important;
 
-      &:visited {
+      /*&:visited {
           color: $l-crimson !important;
           border-color: $l-crimson;
-      }
+      }*/
     }
   }
 
@@ -93,6 +98,7 @@ body.light {
   .site-header {
     border-top-color: $l-grey-color-dark;
     border-bottom-color: $l-grey-color-light;
+    
   }
 
   .site-title,

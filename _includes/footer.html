@@ -1,42 +1,42 @@
 <footer class="site-footer">
-
-  <div class="wrapper">
-
+<div class="wrapper">
+ 
    <!--  <h2 class="footer-heading small-site-title">{{ site.title }}</h2> -->
 
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list footer-content">
-          <li>kmoorman AT ucmerced DOT edu</li>
-        </ul>
-      </div>
-      <div class="footer-col footer-col-3 footer-content">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
+   <center><div class="footer-col-wrapper">
+       <div class="footer-col footer-col-1 ">
+         <ul class="contact-list footer-content">
+            {% if site.github_username %}
+            <li style="margin-bottom: 5px;">
+               {% include icon-github.html username=site.github_username %}
+             </li>
+             {% endif %}
+            <li>kmoorman AT ucmerced DOT edu</li>
+         </ul>
+       </div>
 
-          <!--{% if site.linkedin_username %}
-          <li>
-            {% include icon-linkedin.html username=site.linkedin_username %}
-          </li>
-          {% endif %} -->
-        </ul>
-      </div>
-      <!--<div class="footer-col footer-col-3 footer-content">
-        <ul class="social-media-list">
-        {% if site.linkedin_username %}
-          <li>
-            {% include icon-linkedin.html username=site.github_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div> -->
-    </div>
-      <br>
-      <p> © 2022 All rights reserved.</p>
-  </div>
+      <div class="footer-col footer-col-2 footer-content">
+          <ul class="social-media-list">
+          <!-- {% if site.github_username %}
+           <li>
+             {% include icon-github.html username=site.github_username %}
+           </li>
+           {% endif %}
+ 
+           {% if site.twitter_username %}
+           <li>
+             {% include icon-twitter.html username=site.twitter_username %}
+           </li>
+           {% endif %}-->
+         </ul>
+       </div>
+ 
+      <!-- <div class="footer-col footer-col-3 site-description">
+         <p>{{ site.description }}</p>
+       </div> -->
+     </div>
 
+
+<p> © 2023 Karie Moorman; All rights reserved.</p></center>
+</div>
 </footer>

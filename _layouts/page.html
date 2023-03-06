@@ -8,9 +8,16 @@ layout: default
   </header>
 
   {%if page.tagline%}
-  <div class="tagline">
-  <span class="page-title">{{page.title}}</span> <span class="page-tagline"><em>{{page.tagline}}</em></span>
+  <div class="page-tagline">
+    <span><em>{{page.tagline}}</em></span>
+<!--<span class="page-title">{{page.title}}</span><span><em>{{page.tagline}}</em></span>-->
   </div>
+  {% endif %}
+
+  {%if page.description%}
+<div class="page-description">
+  <h2>{{ page.description }}</h2>
+</div>
   {% endif %}
 
   <div class="post-content">
