@@ -25,4 +25,4 @@ venv.bak/
 
 # Jekyll
 .jekyll-cache/
-_site/
+_site
