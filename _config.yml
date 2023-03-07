@@ -10,13 +10,13 @@ title: karie moorman
 #email: kmoorman AT ucmerced DOT edu
 description: Cognitive Scientist | Computational Linguist
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://kariemoorman.github.io" # the base hostname & protocol for your site
+url: "https://kariemoorman.github.io" # the base hostname & protocol for your site
 github_username: kariemoorman
 #linkedin_username: karie-moorman-82002447
-paginate: 10
-theme-dark: false #Set to true to change to dark website theme
 
-plugins: [jekyll-paginate, kramdown]
+theme-dark: false #Set to true to change to dark website theme
+#paginate: 5
+#plugins: [jekyll-paginate, kramdown]
 # Build settings
 markdown: kramdown
 kramdown:
