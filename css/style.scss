@@ -535,7 +535,7 @@ pre {
   @include media-query($on-laptop) {
     font-size: 20px;
   }
-  padding-bottom: calc($spacing-unit * 1.5);
+  padding-bottom: $spacing-unit * 1.25;
 }
 .post-author {
   letter-spacing: 3px !important; 
