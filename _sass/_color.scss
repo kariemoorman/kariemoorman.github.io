@@ -31,14 +31,14 @@ $d-nav: $d-link-color;
 $d-page: $d-link-color;
 
 
-#hr-header {
-  color: $l-grey-color-light !important;
-}
 
 /* Light theme color definitions */
 body.light {
   color: $l-text-color;
-  background-color: $l-background-color;
+  // background-color: $l-background-color;
+  background-image: radial-gradient($l-grey-color-dark 4%, $l-background-color 0%);
+  background-size: 5px 5px;
+  
 
   /* Links */
   a {
@@ -98,7 +98,6 @@ body.light {
   .site-header {
     border-top-color: $l-grey-color-dark;
     border-bottom-color: $l-grey-color-light;
-    
   }
 
   .site-title,
@@ -134,6 +133,8 @@ body.light {
   /* Site footer */
   .site-footer {
     border-top-color: $l-grey-color-light;
+    background-color: $l-background-color;
+    z-index: 2;
   }
 
   .footer-col-wrapper {
