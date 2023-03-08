@@ -652,11 +652,14 @@ pre {
 
 .archive-list {
   padding:  10px 7px 10px 7px;
-  background-color: rgba(167, 167, 167, 0.1);
+  background-color: rgba(160, 160, 160, 0.1);
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 15px 0 rgb(0 0 0 / 19%);
+  border: 0.5px solid lightgrey;
+  border-top: 0.5px solid $l-background-color; 
 }
 
 .archive-list:hover {
-  background-color: rgba(154, 154, 154, 0.2);
+  background-color: rgba(167, 167, 167, 0.2);
 }
 
 /* About */
