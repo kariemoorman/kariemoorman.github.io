@@ -14,7 +14,7 @@ permalink: /about/
 <div class='manual-container'>
 <div class="manual-title">Research Topics</div>
 <div class="manual-content"> 
-<p class='wide'> Bias, Language & Social Group Dynamics | Social & Political Ideology | Cognitive, Cultural & Linguistic Variation | Computational Linguistics | Pyscholinguistics | Evolutionary Anthropology </p>
+<p class='wide'> Bias, Language & Social Group Dynamics | Social & Political Ideology | Cognitive, Cultural & Linguistic Variation | Computational Linguistics | Neurolinguistics | Psycholinguistics | Evolutionary Anthropology </p>
 </div>
 </div>
 
@@ -53,7 +53,7 @@ permalink: /about/
 
 <div class="manual-content h-min item2">
 <div class="manual-subtitle">Karuk Language Project</div>
-<div><p>The <a href="http://linguistics.berkeley.edu/~karuk/resources.php" target="_blank">Karuk Language Project</a> is a language documentation and revitalization effort in collaborative with the Karuk Tribe and the Survey of California and Other Indian Languages ath UC Berkeley. The effort includes digitization of field notes and learning about the Karuk language and culture through linguistic research and teaching.</p></div>
+<div><p>The <a href="http://linguistics.berkeley.edu/~karuk/resources.php" target="_blank">Karuk Language Project</a> is a language documentation and revitalization effort in collaborative with the Karuk Tribe and the Survey of California and Other Indian Languages at UC Berkeley. The effort includes digitization of field notes and learning about the Karuk language and culture through linguistic research and teaching.</p></div>
 </div>
 </div>
 </div>
