@@ -1,9 +1,13 @@
 ---
 layout: post
-title:  "Welcome to Gravity!"
-date:   2016-03-30 19:45:31 +0530
-categories: jekyll update
+title:  "Free Speech, Privacy, & Security"
+subtitle: "Websites, apps, & other tools I find helpful"
+date: 2023-03-07 19:45:31 +0530
+categories: ["tech", "privacy", "security", "free speech", "hardware", "software"]
+author: "Karie Moorman"
 ---
+Testing...
+
 Gravity is an unopinionated theme for Jekyll, the awesome static site generator.
 
 Some General Instructions for Jekyll

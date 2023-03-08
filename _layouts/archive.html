@@ -6,24 +6,38 @@ layout: page
 {% for post in site.posts %}
 {% for cat in post.categories %}
 {% if cat == page.category %}
-
+{% assign entry = true %}
 
 
 <div class="post postContent">
+  <div class = 'archive-list'>
   <div  class="postDate"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>
   </div>
   <div class="postTag">
     {{post.tag}}
   </div>
   <br>
-  <div class="postTitle">
-  <a class='postLink' href="{{site.url}}{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+  <div>
+  <a class='postLink' href="{{site.url}}{{site.baseurl}}{{post.url}}">
+    <span class="postTitle">{{post.title}}</span>
+{% if post.subtitle %}
+    <br>
+    <span class="postSubtitle">{{post.subtitle}}</span>
+{% endif %}
+  </a>
   </div>
+  
   <div class="postExt">
     {{post.excerpt}}
   </div>
 </div>
+</div>
 {% endif %}
 {% endfor %}
-
 {% endfor %}
+
+{% if entry != true %}
+{% if page.description %}
+<div class="page-description"><h2>{{ page.description }}</h2></div>
+{% endif %}
+{% endif %}

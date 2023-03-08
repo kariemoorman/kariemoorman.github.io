@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-    margin-bottom: calc($spacing-unit / 2);
+    margin-bottom: calc($spacing-unit / 2.5);
 }
 
 /* Images */
@@ -207,6 +207,7 @@ pre {
   font-size: 18px;
   font-weight: 300;
   padding-top: 0;
+  padding-bottom: 1.5em;
 }
 .home{
   padding-bottom: 5em;
@@ -269,19 +270,36 @@ pre {
 }
 .postTitle {
   font-weight: 400;
+  font-size: 22px;
+  @include media-query($on-laptop) {
+    font-size: 20px;
+  }
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 3px;
-  text-indent: 3px;
+  //text-indent: 3px;
+}
+.postSubtitle {
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 1px;
+  @include media-query($on-laptop) {
+    font-size: 17px;
+  }
+  text-align: center;
+  text-transform: uppercase;
+  //text-indent: 3px;
+  padding-bottom: 5px;
 }
 
 /* Site header */
 .site-header {
-  border-top: 5px solid;
+ // border-top: 5px solid;
   border-bottom: 1px solid;
   min-height: 56px;
   // Positioning context for the mobile navigation icon
   position: relative;
+  background-color: $l-background-color;
 }
 
 .site-title {
@@ -290,17 +308,22 @@ pre {
   font-family: 'PT Sans';
   text-transform: capitalize;
   font-weight: 500;
-  margin-top: 1em;
+  padding-top: 1em;
 }
 .site-description {
   font-size: 14px;
   letter-spacing: 2px;
   text-indent: 6px;
   font-family: 'Josefin Sans';
+  color: $l-grey-color-dark;
 }
 .exclamationMark {
   padding-left: 2em;
   padding-right: 2em;
+  @include media-query($on-palm) {
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+  }
 }
 .site-navigation {
   text-transform: uppercase;
@@ -315,10 +338,10 @@ pre {
 }
 
 .header-background {
-  height:120px;
+  min-height:120px;
   width:100%;
-  padding-bottom: 1rem;
   background:repeating-linear-gradient( -45deg,#eee, #fff 1px,#eee 1px);
+  z-index: 2;
 }
 
 .page-title {
@@ -329,21 +352,21 @@ pre {
   font-size: 12px;
   text-align:center;
 }
-
 .page-description {
   letter-spacing: 2px;
   font-family: "PT Sans";
   text-transform: uppercase;
   text-align: center;
   padding-top: 50px;
+  padding-bottom: 50px;
 }
-
 .page-tagline {
   font-size: 18px;
   font-family: "PT Sans";
   text-align: center;
   text-transform: lowercase;
 }
+
 .site-nav {
   .page-link {
     line-height: $base-line-height;
@@ -476,7 +499,10 @@ pre {
 .post-meta {
   font-size: $small-font-size;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 18px;
+  @include media-query($on-laptop) {
+    font-size: 16px;
+  }
 }
 .post-link {
   display: block;
@@ -485,35 +511,60 @@ pre {
 
 /* Posts */
 .post-header {
-  margin-top: $spacing-unit;
-  margin-bottom: $spacing-unit;
+  margin-top: $spacing-unit + 20px ;
+  margin-bottom: $spacing-unit ;
 }
 .post-title {
   font-size: 50px;
-
   text-align: center;
-  font-family: "PT Sans";
-  font-weight: 900;
+  font-family: "Josefin Sans";
+  font-weight: 700;
   @include media-query($on-laptop) {
-    font-size: 36px;
+    font-size: 38px;
   }
 }
+.post-subtitle {
+  font-size: 28px;
+  text-align: center;
+  font-family: "Josefin Sans";
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-weight: 700;
+  @include media-query($on-laptop) {
+    font-size: 20px;
+  }
+  padding-bottom: calc($spacing-unit *.75);
+}
+.post-author {
+  letter-spacing: 3px !important; 
+  text-transform: uppercase !important;
+  font-size: 20px;
+  font-weight: 500;
+  @include media-query($on-laptop) {
+    font-size: 18px;
+  }
+  padding-bottom: $spacing-unit *.75;
+}
 .post-content {
-  margin-bottom: $spacing-unit;
-  padding-bottom: 3em !important;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin: 10px;
   p {
-    font-size: 1.5rem;
+    font-size: 18px;
+    @include media-query($on-laptop) {
+      font-size: 16px;
+    }
   }
   h2 {
-    font-size: 32px;
+    font-size: 24px;
     @include media-query($on-laptop) {
-      font-size: 28px;
+      font-size: 22px;
     }
   }
   h3 {
-    font-size: 26px;
+    font-size: 22px;
     @include media-query($on-laptop) {
-      font-size: 22px;
+      font-size: 20px;
     }
   }
   h4 {
@@ -562,7 +613,7 @@ pre {
   border: .2px solid #e3d2d2; 
   box-shadow: 1px 1px 15px 4px #e3d2d2;
   border-radius: 35px;
-  margin: 5px 5px;
+  margin: 5px;
 }
 
 .img-inset-container {
@@ -594,6 +645,16 @@ pre {
   font-weight: 300;
 }
 
+/* Archive */
+
+.archive-list {
+  padding:  10px 7px 7px 7px;
+  background-color: rgba(167, 167, 167, 0.1);
+}
+
+.archive-list:hover {
+  background-color: rgba(154, 154, 154, 0.2);
+}
 
 /* About */
 .manual-container {
@@ -678,7 +739,10 @@ pre {
   width: 200px;
 }
 
-
+/* CV */
+#cv {
+  background-color: #fff3ca;
+} 
 
 /* Pagination */
  .pagination {
@@ -706,11 +770,12 @@ pre {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 3em;
-
+    padding-bottom: 2em;
+    padding-top: 1em !important;
     a:only-child {
         width: 100%;
     }
+    border-top: .5px dotted #888;
 }
 .postPrev,
 .postNext {
