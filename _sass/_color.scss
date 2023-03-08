@@ -35,7 +35,7 @@ $d-page: $d-link-color;
 /* Light theme color definitions */
 body.light {
   color: $l-text-color;
-  // background-color: $l-background-color;
+  background-color: $l-background-color;
   background-image: radial-gradient($l-grey-color-dark 4%, $l-background-color 0%);
   background-size: 5px 5px;
   
@@ -96,7 +96,7 @@ body.light {
 
   /* Site header */
   .site-header {
-    border-top-color: $l-grey-color-dark;
+    // border-top-color: $l-grey-color-dark;
     border-bottom-color: $l-grey-color-light;
   }
 
@@ -122,7 +122,7 @@ body.light {
   }
 
   @include media-query($on-palm) {
-    background-color: $l-background-color;
+   // background-color: $l-background-color;
     border: 1px solid $l-grey-color-light;
 
     .menu-icon > svg path {
