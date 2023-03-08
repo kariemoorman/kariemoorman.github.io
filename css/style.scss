@@ -653,7 +653,7 @@ pre {
 .archive-list {
   padding:  10px 7px 10px 7px;
   background-color: rgba(160, 160, 160, 0.1);
-  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 15px 0 rgb(0 0 0 / 19%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
   border: 0.5px solid lightgrey;
   border-top: 0.5px solid $l-background-color; 
 }
