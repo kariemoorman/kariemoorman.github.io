@@ -7,7 +7,7 @@ permalink: /resume/
 <div class='manual-container'>
 <div layout="vertical" layout-fill>
 <md-content>
-<section class="wrapper" style="background-color: rgba(214, 183, 113, .5)">
+<section class="wrapper" id="cv">
 <br/>
 <iframe src="https://kariemoorman.github.io/CV-Karie_Moorman.docx_Fall2018.pdf" type="application/pdf" width="98%;" height="800px;"> 
 
