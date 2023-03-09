@@ -4,7 +4,7 @@ layout: default
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
 <header class="post-header">
-<h2 class="post-title" itemprop="name headline"><a class="post-title-link"  href="{{page.url}}">{{ page.title }}</a></h2>
+<div class="post-title" itemprop="name headline"><a class="post-title-link"  href="{{page.url}}">{{ page.title }}</a></div>
 
 
 <center>
@@ -31,9 +31,9 @@ layout: default
 </header>
 
 
-<div style="background-color: #fdfdfd;  width: 100%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);">
+<div class="post-content-container">
 <div class="post-content" itemprop="articleBody">
-  {{ content }}
+<div style="padding: 15px 10px 12px 10px;">{{ content }}</div>
 </div>
 
 <footer class="postNavigation">
