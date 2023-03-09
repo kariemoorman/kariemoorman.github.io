@@ -68,6 +68,8 @@ body {
     // background-size: 5px 5px;
 }
 
+html, body { height: 100%;}
+
 /* Set `margin-bottom` to maintain vertical rhythm */
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
@@ -414,10 +416,17 @@ pre {
   }
 }
 
+
 /* Site footer */
 .site-footer {
   border-top: 1px solid;
-  padding: $spacing-unit 0;
+  position: sticky;
+  width: 100%;
+  height:auto;
+  top: 100%;
+  display:block;
+  padding: 20px 0;
+  margin: 0 auto; 
 }
 .footer-heading {
   font-size: 18px;
