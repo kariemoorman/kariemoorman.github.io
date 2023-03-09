@@ -1,11 +1,12 @@
 ---
 layout: post
-title:  "Science of Gravity"
-date:   2016-03-30 19:45:31 +0530
-categories: science
+title:  "Einstein & Big Tech"
+subtitle: "What goes up must come down"
+date:   2023-03-02 19:45:31 +0530
+categories: ["tech", "science"]
 author: "Chandler Bing"
 ---
-"Could I be anymore pulling ?"
+Testing... Can the folks in the back hear me?
 
 Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 

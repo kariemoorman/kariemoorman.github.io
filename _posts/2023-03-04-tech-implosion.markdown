@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "Tech-Implosion"
+title:  "The (Not So) Great Tech-Implosion"
+subtitle: "Rotting from the inside out"
 date:   2023-03-04 19:45:31 +0530
-categories: ["blog", "science", "life"]
+categories: ["blog", "tech" , "science", "life"]
 author: "Karie Moorman"
 ---
+Testing... 
+
 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 
 Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
