@@ -244,7 +244,7 @@
     min-height: 200px;
     }
 .manual-content p {
-    font-size: $small-font-size;
+    font-size: $small-font-size !important;
     font-weight: 300;
     margin: 2px;
     padding: 0px 5px 0px 5px;
