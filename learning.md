@@ -1,8 +1,8 @@
 ---
 layout: archive
-title: Education
+title: Learning
 description: Coming Soon...
-permalink: /education/
+permalink: /learning/
 category: "education"
 tagline: '"to give is to receive."'
 ---
