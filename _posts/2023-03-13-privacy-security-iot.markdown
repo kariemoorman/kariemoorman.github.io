@@ -34,13 +34,13 @@ malware landmines planted in every search query, hackers ready to pounce on ever
 <div class='brand'><a href='https://proton.me/mail'>ProtonMail</a></div>
 
 
-ProtonMail is a private email service developed and maintained by [Proton][proton]. Proton is an open-source company created by former scientists at [CERN][cern] who believe that trust is earned through transparency. All the source code used in Proton's applications is public and freely available for inspection. For Proton, privacy and security come first.
+ProtonMail is a private email service developed and maintained by <a href='https://proton.me'>Proton</a>. Proton is an open-source company created by former scientists at <a href='https://home.cern/'>CERN</a> who believe that trust is earned through transparency. All the source code used in Proton's applications is public and freely available for inspection. For Proton, privacy and security come first.
 
 
-ProtonMail uses open source, independently audited end-to-end and zero-access encryption to secure email communications at rest and in-transit. Even Proton itself can't read your emails. Learn more about Proton's privacy and security promise [here][protonsecurity]. 
+ProtonMail uses open source, independently audited end-to-end and zero-access encryption to secure email communications at rest and in-transit. Even Proton itself can't read your emails. Learn more about Proton's privacy and security promise <a href='https://proton.me/mail/security'>here</a>. 
 
 
-ProtonMail offers both free and paid service tiers. For free, users are afforded an email address with MFA, up to 150 messages per day, encrypted file share via ProtonDrive, a medium-speed VPN connection via ProtonVPN, a privacy-preserving calendar via ProtonCalendar, and 1GB of total storage space. For a \$4 USD per month, Proton affords users 10 email addresses, each with unlimited messages, a custom email domain, 20 calendars with calendar sharing, and 15 GB total storage. If needed, Proton offers at \$10 USD per month an even broader service plan. Learn more about ProtonMail pricing options [here][protonmailsubscriptions].
+ProtonMail offers both free and paid service tiers. For free, users are afforded an email address with MFA, up to 150 messages per day, encrypted file share via ProtonDrive, a medium-speed VPN connection via ProtonVPN, a privacy-preserving calendar via ProtonCalendar, and 1GB of total storage space. For a \$4 USD per month, Proton affords users 10 email addresses, each with unlimited messages, a custom email domain, 20 calendars with calendar sharing, and 15 GB total storage. If needed, Proton offers at \$10 USD per month an even broader service plan. Learn more about ProtonMail pricing options <a href='https://proton.me/mail/pricing'>here</a>.
 
 
 <h4>Quick Comparison</h4>
@@ -109,10 +109,10 @@ ProtonMail offers both free and paid service tiers. For free, users are afforded
 
 <i>DO NOT use Google Chrome (see [FAQs](#faq)).</i>
 
-<div class='brand'><a href='firefox'>Mozilla Firefox</a></div>
+<div class='brand'><a href='https://www.mozilla.org/en-US/firefox/new/'>Mozilla Firefox</a></div>
 <p>Mozilla Firefox is a fast, private & safe web browser suitable for Windows, MacOS and Linux operating systems. Firefox is developed and maintained by the Mozilla Foundation, an actual non-profit organization that actively supports online privacy & security, trustworthy artificial intelligence (AI), and accountability for big tech corporations. Mozilla puts people before profit; they create products, technologies and programs that make the internet healthier for everyone. Firefox is ethical, open-source, and customizable. And, it's free.</p>
 
-<div class='brand'><a href='brave'>Brave</a></div>
+<div class='brand'><a href='https://brave.com/'>Brave</a></div>
 <p>Brave is a privacy-focused, open source web browser based on Chromium (under Mozilla Licence), suitable for Windows, MacOS, Linux, Android and iOS operating systems. Brave is developed and maintained by Brave Software, Inc.. Brave is one of two Chromium-based browsers offering true user privacy protection via out-of-the-box Firewall, VPN, Ad and Tracker Shields, and Tor integration. Brave is highly customizable both in its privacy and security settings and search engine optimization. Brave is also the first browser to offer its users compensation for ads viewership, in the form of BAT (Basic Attention Tokens). And, it's free.</p>
 
 <div class='brand'><a href='https://vivaldi.com/'>Vivaldi</a></div>
@@ -125,14 +125,14 @@ ProtonMail offers both free and paid service tiers. For free, users are afforded
 
 <i>DO NOT use Google Chrome (see [FAQs](#faq)).</i>
 
-<div class='brand'><a href='duck'>DuckDuckGo</a></div>
+<div class='brand'><a href='https://duckduckgo.com/'>DuckDuckGo</a></div>
 <p>DuckDuckGo offers a privacy-focused search experience. DuckDuckGo is perhaps most well-known for its privacy feature called "untracked search." While privacy-preserving, DuckDuckGo SEO suffers in terms of relevance and robustness, such that it becomes increasingly burdensome to find exactly what one is actually looking for when (re-)forming a search query. One may find themselves re-indexing the internet in hopes of landing a meaningful result. Maybe that's a good thing, for those with time to spare. Learn more about search integration and customization in DuckDuckGo <a href='https://help.duckduckgo.com/duckduckgo-help-pages/results/syntax/'>here</a>.</p>
 
-<div class='brand'><a href='firefox'>Firefox</a></div>
+<div class='brand'><a href='https://www.mozilla.org/en-US/firefox/new/'>Firefox</a></div>
 <p>Firefox supports addition of multiple search engines, <a href='https://support.mozilla.org/en-US/kb/change-your-default-search-settings-firefox#w_one-click-search-alternatives'>custom search Engines</a>, ranking of search suggestions in relation to browsing history, and more. Learn more about search customization in Firefox <a href='https://support.mozilla.org/en-US/kb/search-firefox-address-bar'>here</a>.</p>
 
 
-<div class='brand'><a href='brave'>Brave</a></div>
+<div class='brand'><a href='https://search.brave.com/'>Brave</a></div>
 <p>Brave offers users ability to customize and refine search performance via user-defined search engine shortcuts and optimization functions.</p>
 <p><a href='brave://settings/searchEngines'>Custom searchEngines</a> enable users to create shortcuts for quicklinking to personal email accounts, executing queries across specific news sites, retail sites, and more. For example, let's define a shortcut for querying HackerNews:</p>
 
@@ -233,7 +233,7 @@ Multi-factor authentication (MFA) (i.e., 2FA or 2-step authentication) is a way 
 MFA can take the form of SMS (text message), a software application (e.g., an authenticator app), and/or a hardware device (e.g., a yubikey). 2FA via SMS is prone to security issues, as text messages are unencrypted and able to be intercepted with little to no effort. Because the objective is to increase our online security, is not advised to use SMS as the 2FA solution. Instead, we will choose as our MFA mechanism either the authenticator app or hardware authentication solution. 
 
 
-<div class='brand'><a href='authy'>Authy</a></div>
+<div class='brand'><a href='https://authy.com/'>Authy</a></div>
 
 Authy is a free two-factor authentication application developed by Twilio. For a given account, Authy generates time-sensitive codes locally, on your device, based on a secret key. Authy is available for use on both mobile and desktop devices: iOS, Android, Windows, Mac, and Linux. 
 
@@ -249,7 +249,7 @@ SnapChat | Teamviewer | Twitch | Pinterest | Apple | EverNote | Discord
 Learn more about Authy <a href='https://www.nytimes.com/wirecutter/reviews/best-two-factor-authentication-app/'>here</a>.
 
 
-<div class='brand'><a href='yubikey'>Yubikey</a></div>
+<div class='brand'><a href='https://www.yubico.com/'>Yubikey</a></div>
 Yubikey is a hardware authentication device developed and manufactured by Yubico. It is used to protect access to user accounts on computers, networks, and online services. Yubikeys are personal USB security keys; they plug into your computer and/or phone and are used alongside your primary password to complete the second half of a MFA web login authentication process. Each Yubikey device has a unique code built on to it which is used to generate codes that help confirm your unique identity.
 
 2FA via apps and SMS, while an improvement to the alternative (single-authentication), remain vulnerable to time-delay attacks. Yubikey offers an additional level of robustness, as it can protect users from phishing and advanced man-in-the-middle attacks, e.g., attacks in which a person or maligning process attempts to intercept the two-factor authentication as it is entered and processed. Yubikeys are tech industry standard. 
@@ -274,7 +274,7 @@ Learn more about Yubikey <a href='https://zapier.com/blog/what-is-a-yubikey/'>he
 Password theft is a serious problem. Websites and applications we use are under constant attack. When security breaches occur, they expose sensitive and unique identifying information about us (e.g., username, email address, password, phone number, physical address) to the world. Using a password manager helps protect us against password theft occurrences, and limits our exposure when security breaches happen. 
 
 
-<div class='brand'><a href='bitwarden'>Bitwarden</a></div>
+<div class='brand'><a href='https://bitwarden.com/'>Bitwarden</a></div>
 
 Bitwarden is an open source password management service that stores sensitive information (i.e., usernames, passwords, metadata) in an encrypted vault. At present Bitwarden is one of the safest ways to store all logins and passwords while also keeping them synced between all of your devices, and secure via MFA.
 
@@ -308,7 +308,7 @@ Note: VPNs are not free.
 <div id='link'><a href='https://www.mozilla.org/en-US/products/vpn/'>MozillaVPN</a></div>
 
 <br>
-Learn more about VPN options [here][vpn-options].
+Learn more about VPN options <a href='https://www.pcmag.com/picks/the-best-vpn-services'>here</a>.
 
 <br>
 
