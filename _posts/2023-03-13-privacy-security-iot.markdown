@@ -161,11 +161,11 @@ malware landmines planted in every search query, hackers ready to pounce on ever
 Shortcut: hnq
 URL: https://hn.algolia.com/?dateRange=all&page=0&prefix=false&query=%s&sort=byDate&type=story</code></pre>
 <p>3. Navigate to the address bar, enter the shortcut <code>hnq</code> + [spacebar].</p>
-<p><img id='shortcut-hnq' src="/../media/images/shortcut-hnq.png" height="auto;" width="80%;"/></p>
+<p><img id='shortcut-hnq' src="/media/images/shortcut-hnq.png" height="auto;" width="80%;"/></p>
 <p>4. Type a query item (e.g., 'crypto'), and press [enter].</p>
-<p><img id='shortcut-hnq-crypto' src="/../media/images/shortcut-hnq-crypto.png" height="auto;" width="80%;"></p>
+<p><img id='shortcut-hnq-crypto' src="/media/images/shortcut-hnq-crypto.png" height="auto;" width="80%;"></p>
 <p>5. A search query is executed in HackerNews, and results are displayed. Pretty nice!</p>
-<p><img id='crypto-results' src="/../media/images/crypto-results.png" height="220px;" width="80%;"></p>
+<p><img id='crypto-results' src="/media/images/crypto-results.png" height="220px;" width="80%;"></p>
 </div>
 
 <div style='padding-top: 15px;'>
@@ -194,11 +194,11 @@ URL: https://hn.algolia.com/?dateRange=all&page=0&prefix=false&query=%s&sort=byD
 <div class='post-container-grid-2' style='margin-right: 5px;'>
 <div class='p-item1' style='text-align: center;'>
 <p><i>Before applying the filter:</i></p>
-<img id='pnt-before' src='/../media/images/pinterest-before.png' height="300px;" width="80%;"/>
+<img id='pnt-before' src='/media/images/pinterest-before.png' height="300px;" width="80%;"/>
 </div>
 <div class='p-item2' style='text-align: center;'>
 <p><i>After applying the filter:</i></p>
-<img id='pnt-after' src='/../media/images/pinterest-after.png' height="300px;" width="80%;"/>
+<img id='pnt-after' src='/media/images/pinterest-after.png' height="300px;" width="80%;"/>
 </div>
 </div>
 </div>
