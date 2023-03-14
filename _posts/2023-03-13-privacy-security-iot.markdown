@@ -21,7 +21,7 @@ malware landmines planted in every search query, hackers ready to pounce on ever
 <li><a href='#browser'>Web Browsers</a></li>
 <li><a href='#search'>Search Engines</a></li>
 <li><a href='#adblock'>Ad & Tracking Blockers</a></li>
-<li><a href='#tool'>Multi-Factor Authentication</a></li>
+<li><a href='#mfa'>Multi-Factor Authentication</a></li>
 <li><a href='#password'>Password Managers</a></li>
 <li><a href='#vpn'>VPNs</a></li>
 <li><a href='#faq'>FAQs</a></li>
@@ -195,16 +195,18 @@ How simple! Discover more Brave Goggles offerings <a href='https://search.brave.
 <h3 id='adblock'>Ad & Tracking Blockers</h3>
 
 With a web browser and search engine selected, it's important to configure an Adblocker that will help protect us against "big tech spies" and other malware. Across both Chromium and Firefox web browsers, one well-known and widely respected Adblocker browser extension is called "uBlock Origin." One relatively new and upcoming Adblocker gaining notoriety is called "DuckDuckGo Privacy Essentials." 
-<br>
+<div style='padding-top: 10px;'>
 <h4>FireFox Web Browser</h4>
 <p>For Firefox, Adblock browser extensions are 
 <a href='https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search'>uBlock Origin (Mozilla)</a> and 
 <a href='https://addons.mozilla.org/en-US/firefox/addon/duckduckgo-for-firefox/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search'>DuckDuckGo Privacy Essentials (Mozilla)</a>.</p>
-<br>
+</div>
+<div style='padding-top: 10px;'>
 <h4>Chromium-based Web Browsers</h4>
 <p>Both <a href='https://vivaldi.com/features/privacy-security/'>Vivaldi</a> and
 <a href='https://brave.com/firewall-vpn/'>Brave Browser</a> offer users a built-in, highly customizable Ad and Tracking blocker extension. For Brave, the default Adblocker extension is called "Shield," with uBlock Origin configured as the default Adblocker setting. Shield customizations I've found useful include the following:</p>
-<br>
+</div>
+<div style='padding-top: 5px;'>
 <div class='post-container-grid-2'>
 <div class='p-item1'>  
 <p>Filter lists:</p>
@@ -217,6 +219,7 @@ With a web browser and search engine selected, it's important to configure an Ad
 <p>Custom lists (Licence: MPLv2): </p>
 <p><a href='https://o0.pages.dev/Pro/adblock.txt'>https://o0.pages.dev/Pro/adblock.txt</a></p>
 <p><a href='https://o0.pages.dev/mini/adblock.txt'>https://o0.pages.dev/mini/adblock.txt</a></p>
+</div>
 </div>
 </div>
 <br>
@@ -245,8 +248,8 @@ Bitwarden | Amazon | Facebook | Instagram | Dropbox | Box | Cloudflare
 Slack | Twitter | FastMail | ProtonMail | Gmail | GitHub | Microsoft
 SnapChat | Teamviewer | Twitch | Pinterest | Apple | EverNote | Discord
 ```
-<br>
-Learn more about Authy <a href='https://www.nytimes.com/wirecutter/reviews/best-two-factor-authentication-app/'>here</a>.
+
+<p>Learn more about Authy <a href='https://www.nytimes.com/wirecutter/reviews/best-two-factor-authentication-app/'>here</a>.</p>
 
 
 <div class='brand'><a href='https://www.yubico.com/'>Yubikey</a></div>
@@ -262,8 +265,8 @@ ProtonMail | FastMail | GitHub | GitLab | Reddit | Drupal
 Binance | Kraken | Facebook | Twitter | Instagram | Twitch
 Teamviewer | Ebay |  DocuSign | Tesla | Salesforce | Shopify
 ```
-<br>
-Learn more about Yubikey <a href='https://zapier.com/blog/what-is-a-yubikey/'>here</a>.
+
+<p>Learn more about Yubikey <a href='https://zapier.com/blog/what-is-a-yubikey/'>here</a>.</p>
 
 <br>
 
@@ -282,7 +285,6 @@ Bitwarden offers native desktop applications for macOS, Windows, and Linux, and 
 
 Bitwarden offers both free and paid service tiers. The Free tier includes a password generator, credential sharing, and the option to self-host. With the Free tier users can sync an unlimited number of password vault items across multiple devices. For most users, the free service tier is sufficient.
 
-<br>
 <h4>Other Notable Options:</h4>
 <div id='link'><a href='https://1password.com/'>1Password</a></div>
 <br>
