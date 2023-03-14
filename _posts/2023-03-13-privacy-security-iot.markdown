@@ -7,9 +7,7 @@ categories: ["tech", "privacy", "security", "password", "mfa", "vpn", "adblock"]
 author: "Karie Moorman"
 ---
 <div class='content-pad'>
-<article class="drop-cap"><p>Using the internet can be a real drag. Big tech spies tracking our every move, 
-
-malware landmines planted in every search query, hackers ready to pounce on every website we select. It's 2023: We internet users endure less privacy, less security, and more surveillance than ever before. Yet we continue to receive little to no warning when vulnerabilities arise, and we are offered little to no compensation for all our data. The risk, while it's become the norm, is hardly worth the reward.</p>
+<article class="drop-cap"><p>Using the internet can be a real drag. Big tech spies tracking our every move, malware landmines planted in every search query, hackers ready to pounce on every website we select. It's 2023: We internet users endure less privacy, less security, and more surveillance than ever before. Yet we continue to receive little to no warning when vulnerabilities arise, and we are offered little to no compensation for all our data. The risk, while it's become the norm, is hardly worth the reward.</p>
 <p>Below are some simple tips we can use to reduce the impact of big tech spies in our day-to-day lives.</p>
 </article>
 </div>
