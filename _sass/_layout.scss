@@ -307,11 +307,6 @@
     margin-top: $spacing-unit + 20px ;
     margin-bottom: $spacing-unit ;
   }
-.post-content-container {
-    width: 100%; 
-    background-color: #fdfdfd;  
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
-    }
 .post-title {
     font-size: 50px;
     text-align: center;
@@ -345,7 +340,7 @@
 }
 .post-content {
     padding-bottom: 10px;
-    p {
+    p, li {
       font-size: 18px;
       @include media-query($on-laptop) {
         font-size: 16px;
@@ -359,17 +354,176 @@
     }
     h3 {
       font-size: 22px;
+      font-weight: 600;
       @include media-query($on-laptop) {
         font-size: 20px;
       }
     }
     h4 {
-      font-size: 20px;
+      font-size: 18px;
       @include media-query($on-laptop) {
-        font-size: 18px;
+        font-size: 17px;
       }
     }
 } 
+
+.post-content-container {
+    width: 100%; 
+    background-color: #fdfdfd;  
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
+    }
+.post-content-container {
+    padding-left: 5px;
+    padding-bottom: 10px;
+    p {
+      font-size: 18px;
+      @include media-query($on-laptop) {
+        font-size: 16px;
+      }
+    }
+    h2 {
+      font-size: 24px;
+      @include media-query($on-laptop) {
+        font-size: 22px;
+      }
+    }
+    h3 {
+      padding-top: 15px;
+      font-size: 22px;
+      font-weight: 600;
+      @include media-query($on-laptop) {
+        font-size: 20px;
+      }
+    }
+    h4 {
+      font-size: 18px;
+      font-weight: 600;
+      @include media-query($on-laptop) {
+        font-size: 17px;
+      }
+    }
+}
+
+.post-content-container article {
+    padding-top: 5px;
+    padding-bottom: 10px;
+    line-height: 1.5;
+    margin-top: .25rem;
+    margin-right: .25rem;
+    text-align:justify;
+}
+.post-content-container article.drop-cap::first-letter {
+    -webkit-initial-letter: 4;
+            initial-letter: 4;
+    color: orange;
+    font-weight:bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; //Georgia, 'Times New Roman', Times, serif;
+    margin-right: .5em;
+    
+  }
+
+  .post-content-container article::first-letter {
+    -webkit-initial-letter: 4 1;
+            initial-letter: 4 1;
+    color: orange;
+    font-weight: bold;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  // Georgia, 'Times New Roman', Times, serif;
+    margin-right: .5em;
+  }
+
+  .post-content-container .brand {
+    padding-bottom: 10px;
+  }
+
+  .post-content-container .brand a {
+    color: $l-brand-color !important;
+    font-size: 21px;
+    font-weight: 600;
+    @include media-query($on-laptop) {
+        font-size: 19.5px;
+    }
+}
+
+.post-content-container #link:last-child() {
+    padding-bottom: 10px;
+}
+
+.post-content-container #link a {
+    color: $l-brand-color !important;
+    font-size: 19px;
+    font-weight: 500;
+    @include media-query($on-laptop) {
+        font-size: 17px;
+    }
+}
+.post-content-container #link a:hover {
+    color: $l-brand-color !important;
+    font-size: 19.5px;
+    @include media-query($on-laptop) {
+        font-size: 17.5px;
+    }
+}
+
+.post-content-container div p a {
+    color: $l-brand-color !important;
+}
+.post-content-container ul li a {
+    color: $l-text-color !important;
+}
+
+.post-content-container ul li a:hover {
+    font-weight: 500;
+    color: $l-brand-color !important;
+}
+
+.post-content-container table {
+    width: 80%;
+    align-items: center;
+  justify-content: center;
+}
+.post-content-container table, th, td {
+    border: 1px solid $l-grey-color;
+    border-collapse: collapse;
+    padding: 5px;
+    padding-left: 5px;
+    font-size: 18px;
+    @include media-query($on-laptop) {
+        font-size: 16px;
+    }
+  }
+
+  .post-content-container table tr a {
+    color: $l-text-color !important;
+}
+
+.post-content-container table tr a:hover {
+    font-weight: 500;
+    color: $l-brand-color !important;
+}
+
+.post-content-container tr:nth-child(even) {background-color: #f2f2f2;}
+
+.post-content-container tr:hover {background-color: rgb(233, 240, 250);}
+
+
+.post-container-grid-2 {
+    display: grid;
+    grid-template-areas: 
+    'one two';
+    grid-template-columns: 1fr 1fr;
+    vertical-align: middle;
+  }
+  .p-item1 {grid-area: one;}
+  .p-item2 {grid-area: two;}
+  
+#amzn-before {content: url('/media/images/amazon-exclude-before.png'); height: 300px; max-height: 500px; width: 80%;}
+#amzn-after {content: url('/media/images/amazon-exclude-after.png'); height: 300px; max-height: 500px; width: 80%;}
+#pnt-before {content: url('/media/images/pinterest-before.png'); height: 300px; max-height: 500px; width: 80%;}
+#pnt-after {content: url('/media/images/pinterest-after.png'); height: 300px; max-height: 500px; width: 80%;}
+#shortcut-hnq {content: url('/media/images/shortcut-hnq.png'); height: auto; width: 80%;}
+#shortcut-hnq-crypto {content: url('/media/images/shortcut-hnq-crypto.png'); height: auto; width: 80%;}
+#crypto-results {content: url('/media/images/crypto-results.png'); height: 220px; max-height: 300px; width: 80%;}
+
 
 
 /* ***************************** */
