@@ -444,9 +444,9 @@
     }
 }
 
-.post-content-container #link:last-child() {
-    padding-bottom: 10px;
-}
+//.post-content-container #link:last-child() {
+//    padding-bottom: 10px;
+//}
 
 .post-content-container #link a {
     color: $l-brand-color !important;
@@ -560,6 +560,9 @@
     list-style: none;
     margin-left: 0;
     z-index: 99;
+  }
+  .contact-list li:not(:last-child) {
+    margin-bottom: 5px;
   }
   .small-site-title {
     font-family: "PT Sans";
