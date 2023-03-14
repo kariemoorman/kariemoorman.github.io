@@ -391,37 +391,4 @@ Learn more about VPN options <a href='https://www.pcmag.com/picks/the-best-vpn-s
 <p>Yes, there are many (e.g., Stripe: js.stripe.com). It is safe to assume everywhere we go on the internet, there are tracking objects (e.g., session cookie and/or json web token (JWT)) actively attempting to connect to our device(s) for the purpose of harvesting our user interaction data, along with all our activity across our browser(s) and any open apps. This is why it is important to make use of Adblocker software as soon as possible, on all devices (e.g., smartphones, computers).</p>
 </details>
 
-<!--
-[cern]: https://home.cern/
-[proton]: https://proton.me/
-[protonvpn]: https://protonvpn.com/
-[protonmail]: https://proton.me/mail
-[protonsecurity]: https://proton.me/mail/security
-[protonmailsubscriptions]: https://proton.me/mail/pricing
-[hushmail]: https://www.hushmail.com/
-[fastmail]: https://www.fastmail.com/
-[firefox]: https://www.mozilla.org/en-US/firefox/new/
-[firefox-vpn]: https://www.mozilla.org/en-US/products/vpn/
-[brave]: https://brave.com/
-[brave-goggles]: https://search.brave.com/help/goggles
-[brave-vpn]: https://brave.com/firewall-vpn/
-[vivaldi]: https://vivaldi.com/
-[duck]: https://duckduckgo.com/
-[yubikey]: https://www.yubico.com/
-[authy]: https://authy.com/
-[bitwarden]: https://bitwarden.com/
-[1password]: https://1password.com/
-[nordvpn]: https://nordvpn.com/
-[expressvpn]: https://www.expressvpn.com/
-[phish1]: https://www.bleepingcomputer.com/news/security/malicious-google-ads-sneak-aws-phishing-sites-into-search-results/
-[phish2]: https://www.bleepingcomputer.com/news/security/hackers-push-malware-via-google-search-ads-for-vlc-7-zip-ccleaner/
-[phish3]: https://www.bleepingcomputer.com/news/security/ransomware-access-brokers-use-google-ads-to-breach-your-network/
-[phish4]: https://www.bleepingcomputer.com/news/security/hackers-abuse-google-ads-to-spread-malware-in-legit-software/
-[phish5]: https://www.bleepingcomputer.com/news/security/bitwarden-password-vaults-targeted-in-google-ads-phishing-attack/
-[antitrust]: https://www.vox.com/recode/2023/1/24/23569609/google-antitrust-lawsuit-digital-ads
-[chromeusers]: https://backlinko.com/chrome-users#chrome-stats
-[ecosia]: https://www.ecosia.org/
-[rep]: https://www.house.gov/representatives/find-your-representative
-[sen]: https://www.senate.gov/senators/
-[vpn-options]: https://www.pcmag.com/picks/the-best-vpn-services
--->
+
