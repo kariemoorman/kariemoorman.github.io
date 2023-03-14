@@ -135,7 +135,7 @@ ProtonMail offers both free and paid service tiers. For free, users are afforded
 <div class='brand'><a href='https://search.brave.com/'>Brave</a></div>
 <p>Brave offers users ability to customize and refine search performance via user-defined search engine shortcuts and optimization functions.</p>
 <p><a href='brave://settings/searchEngines'>Custom searchEngines</a> enable users to create shortcuts for quicklinking to personal email accounts, executing queries across specific news sites, retail sites, and more. For example, let's define a shortcut for querying HackerNews:</p>
-
+<br>
 <p>1. In the address bar, enter <code>brave://settings/searchEngines</code>.</p>
 <p>2. Under "Site Search," select "Add" to create a shortcut. Define the custom search engine name (e.g., <code>HackerNews Query</code>) and the shortcut (e.g., <code>hnq</code>). In the URL, substitute <code >%s</code> in place of the query item (e.g., <code>query=%s</code>), and "Save." </p>
 
@@ -146,11 +146,11 @@ URL: https://hn.algolia.com/?dateRange=all&page=0&prefix=false&query=%s&sort=byD
 ```
 
 <p>3. Navigate to the address bar, enter the shortcut <code>hnq</code> + [spacebar]. </p>
-<img id='shortcut-hnq'>
+<img id='shortcut-hnq'/>
 <p>4. Type a query item (e.g., 'crypto'), and press [enter]. </p>
-<img id='shortcut-hnq-crypto'>
+<img id='shortcut-hnq-crypto'/>
 <p>5. A search query is executed in HackerNews, and results are displayed. Pretty nice!</p>
-<img id='crypto-results'>
+<img id='crypto-results'/>
 
 <br>
 
@@ -161,11 +161,11 @@ URL: https://hn.algolia.com/?dateRange=all&page=0&prefix=false&query=%s&sort=byD
 <div class='post-container-grid-2'>
 <div class='p-item1'  style='text-align: center;'>
 <p >Before applying the filter: </p>
-<img id='amzn-before'>
+<img id='amzn-before'/>
 </div>
 <div class='p-item2'  style='text-align: center;'>
 <p>After applying the filter: </p>
-<img id='amzn-after'>
+<img id='amzn-after'/>
 </div>
 </div>
 <br>
@@ -175,11 +175,11 @@ URL: https://hn.algolia.com/?dateRange=all&page=0&prefix=false&query=%s&sort=byD
 <div class='post-container-grid-2'>
 <div class='p-item1' style='text-align: center;'>
 <p>Before applying the filter: </p>
-<img id='pnt-before'>
+<img id='pnt-before'/>
 </div>
 <div class='p-item2'  style='text-align: center;'>
 <p>After applying the filter: </p>
-<img id='pnt-after'>
+<img id='pnt-after'/>
 </div>
 </div>
 
@@ -195,16 +195,16 @@ How simple! Discover more Brave Goggles offerings <a href='https://search.brave.
 <h3 id='adblock'>Ad & Tracking Blockers</h3>
 
 With a web browser and search engine selected, it's important to configure an Adblocker that will help protect us against "big tech spies" and other malware. Across both Chromium and Firefox web browsers, one well-known and widely respected Adblocker browser extension is called "uBlock Origin." One relatively new and upcoming Adblocker gaining notoriety is called "DuckDuckGo Privacy Essentials." 
-
+<br>
 <h4>FireFox Web Browser</h4>
 <p>For Firefox, Adblock browser extensions are 
 <a href='https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search'>uBlock Origin (Mozilla)</a> and 
 <a href='https://addons.mozilla.org/en-US/firefox/addon/duckduckgo-for-firefox/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search'>DuckDuckGo Privacy Essentials (Mozilla)</a>.</p>
-
+<br>
 <h4>Chromium-based Web Browsers</h4>
 <p>Both <a href='https://vivaldi.com/features/privacy-security/'>Vivaldi</a> and
 <a href='https://brave.com/firewall-vpn/'>Brave Browser</a> offer users a built-in, highly customizable Ad and Tracking blocker extension. For Brave, the default Adblocker extension is called "Shield," with uBlock Origin configured as the default Adblocker setting. Shield customizations I've found useful include the following:</p>
-
+<br>
 <div class='post-container-grid-2'>
 <div class='p-item1'>  
 <p>Filter lists:</p>
@@ -219,7 +219,7 @@ With a web browser and search engine selected, it's important to configure an Ad
 <p><a href='https://o0.pages.dev/mini/adblock.txt'>https://o0.pages.dev/mini/adblock.txt</a></p>
 </div>
 </div>
-
+<br>
 
 <p>In addition to Shield customization, I've added the browser extension <a href='https://chrome.google.com/webstore/detail/duckduckgo-privacy-essent/bkdgflcldnnnapblkhphbgpggdiikppg'>DuckDuckGo Privacy Essentials (Chrome)</a>. As new trackers and ad services are detected by DuckDuckGo Privacy Essentials, I add them to the custom filter list in Shield.</p>
 <br>
@@ -245,7 +245,7 @@ Bitwarden | Amazon | Facebook | Instagram | Dropbox | Box | Cloudflare
 Slack | Twitter | FastMail | ProtonMail | Gmail | GitHub | Microsoft
 SnapChat | Teamviewer | Twitch | Pinterest | Apple | EverNote | Discord
 ```
-
+<br>
 Learn more about Authy <a href='https://www.nytimes.com/wirecutter/reviews/best-two-factor-authentication-app/'>here</a>.
 
 
@@ -262,7 +262,7 @@ ProtonMail | FastMail | GitHub | GitLab | Reddit | Drupal
 Binance | Kraken | Facebook | Twitter | Instagram | Twitch
 Teamviewer | Ebay |  DocuSign | Tesla | Salesforce | Shopify
 ```
-
+<br>
 Learn more about Yubikey <a href='https://zapier.com/blog/what-is-a-yubikey/'>here</a>.
 
 <br>
@@ -282,7 +282,7 @@ Bitwarden offers native desktop applications for macOS, Windows, and Linux, and 
 
 Bitwarden offers both free and paid service tiers. The Free tier includes a password generator, credential sharing, and the option to self-host. With the Free tier users can sync an unlimited number of password vault items across multiple devices. For most users, the free service tier is sufficient.
 
-
+<br>
 <h4>Other Notable Options:</h4>
 <div id='link'><a href='https://1password.com/'>1Password</a></div>
 <br>
@@ -300,7 +300,7 @@ Virtual Private Networks (VPNs) help our data remain private and secure. VPNs wo
 VPNs protect us when connecting to public WiFi networks (e.g., Starbucks, the airport, by accident when our smartphones are set to WiFi -> ON + Autoconnect). VPNs also limit the amount of data our internet service provider (ISP) can reliably gather (and sell) about our internet usage. 
 
 Note: VPNs are not free. 
-
+<br>
 <h4>Notable VPN Service Options:</h4>
 <div id='link'><a href='https://protonvpn.com/'>ProtonVPN</a></div>
 <div id='link'><a href='https://www.expressvpn.com/'>ExpressVPN</a></div>
