@@ -391,7 +391,7 @@ Learn more about VPN options [here][vpn-options].
 <p>Yes, there are many (e.g., Stripe: js.stripe.com). It is safe to assume everywhere we go on the internet, there are tracking objects (e.g., session cookie and/or json web token (JWT)) actively attempting to connect to our device(s) for the purpose of harvesting our user interaction data, along with all our activity across our browser(s) and any open apps. This is why it is important to make use of Adblocker software as soon as possible, on all devices (e.g., smartphones, computers).</p>
 </details>
 
-
+<!--
 [cern]: https://home.cern/
 [proton]: https://proton.me/
 [protonvpn]: https://protonvpn.com/
@@ -424,3 +424,4 @@ Learn more about VPN options [here][vpn-options].
 [rep]: https://www.house.gov/representatives/find-your-representative
 [sen]: https://www.senate.gov/senators/
 [vpn-options]: https://www.pcmag.com/picks/the-best-vpn-services
+-->
