@@ -5,6 +5,20 @@ permalink: /about/
 ---
 
 <div class='manual-container'>
+<div class="manual-title">Personal Interests</div>
+<div class="manual-content">
+<p>I like patterns, anomalies, and understanding how and why systems work. For personal enrichment this amounts to an affinity for polyrythms, vector graphics, and random rabbit holes of knowledge acquired via Google dorking, observation, and the like.</p>
+</div>
+</div>
+
+<div class='manual-container'>
+<div class="manual-title">Current Topics of Interest</div>
+<div class="manual-content">
+<p class='wide'> Ethics | Privacy & Security | Human-Computer Interaction | Dis/Misinformation | DevOps | QA Testing | Supply Chain Optimization | Classification & Recommender Systems | Cryptography | Quantum Technology </p>
+</div>
+</div>
+
+<div class='manual-container'>
 <div class="manual-title">Educational Background</div>
 <div class="manual-content">
 <p>I studied <a href="http://cogsci.ucmerced.edu" target="_blank">Cognitive and Information Sciences</a> as a graduate student and Eugene Cota Robles fellow at <a href="https://s.hdnux.com/photos/21/12/47/4499926/3/920x920.jpg" target="_blank">UC Merced</a>. As an undergraduate student, I studied all sorts of things including linguistics at <a href='../media/images/uc-berkeley-campus.jpg' target="_blank">UC Berkeley</a>. My undergraduate and graduate studies focused primarily on the formation of meaning via interactions between language, cognition, and ideology from a cognitive and functional perspective. I researched sociocultural identity as mediated by language using corpus-based and behavioral methods.</p>
@@ -40,19 +54,21 @@ permalink: /about/
 <div class="manual-content h-min item4">
 <div class="manual-subtitle">Metaphor & Cognition</div>
 <div class='img'><a href="http://neurocritic.blogspot.com/2006/12/positive-voltage-does-not-equal.html" target="_blank"><img id="eeg"></a></div>
-<div class='text'><p>This project uses EEG to measure ERPs related to the online processing of novel and conventional metaphor. We are interested in how different types of lexical priming (e.g., category-based mappings, comparison-based mappings) affect novel metaphor comprehension. We want to better understand the degree to which semantically congruent conventional, or primary, metaphors can facilitate processing of novel metaphors.</p></div>
+<div><p>This project uses EEG to measure ERPs related to the online processing of novel and conventional metaphor. We are interested in how different types of lexical priming (e.g., category-based mappings, comparison-based mappings) affect novel metaphor comprehension. We want to better understand the degree to which semantically congruent conventional, or primary, metaphors can facilitate processing of novel metaphors.</p></div>
 </div>
+
 
 <div class="manual-content h-min item1">
 <div class="manual-subtitle">MetaNet</div>
+<div class='img'><a href="https://metaphor.icsi.berkeley.edu/pub/en/index.php/MetaNet_Metaphor_Wiki" target="_blank"><img id='icsi'></a></div>
 <div><p>The <a href="https://metanet.icsi.berkeley.edu/metanet/" target="_blank">MetaNet</a> Project 
  is a multi-year effort to systematize novel and conventional metaphor detection for large-scale analyses. The goal is to identify and analyze the metaphors people use to discuss and reason about a broad range of topics and domains (e.g., relationships, education, poverty, immigration), across multiple languages (e.g., US English, Mexican Spanish, Russian, Farsi).
 </p></div>
 </div>
 
-
 <div class="manual-content h-min item2">
 <div class="manual-subtitle">Karuk Language Project</div>
+<div class='img'><a href="https://www.karuk.us/index.php/departments/language-program" target="_blank"><img id='karuk'></a></div>
 <div><p>The <a href="http://linguistics.berkeley.edu/~karuk/resources.php" target="_blank">Karuk Language Project</a> is a language documentation and revitalization effort in collaborative with the Karuk Tribe and the Survey of California and Other Indian Languages at UC Berkeley. The effort includes digitization of field notes and learning about the Karuk language and culture through linguistic research and teaching.</p></div>
 </div>
 </div>
