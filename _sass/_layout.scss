@@ -246,8 +246,9 @@
 .manual-content p {
     font-size: $small-font-size !important;
     font-weight: 300;
-    margin: 2px;
-    padding: 0px 5px 0px 5px;
+    margin: 0px 2px 2px 2px;
+    //padding: 0px 5px 0px 5px;
+    padding-right: 5px;
     }
 .manual-content p.wide {
     letter-spacing: 1.2px;
@@ -255,7 +256,8 @@
 .manual-content img {
     float: left;
     margin-right: 10px; 
-    padding: 5px 2px 5px 2px;
+    //padding: 5px 2px 5px 2px;
+    padding: 7px 2px 0px 2px; 
     position: relative;
     }
 .img {
@@ -270,12 +272,21 @@
     height: 150px;
     width: 200px;
     }
-
 #eeg {
     content: url('https://photos1.blogger.com/x/blogger/1782/2187/320/22148/N400-P600.jpg');
     height: 150px;
-    width: 200px;
+    width: 150px;
     }
+#icsi {
+    content: url('https://metaphor.icsi.berkeley.edu/pub/en/icsi_logo_135b.jpg');
+    height: 150px;
+    width: 140px;
+}
+#karuk {
+  content: url('https://www.karuk.us/images/docs/Transportation/Great_Seal_of_the_Karuk_Tribe_Large_copy_edited-1.jpg');
+  height: 150px;
+  width: 150px;
+}
 
 /* ***************************** */
 /* ******* BLOG ARCHIVE ******** */
