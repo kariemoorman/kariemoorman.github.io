@@ -26,3 +26,6 @@ venv.bak/
 # Jekyll
 .jekyll-cache/
 _site
+
+#temp
+_learnings/
