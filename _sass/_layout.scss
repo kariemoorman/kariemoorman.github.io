@@ -378,6 +378,11 @@
     }
 } 
 
+#margin {
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
 .post-content-container {
     width: 100%; 
     background-color: #fdfcfb ; // #fdfdfd;  
@@ -540,6 +545,72 @@
 #shortcut-hnq-crypto {content: url('/media/images/shortcut-hnq-crypto.png'); height: auto; width: 80%;}
 #crypto-results {content: url('/media/images/crypto-results.png'); height: 220px; max-height: 300px; width: 80%;}
 
+#whatsapp {content: url('https://static.whatsapp.net/rsrc.php/v3/y7/r/DSxOAUB0raA.png'); height: 38px; width: 130px; margin: 30px 0px 20px 130px;}
+#fbmess {content: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0Hwt69CKFe2E7IwmrNh-MYRc1BiTUYhfQYA&usqp=CAU'); height: 45px; width: 120px; margin: 10px 0px 20px 70px;}
+#snapchat {content: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEN5GlVfdMbFKqHIfoNPyTY312-AosnzJfEA&usqp=CAU'); height: 40px; width: 120px; margin: 10px 0px 10px 30px;}
+#telegram {content: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRagh-hgmxKTreOeflDKzBLfIhQqWGvAdgxbw&usqp=CAU'); height: 60px; width: 120px; margin: 10px 0px 10px 70px;}
+#imessage {content: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.NnBNOgtcZaNzLp_-rnbtjgAAAA%26pid%3DApi&f=1&ipt=bf105dcd1a14ee8d2d6542fd07662c8260fb3419525c153845e7749eb8a46836&ipo=images'); height: 60px; width: 110px;  margin: 0px 0px 20px 125px;}
+#signal {content: url('https://www.signal.org/assets/header/logo-f7ef605fe417d5520d38d546b3b774b4261c75220b9904da4d8b2ffc19a761ff.png'); height: 55px; width: 155px;}
+
+#noaccent:hover {
+  border-bottom: transparent !important;
+}
+
+
+.arrow {
+  cursor: pointer;
+  height: 120px;
+  margin-left: 310px;
+  position: absolute;
+  margin-top: -190px;
+  transform: translateX(-50%) translateY(-50%);
+  transition: transform .1s;
+  width: 100px;
+  z-index: 2;
+  
+  &-top,
+  &-bottom {
+    background-color: #437dfa;
+    opacity: .1;
+    height: 5px;
+    left: -5px;
+    position: absolute;
+    top: 50%;
+    width: 99%;
+    
+    &:after {
+      background-color: #fff;
+      content: '';
+      height: 100%;
+      position: absolute;
+      top: 0;
+    }
+  }
+  
+  &-top {
+    transform: rotate(60deg);
+    transform-origin: bottom right;
+    border-radius: 20px 0px 20px 0px;
+    
+    &:after {
+      left: 100%;
+      right: 0;
+
+    }
+  }
+  
+  &-bottom {
+    transform: rotate(-60deg);
+    transform-origin: top right;
+    border-radius: 0px 20px 0px 20px;
+    
+    &:after {
+      left: 0;
+      right: 100%;
+
+    }
+  }
+}
 
 
 /* ***************************** */
