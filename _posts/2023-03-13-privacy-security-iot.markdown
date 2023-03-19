@@ -16,6 +16,7 @@ author: "Karie Moorman"
 <h3>Table of Contents</h3>
 <div>
 <ul>
+<li><a href='#msg'>Messaging</a></li>
 <li><a href='#email'>Email Applications</a></li>
 <li><a href='#browser'>Web Browsers</a></li>
 <li><a href='#search'>Search Engines</a></li>
@@ -28,6 +29,43 @@ author: "Karie Moorman"
 </div>
 
 ---
+
+<h3 id='msg'>Messaging</h3>
+<div class='content-pad' style='padding-bottom: 12px;'>
+<div class='brand'><a href='https://signal.org/' target="_blank">Signal</a></div>
+<div><p>To limit your accessible data footprint, transition from current messaging applications to <a href='https://signal.org/' target='_blank'>Signal</a>. Reason? E2E Encryption and privacy protection.</p><p>SMS communications are unencrypted, allowing anyone to intercept and read communications between parties without issue. In contrast, Signal ensures privacy and security for messages, calls, and video chats via E2E encryption both at-rest (i.e., messages stored on your phone or desktop application) and in-transit (i.e., while sending and receiving communications). Further, Signal does not breach customer privacy and security by decrypting, data mining, and/or sharing communications to others (i.e., law enforcement). This makes Signal an optimal choice for anyone engaging in digital communication today.</p></div>
+<div style='display: block; min-height: 200px; margin: 30px 30px 20px 30px; box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(3, 116, 225, 0.15) 0px -2px 6px 0px inset;'>
+<div class='post-container-grid-2' style='column-gap: 30px; '>
+<div class='p-item1'><!--style='text-align: center;'>-->
+
+<div style='background-color:transparent;'><a id='noaccent' href='https://www.whatsapp.com/' target='_blank' ><img id='whatsapp' ></a></div>
+<div style='background-color:transparent;'><a id='noaccent' href='https://www.messenger.com/?_rdr' target='_blank'><img id='fbmess'></a></div>
+<div style='background-color:transparent;'><a id='noaccent' href='https://www.snapchat.com/' target='_blank'><img id='snapchat'></a></div>
+<div style='background-color:transparent;'><a id='noaccent' href='https://telegram.org/' target='_blank'><img id='telegram'></a></div>
+<div style='background-color:transparent;'><a id='noaccent' href='https://apps.apple.com/us/app/messages/id1146560473' target='_blank'><img id='imessage'></a></div>
+<div class="arrow"><div class="arrow-top"></div><div class="arrow-bottom"></div></div>
+<div class="arrow" style='margin-left: 314px'><div class="arrow-top" style='opacity:.2;'></div><div class="arrow-bottom" style='opacity:.2'></div></div>
+<div class="arrow" style='margin-left: 318px'><div class="arrow-top" style='opacity:.3'></div><div class="arrow-bottom" style='opacity:.3'></div></div>
+<div class="arrow" style='margin-left: 322px'><div class="arrow-top" style='opacity:.4'></div><div class="arrow-bottom" style='opacity:.4'></div></div>
+<div class="arrow" style='margin-left: 326px'><div class="arrow-top" style='opacity:.5'></div><div class="arrow-bottom" style='opacity:.5'></div></div>
+<div class="arrow" style='margin-left: 330px'><div class="arrow-top" style='opacity:.6'></div><div class="arrow-bottom" style='opacity:.6'></div></div>
+<div class="arrow" style='margin-left: 334px'><div class="arrow-top" style='opacity:.7'></div><div class="arrow-bottom" style='opacity:.7'></div></div>
+<div class="arrow" style='margin-left: 338px'><div class="arrow-top" style='opacity:.8'></div><div class="arrow-bottom" style='opacity:.8'></div></div>
+<div class="arrow" style='margin-left: 342px'><div class="arrow-top" style='opacity:.9'></div><div class="arrow-bottom" style='opacity:.9'></div></div>
+<div class="arrow" style='margin-left: 346px'><div class="arrow-top" style='opacity:1'></div><div class="arrow-bottom" style='opacity:1'></div></div>
+<div class="arrow" style='margin-left: 350px'><div class="arrow-top" style='opacity:1'></div><div class="arrow-bottom" style='opacity:1'></div></div>
+</div>
+<div class='p-item2' style='text-align: center; align-self:center;'>
+<div style='background-color:transparent;'><a id='noaccent' href='https://signal.org/' target='_blank'><img id='signal'></a></div>
+</div>
+</div>
+</div>
+</div>
+
+<br>
+
+---
+
 <h3 id='email'>Email Applications</h3>
 <div class='content-pad' style='padding-bottom: 12px;'>
 <div class='brand'><a href='https://proton.me/mail' target="_blank">ProtonMail</a></div>
@@ -51,7 +89,7 @@ author: "Karie Moorman"
 <div>
 <p>A quick comparison with the status quo shows ProtonMail outperforming Gmail in privacy and security measures, from the most basic to the advanced. ProtonMail has suffered only one reported CVE (Common Vulnerabilities and Exposures), while Google Gmail has suffered more than 15 publicly reported vulnerabilities. Proton has endured no Antitrust investigations, while Google has commanded an astounding 10+ Antitrust lawsuits across the US, the UK, and the EU, related to Advertising (learn more <a href='https://www.investopedia.com/terms/a/antitrust.asp' target="_blank">here</a>).</p>
 </div>
-<div style=" margin: 30px 0 30px 0px;">
+<div style=" margin: 30px 5px 30px 0px;">
 <center><table>
    <thead>
       <tr>
@@ -105,7 +143,7 @@ author: "Karie Moorman"
 </table></center>
 </div>
 <div>
-<p>Companies such as Proton, FastMail, and HushMail ensure our private identities and electronic communications stay private. In contrast, companies such as Google and Microsoft amplify their profits and our personal risk by mining our personal email data (learn more <a href='https://www.theguardian.com/technology/2021/may/09/how-private-is-your-gmail-and-should-you-switch' target="_blank">here</a> and <a href='https://www.lifewire.com/find-out-who-or-what-is-accessing-your-gmail-1171930' target="_blank">here</a>).</p>
+<p>Companies such as Proton, FastMail, and HushMail ensure our private identities and electronic communications stay private. In contrast, companies such as Google<a href='https://www.bleepingcomputer.com/news/security/google-smtp-relay-service-abused-for-sending-phishing-emails/' target='_blank'>[1]</a><a href='https://www.bleepingcomputer.com/news/security/cyberspies-use-google-chrome-extension-to-steal-emails-undetected/' target='_blank'>[2]</a> and Microsoft<a href='https://thehackernews.com/2023/03/microsoft-rolls-out-patches-for-80-new.html' target='_blank'>[1]</a><a href='https://thehackernews.com/2023/03/microsoft-warns-of-large-scale-use-of.html' target='_blank'>[2]</a><a href='https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-outlook-zero-day-used-by-russian-hackers-since-april-2022/' target='_blank'>[3]</a> amplify their profits and our personal risk by mining our personal email data (learn more <a href='https://www.theguardian.com/technology/2021/may/09/how-private-is-your-gmail-and-should-you-switch' target="_blank">here</a> and <a href='https://www.lifewire.com/find-out-who-or-what-is-accessing-your-gmail-1171930' target="_blank">here</a>).</p>
 <p>In the United States there exists no mandatory reporting regiment for CVEs today; only "good-faith." It is up to the company and/or the discoverer to make public any discovered vulnerabilites and exposures. When companies such as Google and Microsoft choose not to announce a vulnerability (let's say, it's ongoing and they are still trying to identify the root-cause and push a fix), we end-users don't know we are exposed. For the company this amounts to a trouble ticket and an escalation. For end-users this amounts to identity theft.</p>
 </div>
 </div>
@@ -259,6 +297,7 @@ URL: https://hn.algolia.com/?dateRange=all&page=0&prefix=false&query=%s&sort=byD
 
 <p>MFA can take the form of SMS (text message), a software application (e.g., an authenticator app), and/or a hardware device (e.g., a yubikey). 2FA via SMS is prone to security issues, as text messages are unencrypted and able to be intercepted with little to no effort. Because the objective is to increase our online security, is not advised to use SMS as the 2FA solution. Instead, we will choose as our MFA mechanism either the authenticator app or hardware authentication solution.</p> 
 
+<p><i>Note: MFA is not fool-proof. Learn about MFA blind-spots <a href='https://thehackernews.com/2023/03/when-partial-protection-is-zero.html' target='_blank'>here</a>.</i></p>
 
 <div class='brand'><a href='https://authy.com/' target="_blank">Authy</a></div>
 <div>
@@ -313,6 +352,8 @@ Teamviewer | Ebay |  DocuSign | Tesla | Salesforce | Shopify</code>
 <p>Bitwarden offers native desktop applications for macOS, Windows, and Linux, and native mobile applications for Android and iOS. Bitwarden also offers browser extension support for Chrome, Edge, Firefox, Opera, Safari, Vivaldi, Brave, and Tor Browsers. Users can leverage Bitwarden web interface, desktop/mobile application, and/or browser extension to create and edit entries in their password vault.</p>
 
 <p>Bitwarden offers both free and paid service tiers. The Free tier includes a password generator, credential sharing, and the option to self-host. With the Free tier users can sync an unlimited number of password vault items across multiple devices. For most users, the free service tier is sufficient.</p>
+
+<p><i>Note: Be sure to choose a long passphrase as a PIN (i.e., don't choose a 4-6 alphanumeric value). Learn more about brute-forcing Bitwarden PINs <a href='https://news.ycombinator.com/item?id=35219281'>here</a>.</i></p>
 </div>
 <div style='padding-top: 10px;'>
 <h4>Other Notable Options:</h4>
@@ -334,7 +375,7 @@ Teamviewer | Ebay |  DocuSign | Tesla | Salesforce | Shopify</code>
 </ul>
 <p>VPNs protect us when connecting to public WiFi networks (e.g., Starbucks, the airport, by accident when our smartphones are set to WiFi -> ON + Autoconnect). VPNs also limit the amount of data our internet service provider (ISP) can reliably gather (and sell) about our internet usage.</p> 
 
-<p>Note: VPNs are not free.</p>
+<p><i>Note: VPNs are not free.</i></p>
 </div>
 <div style='padding-top: 10px;'>
 <h4>Notable VPN Service Options:</h4>
@@ -357,7 +398,7 @@ Teamviewer | Ebay |  DocuSign | Tesla | Salesforce | Shopify</code>
 <summary> <strong>Why suggest internet users avoid Google Chrome?</strong> </summary>
 
 <strong>Why?</strong>
-  <p>Malware in Google Ads and Search results.</p>
+  <p>Malware in Google Ads and Search results. Oh, and password mining <a href='https://www.bleepingcomputer.com/news/security/google-microsoft-can-get-your-passwords-via-web-browsers-spellcheck/' target='_blank'>[1]</a>.</p>
 <strong>What do you mean?</strong>
 <p>Ads dominate Google search results; it's how they make so much money every  year. Many of those ads contain malware.</p>
 <strong>Okay, but... How?</strong>
@@ -428,4 +469,9 @@ Teamviewer | Ebay |  DocuSign | Tesla | Salesforce | Shopify</code>
 <p>Yes, there are many (e.g., Stripe: js.stripe.com). It is safe to assume everywhere we go on the internet, there are tracking objects (e.g., session cookie and/or json web token (JWT)) actively attempting to connect to our device(s) for the purpose of harvesting our user interaction data, along with all our activity across our browser(s) and any open apps. This is why it is important to make use of Adblocker software as soon as possible, on all devices (e.g., smartphones, computers).</p>
 </details>
 
+</div>
+
+---
+<div style='padding-top: 15px;'>
+<p>[19 March 2023] <i>Update: Added additional links and Messaging section.</i></p>
 </div>
