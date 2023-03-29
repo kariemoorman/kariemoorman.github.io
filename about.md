@@ -68,7 +68,7 @@ permalink: /about/
 
 <div class="manual-content h-min item2">
 <div class="manual-subtitle">Karuk Language Project</div>
-<div class='img'><a href="https://www.karuk.us/index.php/departments/language-program" target="_blank"><img id='karuk'></a></div>
+<div class='img'><a href="https://linguistics.berkeley.edu/~karuk/index.php" target="_blank"><img id='karuk'></a></div>
 <div><p>The <a href="http://linguistics.berkeley.edu/~karuk/resources.php" target="_blank">Karuk Language Project</a> is a language documentation and revitalization effort in collaborative with the Karuk Tribe and the Survey of California and Other Indian Languages at UC Berkeley. The effort includes digitization of field notes and learning about the Karuk language and culture through linguistic research and teaching.</p></div>
 </div>
 </div>
