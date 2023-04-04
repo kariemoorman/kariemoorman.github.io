@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: blog-archive
 title: Blog
 description: Coming Soon...
 permalink: /blog/

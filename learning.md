@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: edu-archive
 title: Learning
 description: Coming Soon...
 permalink: /learning/
