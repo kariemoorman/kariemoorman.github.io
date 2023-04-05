@@ -2,8 +2,8 @@
 layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-
-<header class="post-header">
+    <div class="post-content-container">
+<header class="post-header" style="padding-top:25px;">
 <div class="post-title" itemprop="name headline"><a class="post-title-link"  href="{{page.url}}">{{ page.title }}</a></div>
 
 
@@ -18,10 +18,11 @@ layout: default
   {% endif %} -->
 
 
-<div style = 'display:inline-block; font-weight: 400;'>
+<div style = 'display:inline-block; font-weight: 400; font-size: 15px; '>
+    
 {%if page.tags %}
 {% for tag in page.tags %}
-<span style="background-color:rgb(223, 243, 250, .5);">
+<span style="background-color:rgba(249, 251, 252, 0.5);">
   &nbsp; #{{ tag }}  &nbsp;
 </span> &nbsp;
 {%endfor%}
@@ -31,8 +32,8 @@ layout: default
 </header>
 
 
-<div class="post-content-container">
-<div class="post-content" itemprop="articleBody">
+
+<div itemprop="articleBody">
 <div style="padding: 15px 10px 12px 10px;">{{ content }}</div>
 </div>
 

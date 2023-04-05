@@ -4,6 +4,7 @@ title: CV
 permalink: /resume/
 ---
 
+<div style='padding-top: 15px;'>
 <div class='manual-container'>
 <div layout="vertical" layout-fill>
 <md-content>
@@ -17,5 +18,6 @@ permalink: /resume/
 <br/>
 </section>
 </md-content>
+</div>
 </div>
 </div>
