@@ -3,7 +3,7 @@ layout: learning
 title:  "Long Longer and more Longer titles look cool too!!"
 subtitle: "Apps, services, & other tools I find helpful"
 date:   2016-03-30 19:45:31 +0530
-categories: ["education"]
+categories: ["test"]
 tags: ["html", "css"]
 author: "Chandler Bing"
 ---

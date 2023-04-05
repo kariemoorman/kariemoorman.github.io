@@ -2,8 +2,8 @@
 layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-
-<header class="post-header">
+  <div class="post-content-container">
+<header class="post-header" style="padding-top:25px;">
 <div class="post-title" itemprop="name headline"><a class="post-title-link"  href="{{page.url}}">{{ page.title }}</a></div>
 
 
@@ -18,11 +18,12 @@ layout: default
   {% endif %}
 
 
-<div style = 'display:inline-block; font-weight: 400;'>
+<div style = 'display:inline-block; font-weight: 400; font-size: 15px;'>
+  Tags:
 {%if page.categories %}
 {% for cat in page.categories %}
-<span style="background-color:rgb(223, 243, 250, .5);">
-  &nbsp; {{ cat }}  &nbsp;
+<span style="background-color:rgb(249, 251, 252, .5); ">
+  &nbsp; #{{ cat }}  &nbsp;
 </span> &nbsp;
 {%endfor%}
 {% endif %}
@@ -30,12 +31,12 @@ layout: default
 </center>
 </header>
 
+<hr style="background-color:lightgrey !important; height: 1.2px; ">
 
-<div class="post-content-container">
 <div class="post-content" itemprop="articleBody">
 <div style="padding: 15px 10px 12px 10px;">{{ content }}</div>
 </div>
-
+ <!--
 <footer class="postNavigation">
   {% if page.previous.url %}
     <a class="postPrev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
@@ -44,6 +45,7 @@ layout: default
     <a class="postNext" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
   {% endif %}
 </footer>
+-->
 </div>
 
 </article>
