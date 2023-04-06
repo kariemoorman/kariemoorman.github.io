@@ -7,6 +7,7 @@
 ;
 
 
+
 /* ***************************** */
 /* ******** SITE HEADER ******** */
 /* ***************************** */
@@ -74,9 +75,10 @@
    }
 .page-tagline {
     font-size: 18px;
-    font-family: "PT Sans";
+    font-family: "Josefin Sans";
     text-align: center;
     text-transform: lowercase;
+    font-size: 300;
    }
 .site-nav {
     .page-link {
@@ -132,7 +134,7 @@
     width: 80%;
     min-height: 200px;
     margin: 0 auto;
-    background-color: #fbf7e8; /*rgba(172, 170, 170, 0.19);*/
+    background-color: #eeeeeedb; // #fbf7e8; /*rgba(172, 170, 170, 0.19);*/
     border-radius: 35px 0 35px 0;
     box-shadow: 1px 1px 15px 2px lightsteelblue; /* #f3e1e1bb; */
     margin-top: 4rem;
@@ -156,7 +158,8 @@
     height: 200px;
     width: 170px;
    /* float: left; */
-    background-color: RGBA(0, 128,128, .5) ;/* RGBA(0, 128, 128, .5); */
+    //background-color: rgba(0, 128,128, .5) ;/* RGBA(0, 128, 128, .5); */
+    background-color: rgba(22,83,126, 0.5) ;/* RGBA(0, 128, 128, .5); */
     padding: 7px;
     border: .2px solid #e3d2d2; 
     box-shadow: 1px 1px 15px 4px #e3d2d2;
@@ -237,7 +240,7 @@
   
 .manual-content {
     padding: 15px 10px;
-    background-color: #fbf7e8; /*  #efefef; */
+    background-color:  #eeeeeedb; // #fbf7e8; /*  #efefef; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
     }
 .manual-content.h-min {
@@ -295,14 +298,20 @@
     margin-top: 60px;
   }
   .archive-list {
-    padding:  10px 7px 10px 7px;
-    background-color: rgba(160, 160, 160, 0.1);
+    padding:  10px 7px 7px 7px;
+    //background-color: rgba(160, 160, 160, 0.1);
+    background-color: #eeeeee44; // rgba(238, 238, 238, 0.25);
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
     border: 0.5px solid lightgrey;
-    border-top: 0.5px solid $l-background-color; 
+    //border-top: 0.5px solid $l-background-color; 
+    border-top: none;
   }
   .archive-list:hover {
-    background-color: rgba(167, 167, 167, 0.2);
+    //background-color: rgba(167, 167, 167, 0.2);
+    //background-color: rgba(58, 66, 230, 0.25);
+    background-color: rgba(55, 80, 144, 0.1);
+    background-image: radial-gradient( rgba(222, 223, 224, 0.35) 10%, transparent 73%);
+    background-size: 5px 5px;
   }
   .archive-intro {
     font-size: 14px;
@@ -310,6 +319,73 @@
     letter-spacing: 2px;
     text-indent: 2px;
   }
+
+/* ***************************** */
+/* ***** EDUCATION ARCHIVE ***** */
+/* ***************************** */
+.edu-archive-grid {
+  display: grid; 
+  grid-template-columns: 45% 45%;
+  grid-gap: $spacing-unit - 10px;
+}
+.edu-archive-list {
+  padding:  10px 5px 10px 5px;
+  background-color: rgba(148, 168, 196, 0.35);// rgba(238, 238, 238, 0.5); // rgba(235, 225, 206, 0.4);
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
+  border: 0.5px solid $d-grey-color-light;
+  //border-top: 0.5px solid $l-background-color; 
+  border-radius: 15px;
+
+}
+.edu-archive-list:hover {
+  background-color: rgba(233, 216, 186, 0.687);// rgba(49, 14, 127, 0.27);
+  background-image: radial-gradient(circle, rgba(248, 222, 131, 0.2) 13%, transparent 30%), radial-gradient(circle, rgba(248, 222, 131, 0.2) 13%, transparent 30%);
+  background-size: 5px 5px;
+  background-position: 0 0, 7px 7px;
+  
+}
+.eduTitle { 
+  color: $l-text-color !important;
+  font-weight: 400;
+  font-size: 20px;
+  @include media-query($on-laptop) {
+    font-size: 19px;
+  }
+  text-align: left;
+  text-transform: uppercase;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  letter-spacing: 1px;
+  display: block;
+  position: static;
+  padding-left: 2px;
+}
+.eduSubtitle {
+  color: $l-text-color !important;
+  font-weight: 300;
+  font-size: 16px;
+  @include media-query($on-laptop) {
+    font-size: 15px;
+  }
+  text-align: left;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  display: block;
+  position: static;
+  padding-left: 2px;
+}
+.eduTag {
+  //display: block;
+  color: $l-text-color !important;
+  position: static;
+  font-weight: 400; 
+  font-size: 15px; 
+  @include media-query($on-laptop) {
+    font-size: 14px;
+  }
+  text-align: center;
+  padding-top: 5px;
+}
 
 /* ***************************** */
 /* ******** BLOG POSTS ********* */
@@ -385,15 +461,15 @@
 
 .post-content-container {
     width: 100%; 
-    background-color: #fdfcfb ; // #fdfdfd;  
+    background-color: rgba(223, 226, 230, 0.88) ; // rgb(237, 241, 243) ; // rgb(227, 233, 242) ;// #f4efea; // #fdfcfb ; // #fdfdfd;  
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
     }
 .post-content-container {
     padding-bottom: 10px;
     p {
-      font-size: 17px;
+      font-size: 16px;
       @include media-query($on-laptop) {
-        font-size: 16px;
+        font-size: 15px;
       }
     }
     h2 {
@@ -417,6 +493,12 @@
         font-size: 17px;
       }
     }
+    ul li {
+    font-size: 16px;
+    @include media-query($on-laptop) {
+      font-size: 15px;
+    }
+  }
 }
 
 .content-pad {
@@ -454,6 +536,11 @@
   .post-content-container .brand {
     padding-top: 10px;
     padding-bottom: 7px;
+  }
+
+  .post-content-container .tbl ul li {
+    font-size: 18px;
+    font-weight: 400;
   }
 
   .post-content-container .brand a {
@@ -494,6 +581,7 @@
 
 .post-content-container ul li a:hover {
     font-weight: 500;
+    font-size: 19px;
     color: $l-brand-color !important;
 }
 
@@ -523,7 +611,7 @@
 }
 .post-content-container th {background-color: #c2c2c2;}
 .post-content-container tr:nth-child(even) {background-color: #f2f2f2;}
-
+.post-content-container tr:nth-child(odd) {background-color: #fff;}
 .post-content-container tr:hover {background-color: rgb(233, 240, 250);}
 
 
@@ -617,12 +705,18 @@
 /* ************ CV ************* */
 /* ***************************** */
 #cv {
-    background-color: wheat;
+    //background-color: wheat;
     text-align: center;
     width: 80%;
     min-height: 600px;
     max-height: 800px;
-  } 
+    background-color: rgba(152, 173, 188, 0.8);
+    border: 0.5px solid lightgrey;
+    background-image: radial-gradient(circle, rgba(248, 249, 250, 0.2) 13%, transparent 60%), radial-gradient(circle, rgba(72, 82, 88, 0.2) 13%, transparent 70%);
+    background-size: 5px 5px;
+    background-position: 0 0, 7px 7px;
+    padding:40px ;
+    } 
  
 
 /* ***************************** */
