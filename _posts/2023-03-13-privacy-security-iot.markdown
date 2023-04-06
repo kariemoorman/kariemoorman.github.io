@@ -7,14 +7,15 @@ categories: ["tech", "privacy", "security", "password", "mfa", "vpn", "adblock"]
 author: "Karie Moorman"
 ---
 <div class='content-pad'>
-<article class="drop-cap"><p>Using the internet can be a real drag. Big tech spies tracking our every move, malware landmines planted in every search query, hackers ready to pounce on every website we select. It's 2023: We internet users endure less privacy, less security, and more surveillance than ever before. Yet we continue to receive little to no warning when vulnerabilities arise, and we are offered little to no compensation for all our data. The risk, while it's become the norm, is hardly worth the reward.</p>
+<article class="drop-cap"><p>Using the internet can be a real drag. Big tech spies tracking our every move, malware landmines planted in every search query, hackers ready to pounce on every website we select. It's 2023: we internet users endure less privacy, less security, and more surveillance than ever before. Yet we continue to receive little to no warning when vulnerabilities arise, and we are offered little to no compensation for all our data. The risk, while it's become the norm, is hardly worth the reward.</p>
 <p>Below are some simple tips we can use to reduce the impact of big tech spies in our day-to-day lives.</p>
 </article>
 </div>
 
 ---
+
 <h3>Table of Contents</h3>
-<div>
+<div class='tbl'>
 <ul>
 <li><a href='#msg'>Messaging</a></li>
 <li><a href='#email'>Email Applications</a></li>
@@ -34,7 +35,7 @@ author: "Karie Moorman"
 <div class='content-pad' style='padding-bottom: 12px;'>
 <div class='brand'><a href='https://signal.org/' target="_blank">Signal</a></div>
 <div><p>To limit your accessible data footprint, transition from current messaging applications to <a href='https://signal.org/' target='_blank'>Signal</a>. Reason? E2E Encryption and privacy protection.</p><p>SMS communications are unencrypted, allowing anyone to intercept and read communications between parties without issue. In contrast, Signal ensures privacy and security for messages, calls, and video chats via E2E encryption both at-rest (i.e., messages stored on your phone or desktop application) and in-transit (i.e., while sending and receiving communications). Further, Signal does not breach customer privacy and security by decrypting, data mining, and/or sharing communications to others (i.e., law enforcement). This makes Signal an optimal choice for anyone engaging in digital communication today.</p></div>
-<div style='display: block; min-height: 200px; margin: 30px 30px 20px 30px; box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(3, 116, 225, 0.15) 0px -2px 6px 0px inset;'>
+<div style='display: block; min-height: 200px; margin: 30px 30px 20px 30px; box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(3, 116, 225, 0.15) 0px -2px 6px 0px inset; background-color: #fff;'>
 <div class='post-container-grid-2' style='column-gap: 30px; '>
 <div class='p-item1'><!--style='text-align: center;'>-->
 
@@ -304,14 +305,14 @@ URL: https://hn.algolia.com/?dateRange=all&page=0&prefix=false&query=%s&sort=byD
 <p>Authy is a free two-factor authentication application developed by Twilio. For a given account, Authy generates time-sensitive codes locally, on your device, based on a secret key. Authy is available for use on both mobile and desktop devices: iOS, Android, Windows, Mac, and Linux.</p>
 
 <p>Authy supports 2FA for many <a href='https://authy.com/guides/' target="_blank">applications/services</a> including: </p>
-
+<center>
 <pre>
 <code>LinkedIn | PayPal | Reddit | Binance | Uber | Grammarly | MailChimp
 Bitwarden | Amazon | Facebook | Instagram | Dropbox | Box | Cloudflare
 Slack | Twitter | FastMail | ProtonMail | Gmail | GitHub | Microsoft
 SnapChat | Teamviewer | Twitch | Pinterest | Apple | EverNote | Discord</code>
 </pre>
-
+</center>
 <p>Learn more about Authy <a href='https://www.nytimes.com/wirecutter/reviews/best-two-factor-authentication-app/' target="_blank">here</a>.</p>
 </div>
 
@@ -322,7 +323,7 @@ SnapChat | Teamviewer | Twitch | Pinterest | Apple | EverNote | Discord</code>
 <p>2FA via apps and SMS, while an improvement to the alternative (single-authentication), remain vulnerable to time-delay attacks. Yubikey offers an additional level of robustness, as it can protect users from phishing and advanced man-in-the-middle attacks, e.g., attacks in which a person or maligning process attempts to intercept the two-factor authentication as it is entered and processed. Yubikeys are tech industry standard.</p>
 
 <p>Yubikey supports 2FA for many <a href='https://www.yubico.com/quiz/' target="_blank">applications/services</a> including:</p>
-
+<center>
 <pre>
 <code>AWS (IAM) | Google | Microsoft | Apple | Brave | Oracle
 Dropbox | 1Password | Bitwarden | Duo | Cloudflare | Linux
@@ -330,7 +331,7 @@ ProtonMail | FastMail | GitHub | GitLab | Reddit | Drupal
 Binance | Kraken | Facebook | Twitter | Instagram | Twitch
 Teamviewer | Ebay |  DocuSign | Tesla | Salesforce | Shopify</code>
 </pre>
-
+</center>
 
 <p>Learn more about Yubikey <a href='https://zapier.com/blog/what-is-a-yubikey/' target="_blank">here</a>.</p>
 </div>
@@ -408,7 +409,7 @@ Teamviewer | Ebay |  DocuSign | Tesla | Salesforce | Shopify</code>
 <strong>You actually contacted Google? What did Google say?</strong>
 <p>Google referred me to their privacy and security URLs, and suggested I have my lawyer contact them if needed.</p>
 <strong>Wow, that's extremely unhelpful, and doesn't really address your credible concern. Did Google ever fix the issues?</strong>
-<p>Unfortunately, no. As of March 2023, the vulnerability is still ongoing.</p>
+<p>Unfortunately, no. As of April 2023 <a href='https://archive.ph/VgiM4'target="_blank">[1]</a>, the vulnerability is still ongoing.</p>
 <strong>What?! How scary! Do you know how many people use Google Chrome?</strong>
 <p>As a matter of fact, Google itself estimates 2.65 billion internet users use Chrome as their primary web browser in 2022 <a href='https://backlinko.com/chrome-users#chrome-stats' target="_blank">[1]</a>.</p>
 <strong>That is a huge number of impacted people to leave vulnerable. Is anyone taking action?!</strong>
@@ -470,6 +471,7 @@ Teamviewer | Ebay |  DocuSign | Tesla | Salesforce | Shopify</code>
 </details>
 
 </div>
+<br>
 
 ---
 <div style='padding-top: 15px;'>
