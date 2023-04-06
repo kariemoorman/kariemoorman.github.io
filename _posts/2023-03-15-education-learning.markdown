@@ -3,7 +3,7 @@ layout: learning
 title:  "LeetCode: Easy Examples"
 subtitle: "Apps, services, & other tools I find helpful"
 date: 2023-03-13 15:45:31 +0530
-categories: ["education"]
+categories: ["test"]
 tags: ["js", "python"]
 author: "Karie Moorman"
 ---
