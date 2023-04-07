@@ -409,7 +409,7 @@ Teamviewer | Ebay |  DocuSign | Tesla | Salesforce | Shopify</code>
 <strong>You actually contacted Google? What did Google say?</strong>
 <p>Google referred me to their privacy and security URLs, and suggested I have my lawyer contact them if needed.</p>
 <strong>Wow, that's extremely unhelpful, and doesn't really address your credible concern. Did Google ever fix the issues?</strong>
-<p>Unfortunately, no. As of April 2023 <a href='https://archive.ph/VgiM4'target="_blank">[1]</a>, the vulnerability is still ongoing.</p>
+<p>Unfortunately, no. As of April 2023 <a href='https://archive.ph/VgiM4' target="_blank">[1]</a>, the vulnerability is still ongoing.</p>
 <strong>What?! How scary! Do you know how many people use Google Chrome?</strong>
 <p>As a matter of fact, Google itself estimates 2.65 billion internet users use Chrome as their primary web browser in 2022 <a href='https://backlinko.com/chrome-users#chrome-stats' target="_blank">[1]</a>.</p>
 <strong>That is a huge number of impacted people to leave vulnerable. Is anyone taking action?!</strong>
