@@ -155,6 +155,9 @@ author: "Karie Moorman"
 <h3 id='browser'>Web Browsers</h3>
 
 <i>DO NOT use Google Chrome (see [FAQs](#faq)).</i>
+
+<i>UPDATE: As of 14 April 2023, Google has finally "discovered" the issue reported to them in December 2022 (<a href='https://www.bleepingcomputer.com/news/security/google-chrome-emergency-update-fixes-first-zero-day-of-2023/' target="_blank">CVE-2022-4262 | CVE-2023-2033</a>).</i>
+
 <div class='content-pad'>
 <div class='brand'><a href='https://www.mozilla.org/en-US/firefox/new/' target="_blank">Mozilla Firefox</a></div>
 <p>Mozilla Firefox is a fast, private & safe web browser suitable for Windows, MacOS and Linux operating systems. Firefox is developed and maintained by the Mozilla Foundation, an actual non-profit organization that actively supports online privacy & security, trustworthy artificial intelligence (AI), and accountability for big tech corporations. Mozilla puts people before profit; they create products, technologies and programs that make the internet healthier for everyone. Firefox is ethical, open-source, and customizable. And, it's free.</p>
@@ -172,6 +175,10 @@ author: "Karie Moorman"
 <h3 id='search'>Search Engines</h3>
 
 <i>DO NOT use Google Chrome (see [FAQs](#faq)).</i>
+
+
+<i>UPDATE: As of 14 April 2023, Google has finally "discovered" the issue reported to them in December 2022 (<a href='https://www.bleepingcomputer.com/news/security/google-chrome-emergency-update-fixes-first-zero-day-of-2023/' target="_blank">CVE-2022-4262 | CVE-2023-2033</a>).</i>
+
 <div class='content-pad'>
 <div class='brand'><a href='https://www.mozilla.org/en-US/firefox/new/' target="_blank">Firefox</a></div>
 <div>
