@@ -321,7 +321,15 @@ SnapChat | Teamviewer | Twitch | Pinterest | Apple | EverNote | Discord</code>
 </pre>
 </center>
 <p>Learn more about Authy <a href='https://www.nytimes.com/wirecutter/reviews/best-two-factor-authentication-app/' target="_blank">here</a>.</p>
+   
+<div style='padding-top: 10px;'>
+<h4>Other Notable 2FA Apps:</h4>
+<div id='link'><a href='https://www.androidauthority.com/best-two-factor-authenticator-apps-904743/' target="_blank">Aegis</a> (Android)</div>
+<div id='link'><a href='https://raivo-otp.com/' target="_blank">Raivo</a> (iPhone)</div>
+</div>   
 </div>
+<br>
+<br>
 
 <div class='brand'><a href='https://www.yubico.com/' target="_blank">Yubikey</a></div>
 <div>
@@ -387,9 +395,10 @@ Teamviewer | Ebay |  DocuSign | Tesla | Salesforce | Shopify</code>
 </div>
 <div style='padding-top: 10px;'>
 <h4>Notable VPN Service Options:</h4>
-<div id='link'><a href='https://protonvpn.com/' target="_blank">ProtonVPN</a></div>
-<div id='link'><a href='https://www.expressvpn.com/' target="_blank">ExpressVPN</a></div>
+<div id='link'><a href='https://mullvad.net/' target="_blank">MullvadVPN</a> <a href='https://www.techdirt.com/2023/05/01/cops-raid-swedish-vpn-provider-only-to-find-out-theres-no-there-there/' target="_blank">[1]</a></div>
+<div id='link'><a href='https://protonvpn.com/' target="_blank">ProtonVPN</a> (Free)</div>
 <div id='link'><a href='https://nordvpn.com/' target="_blank">NordVPN</a></div>
+<div id='link'><a href='https://brave.com/firewall-vpn/' target="_blank">BraveVPN</a></div>
 <div id='link'><a href='https://www.mozilla.org/en-US/products/vpn/' target="_blank">MozillaVPN</a></div>
 </div>
 <div style='padding-top: 10px;'>
