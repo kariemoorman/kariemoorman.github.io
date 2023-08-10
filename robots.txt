@@ -1,0 +1,41 @@
+User-agent: * 
+Disallow: /
+
+User-agent: GPTBot 
+Disallow: /
+
+User-agent: Googlebot 
+Disallow: /
+
+User-agent: AdsBot-Google
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SiteAuditBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: SemrushBot-BA
+Disallow: /
+
+User-agent: SemrushBot-SI
+Disallow: /
+
+User-agent: SemrushBot-SWA
+Disallow: /
+
+User-agent: SemrushBot-CT
+Disallow: /
+
+User-agent: SemrushBot-BM
+Disallow: /
+
+User-agent: SplitSignalBot
+Disallow: /
+
+User-agent: SemrushBot-COUB
+Disallow: /
