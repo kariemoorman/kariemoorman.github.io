@@ -11,16 +11,14 @@ layout: default
   {% if page.subtitle %}
   <div class="post-subtitle"><span>{{ page.subtitle }}</span></div>
   {% endif %}
-
   <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></p>
- <!-- {% if page.author %}
+  {% if page.author %}
   <div class="post-author"><span>{{page.author}}</span></div>
-  {% endif %} -->
-
-
+  {% endif %}
 <div style = 'display:inline-block; font-weight: 400; font-size: 15px; '>
     
 {%if page.tags %}
+  Tags:
 {% for tag in page.tags %}
 <span style="background-color:rgba(249, 251, 252, 0.5);">
   &nbsp; #{{ tag }}  &nbsp;
@@ -31,7 +29,7 @@ layout: default
 </center>
 </header>
 
-
+<hr style="background-color:lightgrey !important; height: 1.2px; ">
 
 <div itemprop="articleBody">
 <div style="padding: 15px 10px 12px 10px;">{{ content }}</div>
