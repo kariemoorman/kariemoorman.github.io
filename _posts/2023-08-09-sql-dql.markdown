@@ -38,7 +38,7 @@ author: "Karie Moorman"
 Set theory is a branch of mathematical logic that focuses on the study of sets. Set theory as a framework describes how to logically relate elements within and across sets (or database tables).
 Sets are collections of distinct objects (e.g., fruits, shoes, monthly sales). 
 An element is said to be a member of a set if it is part of the collection represented by that set (e.g., apples, kiwis, and bananas are all elements of the set Fruit).
-A set is considered a subset of another set if every element is included across both sets (e.g., Dogs is a subset of Mammals). A set is considered a superset if it contains all the elements of a subset and more (e.g., Mammals is a superset of Dogs). Sets are considered empty if they no elements. Empty sets are different from non-existent sets (i.e., a set that itself does not exist).
+A set is considered a subset of another set if every element is included across both sets (e.g., Dogs is a subset of Mammals). A set is considered a superset if it contains all the elements of a subset and more (e.g., Mammals is a superset of Dogs). Sets are considered empty if they contain no elements. Empty sets are different from non-existent sets (i.e., a set that itself does not exist).
 </p>
 </div>
 
