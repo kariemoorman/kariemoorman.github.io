@@ -327,6 +327,7 @@
   display: grid; 
   grid-template-columns: 45% 45%;
   grid-gap: $spacing-unit - 10px;
+  padding-left: 40px;
 }
 .edu-archive-list {
   padding:  10px 5px 10px 5px;
@@ -338,7 +339,7 @@
 
 }
 .edu-archive-list:hover {
-  background-color: rgba(233, 216, 186, 0.687);// rgba(49, 14, 127, 0.27);
+  background-color: rgba(238, 227, 207, 0.687);// rgba(49, 14, 127, 0.27);
   background-image: radial-gradient(circle, rgba(248, 222, 131, 0.2) 13%, transparent 30%), radial-gradient(circle, rgba(248, 222, 131, 0.2) 13%, transparent 30%);
   background-size: 5px 5px;
   background-position: 0 0, 7px 7px;
@@ -387,6 +388,7 @@
   padding-top: 5px;
 }
 
+
 /* ***************************** */
 /* ******** BLOG POSTS ********* */
 /* ***************************** */
@@ -395,7 +397,8 @@
     margin-bottom: $spacing-unit ;
   }
 .post-title {
-    font-size: 50px;
+    margin: 1px;
+    font-size: 48px;
     text-align: center;
     font-family: "Josefin Sans";
     font-weight: 700;
@@ -586,7 +589,7 @@
 }
 
 .post-content-container table {
-    width: 60%;
+    width: 90%;
     //align-items: center;
     //justify-content: center;
 }
