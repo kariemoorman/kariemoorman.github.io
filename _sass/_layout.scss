@@ -389,6 +389,62 @@
 }
 
 
+
+.carousel-container {
+  text-align: center;
+  background-color: rgb(75, 74, 74);
+  padding: 5px;
+  position: relative;
+}
+.carousel-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+  padding: 5px;
+  background-color: gray;
+}
+.carousel-images .image {
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+.carousel-images .image img {
+  width: 90px; /* Adjust image width as needed */
+  height: 70px;
+}
+.carousel-images .image:hover {
+  opacity: 1;
+}
+.carousel-main {
+  position: relative;
+  // width: 410px;
+  // height: 410px;
+}
+.main-image {
+  width: 400px; /* Adjust image width as needed */
+  height: 60%;
+  max-height: 400px;
+  max-width: 80%;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  // object-fit: contain;
+  cursor: pointer;
+  
+}
+.image-title {
+  text-align:center;
+  font-size: 20px;
+  margin-top: 5px;
+  color: white;
+
+
+}
+
+
+
+
 /* ***************************** */
 /* ******** BLOG POSTS ********* */
 /* ***************************** */
@@ -544,6 +600,12 @@
   .post-content-container .tbl ul li {
     font-size: 18px;
     font-weight: 400;
+    @include media-query($on-laptop) {
+      font-size: 17px;
+  }
+  @include media-query($on-palm) {
+    font-size: 15px;
+}
   }
 
   .post-content-container .brand a {
@@ -598,10 +660,14 @@
     border-collapse: collapse;
     //padding: 5px;
     padding-left: 5px;
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 1.25;
     @include media-query($on-laptop) {
-        font-size: 16px;
+        font-size: 14px;
     }
+    @include media-query($on-palm) {
+      font-size: 12px;
+  }
   }
 
   .post-content-container table tr a {
