@@ -673,9 +673,10 @@ Note: Gunicorn is often used with [Nginx](https://docs.gunicorn.org/en/stable/de
 
 <h3>Resources</h3>
 <div>
-
+<ul>
 <li>Flask: <a href='https://flask.palletsprojects.com/'>https://flask.palletsprojects.com/</a></li>
 <li>Flask Limiter: <a href='https://flask-limiter.readthedocs.io/en/stable/#rate-limit-key-functions'>https://flask-limiter.readthedocs.io</a></li>
 <li>Gunicorn: <a href='https://gunicorn.org/'>https://gunicorn.org/</a></li>
 <li>WSGI: <a href='https://wsgi.readthedocs.io/'>https://wsgi.readthedocs.io/</a></li>
+</ul>
 </div>
