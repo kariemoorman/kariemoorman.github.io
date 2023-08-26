@@ -1,9 +1,11 @@
 User-agent: * 
 Disallow: /
 
+# OpenAI Web Crawler
 User-agent: GPTBot 
 Disallow: /
 
+# Google Search Engine Robot
 User-agent: Googlebot 
 Disallow: /
 
@@ -46,26 +48,57 @@ Disallow: /
 User-agent: CCbot
 Disallow: /
 
+# Omgili Search Engine Robot
 User-agent: omgilibot
 Disallow: /
 
+# Omgili Search Engine Robot
 User-Agent: omgili
 Disallow: /
 
 User-Agent: 360Spider
 Disallow: /
 
+# ByteDance Web Crawler
 User-agent: Bytespider
 Disallow: /
 
+# Google Image Web Crawler
 User-agent: Googlebot-Image
 Disallow: /
 
+# LinkedIn Web Crawler
 User-agent: LinkedInBot
 Disallow: /
 
+# Duckduckgo Web Crawler
 User-agent: DuckDuckBot
 Disallow: /
 
+# Microsoft Bing Search Engine Robot
 User-agent: Bingbot
+Disallow: /
+
+# Facebook crawler
+User-agent: Facebot
+Disallow: /
+
+# Apple Web Crawler
+User-agent: Applebot
+Disallow: /
+
+# Twitter Web Crawler
+User-agent: Twitterbot
+Disallow: /
+
+# Neeva Search Engine Robot
+User-agent: Neevabot
+Disallow: /
+
+# Yahoo! Search Engine Robot
+User-agent: Slurp
+Disallow: /
+
+# Microsoft Search Engine Robot
+User-agent: msnbot
 Disallow: /
