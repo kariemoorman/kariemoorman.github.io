@@ -40,11 +40,29 @@ Disallow: /
 User-agent: SemrushBot-COUB
 Disallow: /
 
-User-agent: EtaoSpider
-Disallow: /
-
 User-agent: PiplBot
 Disallow: /
 
 User-agent: CCbot
+Disallow: /
+
+User-agent: omgilibot
+Disallow: /
+
+User-Agent: omgili
+Disallow: /
+
+User-Agent: 360Spider
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Googlebot-Image
+Disallow: /
+
+User-agent: LinkedInBot
+Disallow: /
+
+User-agent: DuckDuckBot
 Disallow: /
