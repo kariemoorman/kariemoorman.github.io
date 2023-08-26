@@ -39,3 +39,12 @@ Disallow: /
 
 User-agent: SemrushBot-COUB
 Disallow: /
+
+User-agent: EtaoSpider
+Disallow: /
+
+User-agent: PiplBot
+Disallow: /
+
+User-agent: CCbot
+Disallow: /
