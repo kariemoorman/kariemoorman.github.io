@@ -66,3 +66,6 @@ Disallow: /
 
 User-agent: DuckDuckBot
 Disallow: /
+
+User-agent: Bingbot
+Disallow: /
