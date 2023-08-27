@@ -60,7 +60,7 @@ permalink: /about/
 
 <div class="manual-content h-min item1">
 <div class="manual-subtitle">MetaNet</div>
-<div class='img'><a href="https://metaphor.icsi.berkeley.edu/pub/en/index.php/MetaNet_Metaphor_Wiki" target="_blank"><img id='icsi'></a></div>
+<div class='img'><a href="https://metaphor.icsi.berkeley.edu/pub/en/index.php/MetaNet_Metaphor_Wiki" target="_blank"><img src='/media/images/metanet_icsi.png' alt='icsi' height='150px' width='140px;'></a></div>
 <div><p>The <a href="https://metanet.icsi.berkeley.edu/metanet/" target="_blank">MetaNet</a> Project 
  is a multi-year effort to systematize novel and conventional metaphor detection for large-scale analyses. The goal is to identify and analyze the metaphors people use to discuss and reason about a broad range of topics and domains (e.g., relationships, education, poverty, immigration), across multiple languages (e.g., US English, Mexican Spanish, Russian, Farsi).
 </p></div>
