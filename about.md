@@ -45,9 +45,9 @@ permalink: /about/
 <div class='manual-grid'>
 <div class="manual-content h-min item3">
 <div class="manual-subtitle">Metaphor & Framing</div>
-<div class='img big'><a href="https://epluribusunumjcom2010.wordpress.com/cartoons/" target="_blank">
+<div class='img big'><a href="https://sisu.ut.ee/sites/default/files/proovin/files/moorman.pdf" target="_blank">
 <img id='framing'></a></div>
-<div><p>This project uses both corpus-based and experimental methods to explore how metaphor and grammar can influence attitudes and reasoning about immigrants and immigration policy in the United States. Of interest is force dynamics in metaphoric framing, and understanding how shifts in the force-dynamic construal of a target concept (e.g., "immigrants are flooding over the border" vs. "immigrants are trickling over the border") lead to shifts in attitudes and reasoning about that target concept (e.g., sentiment towards immigrants and access to socio-economic resources).</p></div>
+<div><p>This <a href='https://sisu.ut.ee/sites/default/files/proovin/files/moorman.pdf'>project</a> uses both corpus-based and experimental methods to explore how metaphor and grammar can influence attitudes and reasoning about immigrants and immigration policy in the United States. Of interest is force dynamics in metaphoric framing, and understanding how shifts in the force-dynamic construal of a target concept (e.g., "immigrants are flooding over the border" vs. "immigrants are trickling over the border") lead to shifts in attitudes and reasoning about that target concept (e.g., sentiment towards immigrants and access to socio-economic resources).</p></div>
 </div>
 
 
@@ -58,10 +58,18 @@ permalink: /about/
 </div>
 
 
+<div class="manual-content h-min item5">
+<div class="manual-subtitle">Morality and Emotion</div>
+<div class='img big'><a href="https://pubmed.ncbi.nlm.nih.gov/31829720/" target="_blank">
+<img id='emotion'></a></div>
+<div><p>This <a href='https://pubmed.ncbi.nlm.nih.gov/31829720/'>project</a> examines moral emotions (e.g., anger and aggression) from a sociofunctional perspective in the context of harm inflicted on siblings. The studies build upon prior research by Molho, Tybur, Güler, Balliet, and Hofmann (2017), who suggest that anger reactions to moral violations are more intense when the wrongdoing affects oneself compared to when it affects acquaintances. The rationale behind this heightened anger response is that aggressive confrontation is evolutionarily incentivized to protect one's fitness, as it is inherently risky. These findings replicate and extend the sociofunctionalist account of moral emotions to include the context of kinship relationships. This research suggests that people are more likely to respond with anger and a willingness to confront wrongdoers when harm affects themselves or their siblings, consistent with the theory that such reactions evolved to protect fitness.</p></div>
+</div>
+
+
 <div class="manual-content h-min item1">
 <div class="manual-subtitle">MetaNet</div>
 <div class='img'><a href="https://metaphor.icsi.berkeley.edu/pub/en/index.php/MetaNet_Metaphor_Wiki" target="_blank"><img src='/media/images/metanet_icsi.png' alt='icsi' height='150px' width='140px;'></a></div>
-<div><p>The <a href="https://metanet.icsi.berkeley.edu/metanet/" target="_blank">MetaNet</a> Project 
+<div><p>The <a href="https://metanet.icsi.berkeley.edu/metanet/" target="_blank">MetaNet Project</a>
  is a multi-year effort to systematize novel and conventional metaphor detection for large-scale analyses. The goal is to identify and analyze the metaphors people use to discuss and reason about a broad range of topics and domains (e.g., relationships, education, poverty, immigration), across multiple languages (e.g., US English, Mexican Spanish, Russian, Farsi).
 </p></div>
 </div>
