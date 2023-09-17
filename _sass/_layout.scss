@@ -229,7 +229,8 @@
     display: grid;
     grid-template-areas: 
     'one one two two'
-    'three three four four'; 
+    'three three four four'
+    ' five five five five'; 
     gap: $spacing-unit - 10px;
     /*grid-auto-rows: 1fr;*/
     }
@@ -237,7 +238,9 @@
 .item2 {grid-area: two;}
 .item3 {grid-area: three;}
 .item4 {grid-area: four;}
-  
+.item5 {grid-area: five;}
+.item6 {grid-area: six;} 
+
 .manual-content {
     padding: 15px 10px;
     background-color:  #eeeeeedb; // #fbf7e8; /*  #efefef; */
@@ -289,6 +292,12 @@
   content: url('https://i.pinimg.com/originals/a5/a5/5d/a5a55dad2fad0d113cf2900b504c3c24.png');
   height: 150px;
   width: 150px;
+}
+
+#emotion {
+  content: url('https://content.artofmanliness.com/uploads/2018/03/argue.jpg');
+  height: 140px;
+  width: 200px;
 }
 
 /* ***************************** */
