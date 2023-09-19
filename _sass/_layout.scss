@@ -230,7 +230,7 @@
     grid-template-areas: 
     'one one two two'
     'three three four four'
-    ' five five five five'; 
+    ' five five six six'; 
     gap: $spacing-unit - 10px;
     /*grid-auto-rows: 1fr;*/
     }
@@ -245,7 +245,7 @@
     padding: 15px 10px;
     background-color:  #eeeeeedb; // #fbf7e8; /*  #efefef; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
-    }
+  }
 .manual-content.h-min {
     min-height: 200px;
     }
@@ -277,6 +277,12 @@
     content: url("https://i.pinimg.com/736x/a6/a5/cc/a6a5cc35323fcfc8634765e96c2f00a8--mexican-american-political-news.jpg");
     height: 150px;
     width: 200px;
+    padding-bottom: 5px;
+    @include media-query(700px) {
+      height: 160px;
+      width: 240px;
+      align-self: center;
+    }
     }
 #eeg {
     content: url('https://photos1.blogger.com/x/blogger/1782/2187/320/22148/N400-P600.jpg');
@@ -288,6 +294,7 @@
     height: 150px;
     width: 140px;
 }
+
 #karuk {
   content: url('https://i.pinimg.com/originals/a5/a5/5d/a5a55dad2fad0d113cf2900b504c3c24.png');
   height: 150px;
@@ -296,8 +303,24 @@
 
 #emotion {
   content: url('https://content.artofmanliness.com/uploads/2018/03/argue.jpg');
-  height: 140px;
+  height: 150px;
   width: 200px;
+  @include media-query(700px) {
+    height: 160px;
+    width: 240px;
+    align-self: center;
+  }
+}
+
+#bias {
+  content: url('https://scenechange.co.uk/wp-content/uploads/bfi_thumb/cognitive-bias-scene-change-36lv20npcnknboxxqv8ave.jpg');
+  height: 150px;
+  width: 190px;
+  @include media-query(700px) {
+    height: 160px;
+    width: 240px;
+    align-self: center;
+  }
 }
 
 /* ***************************** */
