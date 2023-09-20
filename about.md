@@ -58,14 +58,14 @@ permalink: /about/
 </div>
 
 <div class="manual-content h-min item5">
-<div class="manual-subtitle">Bias and Cognition</div>
+<div class="manual-subtitle">Bias & Cognition</div>
 <div class='img big'><a href="https://scenechange.co.uk/wp-content/uploads/bfi_thumb/cognitive-bias-scene-change-36lv20npcnknboxxqv8ave.jpg" target="_blank">
 <img id='bias'></a></div>
 <div><p>This <a href='/media/docs/bias_and_cognition_presentation_moormankarie_2018.pdf' target="_blank">project</a> examines cognitive bias, comparing unconscious or implicit bias with conscious bias across numerous sociocultural groups, topics, and events (e.g., immigration, ethnicity, elections). We conduct survey-based experiments for adult participants in the United States comprised of a series of implicit association tests (IAT), bias inventory metrics, political ideology metrics, and free response questions allowing participants to self-assess their own bias. We compare results with those found in large-scale language models using WEAT/WEFAT <a href='https://doi.org/10.1126/science.aal4230' target="_blank">(Caliskan, Bryson, & Narayanan, 2017)</a> trained on various corpora (e.g., Twitter, Reddit, Wikipedia, News, CommonCrawl) across multiple languages(e.g., English, Spanish, Chinese).</p></div>
 </div>
 
 <div class="manual-content h-min item6">
-<div class="manual-subtitle">Morality and Emotion</div>
+<div class="manual-subtitle">Morality & Emotion</div>
 <div class='img'><a href="https://pubmed.ncbi.nlm.nih.gov/31829720/" target="_blank">
 <img id='emotion'></a></div>
 <div><p>This <a href='https://www.researchgate.net/publication/337925035_Morality_is_relative_Anger_disgust_and_aggression_as_contingent_responses_to_sibling_versus_acquaintance_harm'  target="_blank">project</a> examines moral emotions (e.g., anger and aggression) from a sociofunctional perspective in the context of harm inflicted on siblings. The studies build upon prior research by Molho, Tybur, Güler, Balliet, and Hofmann (2017), who suggest that anger reactions to moral violations are more intense when the wrongdoing affects oneself compared to when it affects acquaintances. The rationale behind this heightened anger response is that aggressive confrontation is evolutionarily incentivized to protect one's fitness, as it is inherently risky. These findings replicate and extend the sociofunctionalist account of moral emotions to include the context of kinship relationships, suggesting that people are more likely to respond with anger and a willingness to confront wrongdoers when harm affects themselves or their siblings. This is consistent with the theory that such reactions evolved to protect fitness.</p></div>
