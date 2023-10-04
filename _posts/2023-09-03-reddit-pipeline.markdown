@@ -66,7 +66,7 @@ See also: [didactic-diy: Reddit](https://github.com/kariemoorman/didactic-diy/tr
 ---
 
 <h3 align='center' id='pipeline'>Data Pipeline Design</h3>
-<img src="https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__data_pipeline/images/data_pipelines-reddit_local_pipeline.drawio.png" height="500"/>
+<p align='center'><img src="/media/images/pipeline/data_pipelines-reddit_local_pipeline.drawio.png"  height='700px;'/></p>
 
 
 Example Scripts: [__scripts](https://github.com/kariemoorman/didactic-diy/tree/main/reddit/__scripts)
@@ -74,7 +74,7 @@ Example Scripts: [__scripts](https://github.com/kariemoorman/didactic-diy/tree/m
 ---
 <h3 align='center' id='extract'>Extract & Load</h3>
 
-<img src="https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__data_pipeline/images/reddit_local_datapipline-extract.png" height="180" />
+<p align='center'><img src="/media/images/pipeline/reddit_local_datapipline-extract.png" height="180" /></p>
 
 After [registering a Reddit developer application](https://www.reddit.com/prefs/apps/) and [receiving an access token](https://praw.readthedocs.io/en/stable/getting_started/authentication.html), use [PRAW API](https://praw.readthedocs.io/en/stable/index.html) to extract data for a particular subreddit or Reddit user.
 Write that data, in whatever format (e.g., JSON, Parquet, CSV), to local storage. Load that data to a local repository (e.g., SQL database; local subdirectory). Make that data accessible to end users. 
@@ -84,7 +84,7 @@ Example scripts: [reddit_scraper](https://github.com/kariemoorman/didactic-diy/t
 ---
 <h3 align='center' id='transform'>Transform & Load</h3>
 
-<img src="https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__data_pipeline/images/reddit_local_datapipline-transform.png" height="200" />
+<p align='center'><img src="/media/images/pipeline/reddit_local_datapipline-transform.png" height="200"/></p>
 
 Using raw datasets, execute a series of NLP and ML tasks. Write output as new dataset, in whatever format (e.g., JSON, Parquet, CSV), to local storage. Append the new dataset to the existing datasets in local repository (e.g., SQL database; local subdirectory). Make that data accessible to end users. 
 
@@ -93,7 +93,7 @@ Example scripts: [reddit_nlp](https://github.com/kariemoorman/didactic-diy/tree/
 ---
 <h3 align='center' id='visual'>Visualization</h3>
   
-<img src="https://github.com/kariemoorman/didactic-diy/blob/main/reddit/__data_pipeline/images/reddit_local_datapipline-visualize.png" height="180" src="image"/>
+<p align='center'><img src="/media/images/pipeline/reddit_local_datapipline-visualize.png" height="180"/></p>
 
 Using the compiled dataset from the transformation step, surface the analyses in the form of interactive dashboards via Dash. 
 
