@@ -660,6 +660,9 @@
     @include media-query($on-laptop) {
         font-size: 17px;
     }
+    @include media-query($on-palm) {
+      font-size: 15.5px;
+  }
 }
 .post-content-container #link a:hover {
     color: $l-brand-color !important;
@@ -678,8 +681,14 @@
 
 .post-content-container ul li a:hover {
     font-weight: 500;
-    font-size: 19px;
+    font-size: 18.5px;
     color: $l-brand-color !important;
+    @include media-query($on-laptop) {
+      font-size: 17.5px;
+  }
+    @include media-query($on-palm) {
+      font-size: 15.5px;
+  }
 }
 
 .post-content-container table {
@@ -800,6 +809,30 @@
     }
   }
 }
+
+/* ***************************** */
+/* ********* LEARNING ********** */
+/* ***************************** */
+
+  /* Center the list container */
+  .centered-list {
+    text-align: center;
+  }
+
+  /* Style the unordered list */
+  .centered-list ul {
+    list-style-type: disc; /* Set the bullet point style */
+    display: inline-block; /* Make the list inline-block to center it */
+    text-align: left; /* Align list items to the left within the centered container */
+    padding-left: 0; /* Remove default padding */
+  }
+
+  /* Style list items */
+  .centered-list li {
+    margin: 0 0 2px 0; /* Add some spacing between list items */
+  }
+
+
 
 
 /* ***************************** */
