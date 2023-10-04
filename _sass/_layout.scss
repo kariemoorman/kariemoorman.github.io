@@ -681,10 +681,10 @@
 
 .post-content-container ul li a:hover {
     font-weight: 500;
-    font-size: 18.5px;
+    font-size: 16.5px;
     color: $l-brand-color !important;
     @include media-query($on-laptop) {
-      font-size: 17.5px;
+      font-size: 16px;
   }
     @include media-query($on-palm) {
       font-size: 15.5px;
