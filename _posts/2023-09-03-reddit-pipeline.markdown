@@ -16,8 +16,9 @@ author: "Karie Moorman"
 <li><a href='#project'>Project Summary</a></li>
 <li><a href='#pipeline'>Data Pipeline Design</a></li>
 <ul>
-<li><a href='#extract'>Extract & Load</a></li>
-<li><a href='#transform'>Transform & Load</a></li>
+<li><a href='#extract'>Extract</a></li>
+<li><a href='#transform'>Transform</a></li>
+<li><a href='#load'>Load</a></li>
 <li><a href='#visual'>Visualization</a></li>
 <li><a href='#automate'>Automation</a></li>
 </ul>
@@ -72,7 +73,7 @@ See also: [didactic-diy: Reddit](https://github.com/kariemoorman/didactic-diy/tr
 Example Scripts: [__scripts](https://github.com/kariemoorman/didactic-diy/tree/main/reddit/__scripts)
 
 ---
-<h3 align='center' id='extract'>Extract & Load</h3>
+<h3 align='center' id='extract'>Extract</h3>
 
 <p align='center'><img src="/media/images/pipeline/reddit_local_datapipline-extract.png" height="180" /></p>
 
@@ -82,13 +83,24 @@ Write that data, in whatever format (e.g., JSON, Parquet, CSV), to local storage
 Example scripts: [reddit_scraper](https://github.com/kariemoorman/didactic-diy/tree/main/reddit/__scripts/reddit_scraper)
 
 ---
-<h3 align='center' id='transform'>Transform & Load</h3>
+<h3 align='center' id='transform'>Transform</h3>
 
 <p align='center'><img src="/media/images/pipeline/reddit_local_datapipline-transform.png" height="200"/></p>
 
 Using raw datasets, execute a series of NLP and ML tasks. Write output as new dataset, in whatever format (e.g., JSON, Parquet, CSV), to local storage. Append the new dataset to the existing datasets in local repository (e.g., SQL database; local subdirectory). Make that data accessible to end users. 
 
 Example scripts: [reddit_nlp](https://github.com/kariemoorman/didactic-diy/tree/main/reddit/__scripts/reddit_nlp)
+
+---
+<h3 align='center' id='load'>Load</h3>
+
+A database is a structured collection of data organized for efficient retrieval and management. Common relational database systems include MySQL, PostgreSQL, Oracle, Microsoft SQL Server, and SQLite. Common nonrelational database systems include Redis, MongoDB, ElasticSearch, Neo4J, Cassandra, and AWS DynamoDB. For this project I chose a relational database system. 
+
+Database management involves designing and defining user roles, tables, relationships, and constraints (e.g., security, read/write access) to ensure data integrity and efficient querying. Database design, user/group role creation, and table schema declaration is executed before loading any data into the database.
+
+Load raw datasets from the Extract and Transform steps into the SQL database for analysis. Perform data validation checks to ensure accuracy and integrity of datasets prior to executing data analysis and visualization steps.
+
+Example Scripts: [reddit_sql](https://github.com/kariemoorman/didactic-diy/tree/main/reddit/__scripts/reddit_sql)
 
 ---
 <h3 align='center' id='visual'>Visualization</h3>
