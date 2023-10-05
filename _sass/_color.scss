@@ -98,8 +98,11 @@ body.light {
   /* Code formatting */
   pre,
   code {
-    border-color: $l-grey-color-light;
+    //border-color: $l-grey-color-light;
+    // background-color: $d-code;
+    //border-color: $d-grey-color;
     background-color: $l-code;
+    font-size: small;
   }
 
   /* Icons */
