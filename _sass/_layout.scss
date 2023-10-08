@@ -360,6 +360,9 @@
   grid-template-columns: 45% 45%;
   grid-gap: $spacing-unit - 10px;
   padding-left: 40px;
+  @include media-query($on-palm) {
+    padding-left: 20px;
+  }
 }
 .edu-archive-list {
   padding:  10px 5px 10px 5px;
