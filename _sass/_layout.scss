@@ -141,6 +141,9 @@
     display: block;
     position: relative;
     padding: 10px;
+    @include media-query($on-palm) {
+      width: 90%;
+    }
   }
 .container-grid {
     display: grid;
@@ -148,6 +151,11 @@
     'one two two';
     grid-template-columns: 1fr 2fr;
     vertical-align: middle;
+
+    @include media-query($on-palm) {
+      grid-template-areas: 'one' 'two';
+      grid-template-columns: 1fr;
+    }
   }
   .c-item1 {grid-area: one;}
   .c-item2 {grid-area: two;}
@@ -166,6 +174,16 @@
     border-radius: 35px;
     margin: 5px;
   }
+
+.img-contain {
+  @include media-query($on-palm) {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  //   // width: 90%;
+  //   // margin-left: -10p;
+  }
+}
 .img-inset-container {
     background-color: rgba(68, 85, 136, .4) ;/*RGBA(68, 85, 136, .4);*/
     height: 100%;
@@ -812,6 +830,48 @@
     }
   }
 }
+
+.db-split-container {
+  display: flex;
+  flex-direction: row; /* Default direction, horizontal split */
+  vertical-align: middle;
+}
+
+.db-text-container {
+  flex: 60%; /* 60% of the available space */
+  padding: 10px; /* Optional padding */
+}
+
+.db-text-container table {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.db-text-container table td {
+  margin: 0;
+  padding: 5px;
+}
+
+.db-image-container {
+  flex: 40%; /* 40% of the available space */
+  padding: 10px; /* Optional padding */
+  max-height: 100%;
+  height: auto;
+}
+
+/* To make it vertical split on screens smaller than 500px */
+@media (max-width: 500px) {
+  .db-split-container {
+    flex-direction: column;
+  }
+
+  .db-text-container, .db-image-container {
+    flex: 100%; /* Full width on smaller screens */
+
+  }
+}
+
 
 /* ***************************** */
 /* ********* LEARNING ********** */
