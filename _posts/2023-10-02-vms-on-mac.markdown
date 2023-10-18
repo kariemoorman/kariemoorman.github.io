@@ -1,0 +1,144 @@
+---
+layout: learning
+title: "Virtual Machines"
+subtitle:  "(Almost) Any OS on a Single Machine"
+date: 2023-10-02 15:45:31 +0530
+categories: ["edu"]
+tags: ["vm", "linux", "mac", "windows"]
+author: "Karie Moorman"
+---
+
+<div class='content-pad'>
+<p>Virtual machines (VMs) are software-based emulations of physical computers. They enable you to run multiple operating systems on a single physical machine (i.e., a host) using a virtualization layer or hypervisor. Virtualization allows users to create and manage isolated environments, each with its own operating system and software, within a single physical server or computer.</p>
+<p>Virtual machines (VMs) offers several significant benefits:</p>
+<ul>
+<li>Isolation: VMs provide strong isolation between different virtual servers, making it easier to manage and secure applications and data.</li>
+<li>Sandboxing: VMs provide a secure environment for testing new software, potentially harmful files, or untrusted applications without risking the integrity of the host system.</li>
+<li>Scalability: VMs can be easily scaled up or down to accommodate changing workloads or application demands.</li>
+<li>Rapid Deployment: VMs can be created and deployed quickly, reducing the time it takes to provision new servers or applications.</li>
+<li>Resource Consolidation: VMs allow multiple virtual servers to run on a single physical server, optimizing resource utilization and reducing hardware costs.</li>
+<li>Consistency: VMs provide a consistent environment, ensuring that applications run the same way regardless of the underlying hardware or host operating system.</li>
+<li>Legacy Software Support: VMs can run older operating systems or applications that may not be compatible with the host system.</li>
+<li>Disaster Recovery: VM snapshots and backup capabilities make it easier to create backup copies and recover from system failures, enhancing disaster recovery efforts.</li>
+<li>Cross-platform compatibility: VirtualBox can be installed on various host operating systems, including Windows, macOS, Linux, and others. It supports a wide range of guest operating systems, including Windows, Linux, macOS, and various versions of Unix.</li>
+</ul>
+<p>Popular virtual emulators include UTM, KVM, VirtualBox, VMWare, and Parallels.</p>
+</div>
+
+--- 
+
+<h3 align='center'>Table of Contents</h3>
+<div class='tbl'>
+<ul style='display: flex; flex-wrap: row; gap: 30px; margin-left: 10px; justify-content: center;'>
+<li><a href='#utm'>UTM</a></li>
+<li><a href='#par'>Parallels</a></li>
+<li><a href='#kvm'>KVM</a></li>
+<li><a href='#vb'>VirtualBox</a></li>
+<li><a href='#vmw'>VMWare</a></li>
+
+</ul>
+</div>
+
+---
+<h3 align='center' id='utm'>UTM</h3>
+
+<div>
+<p>
+<a href='https://github.com/utmapp/UTM'>UTM (Universal Turing Machine)</a> is a full-featured system emulator and virtual machine host for iOS and macOS. UTM is based off <a href='https://github.com/qemu/qemu'>QEMU</a>, and allows Apple users to run Windows, Linux, and more on Mac, iPhone, and iPad. UTMs can deploy hosts from ISO images.
+</p>
+</div>
+
+<div align='center' >
+<table style='width:70%; font-weight: 400;'>
+<th style='width:35%'>Feature</th><th>Description</th>
+<tr><td>Website</td><td align='center'><a href='https://getutm.app/' target='_blank'>https://getutm.app/</a></td></tr>
+<tr><td>Guide</td><td align='center'><a href='https://docs.getutm.app/' target='_blank'>"UTM Documentation"</a></td></tr>
+<tr><td>Developer</td><td align='center'>Turing Software</td></tr>
+<tr><td>Compatible Platforms</td><td align='center'>macOS, iOS</td></tr>
+<tr><td>Available Distributions</td><td align='center'><a href='https://www.linux.org/pages/download/' target='_blank'>Linux</a>, <a href='https://docs.getutm.app/guides/windows/' target='_blank'>Windows</a>, <a href='https://krypted.com/mac-security/use-utm-to-run-virtual-machines-of-macos-from-macos/' target='_blank'>Mac</a></td></tr>
+</table>
+</div>
+<br>
+
+
+---
+<h3 align='center' id='par'>Parallels</h3>
+
+<div>
+<p><a href='https://www.parallels.com/' target='_blank'>Parallels</a> is a subscription-based virtual machine host for macOS. Parallels can deploy hosts from ISO images.</p>
+</div>
+
+<div align='center' >
+<table style='width:70%; font-weight: 400;'>
+<th style='width:35%'>Feature</th><th>Description</th>
+<tr><td>Website</td><td align='center'><a href='https://www.parallels.com/' target='_blank'>https://www.parallels.com/</a></td></tr>
+<tr><td>Guide</td><td align='center'><a href='https://www.parallels.com/products/desktop/resources/' target='_blank'>"Parallels Resources"</a></td></tr>
+<tr><td>Developer</td><td align='center'>Parallels</td></tr>
+<tr><td>Compatible Platforms</td><td align='center'>macOS</td></tr>
+<tr><td>Available Distributions</td><td align='center'><a href='https://www.parallels.com/tips/windows-on-mac/linux/' target='_blank'>Linux</a>, <a href='https://www.parallels.com/tips/windows-on-mac/' target='_blank'>Windows</a>, <a href='https://kb.parallels.com/125561' target='_blank'>Mac</a></td></tr>
+</table>
+</div>
+<br>
+
+---
+<h3 align='center' id='kvm'>KVM</h3>
+
+<div>
+<p>
+<a href='https://www.linux-kvm.org/page/Main_Page'>KVM (for Kernel-based Virtual Machine)</a> is a full virtualization solution for Linux on x86 hardware containing virtualization extensions (Intel VT or AMD-V). KVM can deploy hosts from ISO images.
+</p>
+</div>
+
+<div align='center' >
+<table style='width:70%; font-weight: 400;'>
+<th style='width:35%'>Feature</th><th>Description</th>
+<tr><td>Website</td><td align='center'><a href='https://www.linux-kvm.org/page/Main_Page' target='_blank'>https://www.linux-kvm.org/</a></td></tr>
+<tr><td>Guide</td><td align='center'><a href='https://www.linux-kvm.org/page/Documents' target='_blank'>"KVM Documentation"</a></td></tr>
+<tr><td>Developer</td><td align='center'>The Linux Kernel community</td></tr>
+<tr><td>Compatible Platforms</td><td align='center'>Linux</td></tr>
+<tr><td>Available Distributions</td><td align='center'><a href='https://www.linux.org/pages/download/' target='_blank'>Linux</a>, <a href='https://getlabsdone.com/how-to-install-windows-11-on-kvm/' target='_blank'>Windows</a>, <a href='https://github.com/kholia/OSX-KVM' target='_blank'>Mac</a></td></tr>
+</table>
+</div>
+<br>
+
+---
+
+<h3 align='center' id='vb'>VirtualBox</h3>
+
+<div>
+<p><a href='https://github.com/Virtualbox-OSE/Virtualbox'>VirtualBox</a> is a free and open-source virtualization software for x86 and x86-64 hardware that allows users to create and run virtual machines (VMs) on their computer. VirtualBox can deploy hosts from ISO or VDI/VMDK/VHD images.</p>
+</div>
+
+
+<div align='center' >
+<table style='width:70%; font-weight: 400;'>
+<th style='width:35%'>Feature</th><th>Description</th>
+<tr><td>Website</td><td align='center'><a href='https://www.virtualbox.org/' target='_blank'>https://www.virtualbox.org/</a></td></tr>
+<tr><td>Guide</td><td align='center'><a href='https://www.tomshardware.com/how-to/set-up-virtual-machines-with-virtualbox' target='_blank'>"Set Up Virtual Machines with VirtualBox"</a></td></tr>
+<tr><td>Developer</td><td align='center'>Oracle</td></tr>
+<tr><td>Compatible Platforms</td><td align='center'>Windows, Linux, macOS</td></tr>
+<tr><td>Available Distributions</td><td align='center'><a href='https://www.linuxvmimages.com/images/virtualbox/' target='_blank'>Linux</a>, <a href='https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/' target='_blank'>Windows</a>, <a href='https://krypted.com/mac-security/use-utm-to-run-virtual-machines-of-macos-from-macos/' target='_blank'>Mac</a></td></tr>
+</table>
+</div>
+<br>
+
+---
+<h3 align='center' id='vmw'>VMWare</h3>
+
+<div>
+<p><a href='https://github.com/vmware'>VMWare</a> is a virtualization software for x86 and x86-64 hardware that allows users to create and run virtual machines (VMs) on their computer. VMWare is free for individual use, and can deploy hosts from OVA images.</p>
+</div>
+
+
+<div align='center' >
+<table style='width:70%; font-weight: 400;'>
+<th style='width:35%'>Feature</th><th>Description</th>
+<tr><td>Website</td><td align='center'><a href='https://www.vmware.com/' target='_blank'>https://www.vmware.com/</a></td></tr>
+<tr><td>Guide</td><td align='center'><a href='https://docs.vmware.com/' target='_blank'>"VMWare Documentation"</a></td></tr>
+<tr><td>Developer</td><td align='center'>VMware</td></tr>
+<tr><td>Compatible Platforms</td><td align='center'>Windows, Linux, macOS</td></tr>
+<tr><td>Available Distributions</td><td align='center'><a href='https://docs.vmware.com/en/VMware-Horizon-7/7.13/linux-desktops-setup/GUID-51C371A9-4D76-4A8C-8645-909E93080B4F.html' target='_blank'>Linux</a>, <a href='https://docs.vmware.com/en/VMware-Workstation-Pro/17/com.vmware.ws.using.doc/GUID-BF16A27D-154B-4E2D-A221-7CE94FA0F8FC.html' target='_blank'>Windows</a>, <a href='https://blog.gitnux.com/guides/how-to-install-mac-os-x-on-vmware/' target='_blank'>Mac</a></td></tr>
+</table>
+</div>
+<br>
+
