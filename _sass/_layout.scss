@@ -251,6 +251,16 @@
     ' five five six six'; 
     gap: $spacing-unit - 10px;
     /*grid-auto-rows: 1fr;*/
+    @include media-query($on-palm) {
+      grid-template-areas: 
+      'one one' 
+      'two two'
+      'three three' 
+      'four four'
+      'five five' 
+      'six six'; 
+      grid-template-columns: 1fr;
+    }
     }
 .item1 {grid-area: one;}
 .item2 {grid-area: two;}
@@ -263,6 +273,10 @@
     padding: 15px 10px;
     background-color:  #eeeeeedb; // #fbf7e8; /*  #efefef; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
+    @include media-query($on-palm) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 .manual-content.h-min {
     min-height: 200px;
@@ -283,6 +297,9 @@
     //padding: 5px 2px 5px 2px;
     padding: 7px 2px 0px 2px; 
     position: relative;
+    @include media-query($on-palm) {
+      margin-bottom: 10px;
+    }
     }
 .img {
     max-width: 250px;
