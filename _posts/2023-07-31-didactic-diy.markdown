@@ -29,7 +29,6 @@ author: "Karie Moorman"
 
 - <b>Statistics & Machine Learning</b>
   - Inferential Statistics: [T-Tests](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/statistics/t_test.ipynb), [Chi-Square](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/statistics/chi_squared.ipynb)
-  - Metrics: [Trimmed Mean](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/metrics/trimmed_mean), [Moving Average](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/metrics/moving_avg)
   - Regression Analyses: [Logistic Regression (Binomial & Multinomial)](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/predictive_modeling/logistic_regression.ipynb)
   - Clustering: [Vector Search using NearestNeighbors](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/clustering/Vector_Search.ipynb)
   - Classification: [SVMs](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/classification/SVM_classification.ipynb)
@@ -37,6 +36,10 @@ author: "Karie Moorman"
   - Recommendation: [Movie Recommender](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/recommendation/movie_recommendation.ipynb), [Contextual Bandits](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/recommendation/Contextual_Bandit_Models.ipynb)
   - Anomaly Detection: [Isolation Forest](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/anomaly_detection/unsupervised_anomaly_detection.ipynb)
   - Simulations: [Wildfire Spread](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/simulations)
+    
+- <b>Metrics</b>
+  - Econometrics: [Trimmed Mean](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/metrics/trimmed_mean)
+  - Forecasting: [Moving Average](https://github.com/kariemoorman/didactic-diy/tree/main/tutorials/metrics/moving_avg)
 
 - <b>Encoding & Encryption</b>
   - Encoders: [Character Encoding (binary, ascii, base64)](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/encoding_and_encryption/character_encoder.py)
@@ -44,6 +47,7 @@ author: "Karie Moorman"
 
 - <b>Computer Vision</b>
   - Face Detection: [Face Detection using OpenCV](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/vision/face_detection.py)
+  - Object Detection: [Object Detection using ResNet & YOLOv](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/vision/object_detection.py)
 
 - <b>NLP</b>
   - Sentiment: [Comment Analysis for Moderation Tasks](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/nlp/sentiment_analysis/comment_analysis.py), [Sentiment & Emotion Analysis (HuggingFace)](https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/nlp/sentiment_analysis/sentiment_analysis_hf.ipynb)
