@@ -10,7 +10,7 @@ title: karie moorman
 #email: kmoorman AT ucmerced DOT edu
 description: Linguistics | Cognitive Science | Data Science & Engineering
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://kariemoorman.com" # the base hostname & protocol for your site
+url: "https://www.kariemoorman.com" # the base hostname & protocol for your site
 github_username: kariemoorman
 permalink: /:year/:month/:day/:title
 
