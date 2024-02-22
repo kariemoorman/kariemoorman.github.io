@@ -20,11 +20,20 @@ layout: default
 </div>
 </div>
 <div class="text-container c-item2">
-<p>Hi! I'm Karie. Welcome to my website.</p>
-<p>To learn more about me, navigate to the <a href="/about/">About</a> section. 
-To read about tech and tech-adjacent happenings, check out the <a href="/blog/">Blog</a> section. 
-For education-based content, including how-to's and ongoing research, head over to <a href="/learning/">Learning</a>.</p>
-<p>Want to contact me? Feel free to reach out using one of the options below.</p>
+<h2>Hi! I'm Karie.</h2>
+<p>I'm a data scientist and engineer working on human understanding, content generation, and information classification systems at scale. I also enjoy security research.</p>
+<div class="socials">
+  <ul>
+
+  {% if site.github_username %}
+<li>{% include icon-github.html username=site.github_username %}</li>
+{% endif %}
+{% if site.linkedin_username %}
+<li>{% include icon-linkedin.html username=site.linkedin_username %}</li>
+{% endif %}
+<li><span class="icon"><a href="mailto:{{ site.email }}" ><img width="36" height="36" src="https://img.icons8.com/sf-black-filled/64/new-post.png" alt="new-post" style="opacity:90%;" title="email"/></a></span></li>
+</ul>
+</div>
 </div>
 </div>
 </div>

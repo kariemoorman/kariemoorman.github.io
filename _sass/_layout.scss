@@ -203,8 +203,12 @@
     border-radius: 25px;
   }
 .text-container { 
-    text-align: left;
-    display: inline-block;
+    //text-align: left;
+    //display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position:relative;
     padding: 7px 5px 0px 10px;
     font-family: 'PT Sans';
@@ -216,11 +220,26 @@
     }
     letter-spacing: .4px;
     padding-bottom: 1px;
+    text-align: center;
   }
 .text-container a {
     text-transform: uppercase;
   }
   
+.socials {
+  margin-top: 10px;
+}
+.socials ul {
+  list-style-type: none !important;
+  margin: 0;
+  padding: 0;
+}
+
+.socials ul li {
+  display: inline;
+  padding-right: 10px;
+}
+
 
 /* ***************************** */
 /* *********** ABOUT *********** */
@@ -356,6 +375,29 @@
     width: 240px;
     align-self: center;
   }
+}
+
+#ics2-cc {
+  // content: url('media/images/certifications/cc.png');
+  height: 80px;
+  width: 80px;
+}
+
+#comptia-sec {
+  // content: url('media/images/certifications/secplus.png');
+  height: 85px;
+  width: 85px;
+}
+
+.certcolumn {
+  float: left;
+}
+
+/* Clear floats after image containers */
+.certrow::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 /* ***************************** */
@@ -786,7 +828,7 @@
 #snapchat {content: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEN5GlVfdMbFKqHIfoNPyTY312-AosnzJfEA&usqp=CAU'); height: 40px; width: 120px; margin: 10px 0px 10px 30px;}
 #telegram {content: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRagh-hgmxKTreOeflDKzBLfIhQqWGvAdgxbw&usqp=CAU'); height: 60px; width: 120px; margin: 10px 0px 10px 70px;}
 #imessage {content: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.NnBNOgtcZaNzLp_-rnbtjgAAAA%26pid%3DApi&f=1&ipt=bf105dcd1a14ee8d2d6542fd07662c8260fb3419525c153845e7749eb8a46836&ipo=images'); height: 60px; width: 110px;  margin: 0px 0px 20px 125px;}
-#signal {content: url('https://www.signal.org/assets/header/logo-f7ef605fe417d5520d38d546b3b774b4261c75220b9904da4d8b2ffc19a761ff.png'); height: 55px; width: 155px;}
+#signal {content: url('https://nordicmonitor.com/wp-content/uploads/2021/07/signal_app_logo-scaled.jpg');}
 
 #noaccent:hover {
   border-bottom: transparent !important;
@@ -952,10 +994,17 @@
   }
   .contact-list,
   .social-media-list {
-    list-style: none;
+    list-style-type: none !important;
     margin-left: 0;
     z-index: 99;
+    margin-top: 10px;
   }
+
+  .contact-list li {
+    display: inline;
+    padding-right: 10px;
+  }
+
   .contact-list li:not(:last-child) {
     margin-bottom: 5px;
   }
@@ -980,7 +1029,9 @@
     /*float: left;*/
     margin-bottom: calc($spacing-unit / 2);
     padding-left: calc($spacing-unit / 2);
+    width: 100%;
   }
+
   .footer-col-1 {
     width: -webkit-calc(40% - (#{$spacing-unit} / 2));
     width: calc(40% - (#{$spacing-unit} / 2));
