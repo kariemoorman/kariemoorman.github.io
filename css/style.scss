@@ -78,9 +78,9 @@ h1, h2, h3, h4, h5, h6 {
 a {
     text-decoration: none;
 
-    &:hover {
-        border-bottom: 1px dotted;
-    }
+    // &:hover {
+    //     border-bottom: 1px dotted;
+    // }
 
     &.page-link:hover {
         font-size: $base-font-size * .9;
@@ -94,6 +94,7 @@ a {
         border-bottom: 1px dotted !important;
     }
 }
+
 
 /* Blockquotes */
 blockquote {
@@ -160,11 +161,23 @@ pre {
 .icon {
     > svg {
         display: inline-block;
-        width: 16px;
-        height: 16px;
+        width: 28px;
+        height: 28px;
         vertical-align: middle;
+        // padding-right: 10px;
     }
 }
+
+.icon svg:hover {
+  width: 32px;
+  height: 32px;
+}
+
+.icon img:hover {
+  width: 38px;
+  height: 38px;
+}
+
 .post {
   font-family: "Source Sans Pro";
   font-size: 18px;

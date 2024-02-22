@@ -4,17 +4,25 @@ title: About
 permalink: /about/
 ---
 
-<div class='manual-container'>
-<div class="manual-title">Personal Interests</div>
-<div class="manual-content">
-<p>I like patterns, anomalies, and understanding how and why systems work. For personal enrichment this amounts to an affinity for polyrythms, vector graphics, and random rabbit holes of knowledge acquired via Google dorking, observation, and the like.</p>
-</div>
-</div>
 
 <div class='manual-container'>
 <div class="manual-title">Current Topics of Interest</div>
 <div class="manual-content">
-<p class='wide'> Ethics | Privacy & Security | Human-Computer Interaction | Dis/Misinformation | DevOps | QA Testing | Supply Chain Optimization | Classification & Recommender Systems | Cryptography | Quantum Technology </p>
+<p class='wide'> Ethics | Privacy & Security | Human-Computer Interaction | Dis/Misinformation | DevSecOps | Supply Chain Optimization | Classification & Recommender Systems | Cryptography | Quantum Technology </p>
+</div>
+</div>
+
+<div class='manual-container'>
+<div class="manual-title">Certifications</div>
+<div class="manual-content">
+
+<div class="certrow">
+  <div class="certcolumn" title='October 2023'>
+    <a href='https://www.isc2.org/Certifications/CC' target="_blank"><img id='ics2-cc' alt="isc2-cc" src='/media/images/certifications/cc2.png'></a>
+  </div>
+  <div class="certcolumn" title='January 2024'>
+    <a href='https://www.comptia.org/certifications/security' target="_blank"><img id='comptia-sec' alt="comtpia-sec" src='/media/images/certifications/secplus.png'></a>
+  </div>
 </div>
 </div>
 
@@ -26,14 +34,14 @@ permalink: /about/
 </div>
 
 <div class='manual-container'>
-<div class="manual-title">Research Topics</div>
+<div class="manual-title">Academic Research Topics</div>
 <div class="manual-content"> 
 <p class='wide'> Bias, Language & Social Group Dynamics | Social & Political Ideology | Cognitive, Cultural & Linguistic Variation | Computational Linguistics | Neurolinguistics | Psycholinguistics | Evolutionary Anthropology </p>
 </div>
 </div>
 
 <div class='manual-container'>
-<div class="manual-title">Research Methods</div>
+<div class="manual-title">Academic Research Methods</div>
 <div class="manual-content"> 
 <p class='wide'>Classification | Clustering | Topic Modeling | Linear & Non-Linear Regression (GLMM; HLM; SEM) | Time-Series Analysis | Causal Inference | Behavioral Experimentation </p>
 </div>
