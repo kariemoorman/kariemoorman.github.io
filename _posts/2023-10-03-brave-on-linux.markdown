@@ -28,7 +28,7 @@ curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt
 <p>3. Add the Brave repository to the system's sources.list.d directory.</p>
 
 ```bash
-echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+echo "deb [arch=arm64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 ```
 
 <p>4. Update the system repository list. </p>
