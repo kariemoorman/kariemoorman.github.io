@@ -121,3 +121,7 @@ Disallow: /
 # Microsoft Search Engine Robot
 User-agent: msnbot
 Disallow: /
+
+# Anthropic Web Crawler
+User-agent: ClaudeBot
+Disallow: /
