@@ -20,12 +20,26 @@
 User-agent: * 
 Disallow: /
 
+# Perplexity Web Crawler
+User-agent: PerplexityBot 
+Disallow: /
+
+# Amazon Web Crawler
+User-agent: Amazonbot 
+Disallow: /
+
 # OpenAI Web Crawler
 User-agent: GPTBot 
 Disallow: /
 
+User-agent: ChatGPT-User 
+Disallow: /
+
 # Google Search Engine Robot
 User-agent: Googlebot 
+Disallow: /
+
+User-agent: Google-Extended
 Disallow: /
 
 User-agent: AdsBot-Google
@@ -64,6 +78,7 @@ Disallow: /
 User-agent: PiplBot
 Disallow: /
 
+# Common Crawl Bot
 User-agent: CCbot
 Disallow: /
 
@@ -102,6 +117,10 @@ Disallow: /
 User-agent: Facebot
 Disallow: /
 
+# Facebook crawler
+User-agent: FacebookBot
+Disallow: /
+
 # Apple Web Crawler
 User-agent: Applebot
 Disallow: /
@@ -124,6 +143,15 @@ Disallow: /
 
 # Anthropic Web Crawler
 User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: cohere-ai
 Disallow: /
 
 # List of Bots
