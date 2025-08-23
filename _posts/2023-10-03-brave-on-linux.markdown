@@ -5,7 +5,7 @@ subtitle: "Install Brave Browser on Debian"
 summary: "Instructions for installing Brave Browser on Debian-based distros (e.g., Kali & Parrot OS)."
 date:   2023-10-03 19:05:31 +0700
 categories: ["edu"]
-image: "https://github.com/kariemoorman/kariemoorman.github.io/blob/master/media/images/brave-logo.png"
+image: "../media/images/brave-logo.png"
 tags: ["linux", "brave"]
 author: "Karie Moorman"
 ---

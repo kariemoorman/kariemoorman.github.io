@@ -3,9 +3,9 @@ layout: learning
 title:  "IP Locator"
 subtitle: "IP Address Geolocation and Metadata"
 summary: "A tool for metadata extraction including geolocation information from domain names and IPv4 addresses."
-date:   2024-04-20 21:03:01 +0700
+date: 2024-04-20 21:03:01 +0700
 categories: ["edu"]
-image: "https://github.com/kariemoorman/kariemoorman.github.io/blob/master/media/images/ip_locator.png"
+image: "../media/images/ip_locator.png"
 tags: ["ipv4", "osint", "geolocation", "flask"]
 author: "Karie Moorman"
 ---

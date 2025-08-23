@@ -5,7 +5,7 @@ subtitle:  "(Almost) Any OS on a Single Device"
 summary: "Collection of resources for setting up VMs on MacOS, Linux, and Windows machines."
 date: 2023-10-02 15:45:31 +0530
 categories: ["edu"]
-image: "https://github.com/kariemoorman/kariemoorman.github.io/blob/master/media/images/vms.png"
+image: "../media/images/vms.png"
 tags: ["vm", "linux", "mac", "windows"]
 author: "Karie Moorman"
 ---
