@@ -17,9 +17,6 @@ permalink: /about/
 <div class="manual-content">
 
 <div class="certrow">
-  <div class="certcolumn" title='October 2023'>
-    <a href='https://www.isc2.org/Certifications/CC' target="_blank"><img id='ics2-cc' alt="isc2-cc" src='/media/images/certifications/cc2.png'></a>
-  </div>
   <div class="certcolumn" title='January 2024'>
     <a href='https://www.comptia.org/certifications/security' target="_blank"><img id='comptia-sec' alt="comtpia-sec" src='/media/images/certifications/secplus.png'></a>
   </div>
