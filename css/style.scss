@@ -8,6 +8,13 @@
 @use "syntax-highlighting";
 @use "color";
 
+$base-font-family: "PT Sans", Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$smaller-font-size:  $base-font-size * 0.75;
+$base-line-height: 1.5;
+
 /* Reset some basic elements */
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
