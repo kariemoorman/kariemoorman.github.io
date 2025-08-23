@@ -1,10 +1,8 @@
 
 /*  Import partials from `sass_dir` (defaults to `_sass`) */
-@import
-        "base",
-        "syntax-highlighting",
-        "color"
-;
+@use "base" as *;
+@use "syntax-highlighting";
+@use "color" as *;
 
 
 
@@ -644,15 +642,15 @@
   color: white;
   font-weight: 300;
   font-size: 16px;
-  @include media-query($on-laptop) {
-    font-size: 15px;
-  }
   // text-align: left;
   text-transform: uppercase;
   padding-bottom: 5px;
   // display: block;
   // position: static;
   padding-left: 2px;
+  @include media-query($on-laptop) {
+    font-size: 15px;
+  }
 }
 .eduTag {
   //display: block;
@@ -660,11 +658,11 @@
   position: static;
   font-weight: 400; 
   font-size: 15px; 
+  text-align: center;
+  padding-top: 5px;
   @include media-query($on-laptop) {
     font-size: 14px;
   }
-  text-align: center;
-  padding-top: 5px;
 }
 
 .edu-archive-list img {
@@ -770,20 +768,20 @@
     text-transform: uppercase;
     letter-spacing: 1.2px;
     font-weight: 700;
+    padding-bottom: 15px;
     @include media-query($on-laptop) {
       font-size: 20px;
     }
-    padding-bottom: 15px;
 }
 .post-author {
     letter-spacing: 3px !important; 
     text-transform: uppercase !important;
     font-size: 20px;
     font-weight: 500;
+    padding-bottom: calc(#{$spacing-unit} * 0.75);
     @include media-query($on-laptop) {
       font-size: 18px;
     }
-    padding-bottom: $spacing-unit *.75;
 }
 .post-content {
     padding-bottom: 10px;
