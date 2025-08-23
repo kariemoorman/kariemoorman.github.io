@@ -436,21 +436,32 @@
   max-width: -webkit-calc(#{$content-width} * 1.15);
   max-width: calc(#{$content-width} * 1.15);
   margin: 60px auto 30px auto;
-
+  @include media-query(1000px) {
+    max-width: -webkit-calc(#{$content-width});
+    max-width: calc(#{$content-width});
+  }
   @include media-query($on-palm) {
     max-width: -webkit-calc(#{$content-width} * .5);
     max-width: calc(#{$content-width} * .5);
   }
 }
+
 .edu-archive-grid {
   display: grid; 
-  grid-template-columns: 45% 45%;
-  grid-gap: $spacing-unit - 10px;
-  padding-left: 40px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  box-sizing: border-box;
+  @include media-query(1000px) {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 20px;
+    margin: 20px;
+  }
   @include media-query($on-palm) {
+    grid-template-columns: 1fr;
     padding-left: 20px;
   }
 }
+
 .edu-archive-list {
   // padding:  10px 5px 10px 5px;
   background-color: rgba(148, 168, 196, 0.35);// rgba(238, 238, 238, 0.5); // rgba(235, 225, 206, 0.4);
@@ -458,7 +469,7 @@
   // border: 0.5px solid $d-grey-color-light;
   // //border-top: 0.5px solid $l-background-color; 
   // border-radius: 15px;
-      display: flex;
+    display: flex;
     flex-direction: column;
     margin: 15px;
     border-radius: 8px;
@@ -779,10 +790,6 @@
     }
 }
 
-//.post-content-container #link:last-child() {
-//    padding-bottom: 10px;
-//}
-
 .post-content-container #link a {
     color: $l-brand-color !important;
     font-size: 19px;
@@ -1052,14 +1059,22 @@
   }
 
   .footer-section {
+    // width: 100%;
+    // border-top: 1px solid;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // padding: 0.5rem 0;
+    // justify-content: flex-end;
+    // height: 100px;
+        border-top: 1px solid;
+    position: sticky;
     width: 100%;
-    border-top: 1px solid;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0.5rem 0;
-    justify-content: flex-end;
-    height: 100px;
+    height:auto;
+    top: 100%;
+    display:block;
+    padding: 20px 0;
+    margin: 0 auto; 
   }
 
   .footer-text {
