@@ -8,13 +8,14 @@ categories: ["edu"]
 image: "../media/images/didactic-diy.png"
 tags: ["datasci", "dataeng"]
 author: "Karie Moorman"
+page_type: pages
 ---
 
 
 <h2 align='center'>didactic-diy</h2>
 <h4 align='center'>Data Engineering, Science & Analytics, for practice and utility.</h4>
 
-<h4 align='center'>Github Repo: <a href='https://github.com/kariemoorman/didactic-diy/tree/main'>didactic-diy</a></h4>
+<p align='center'>Github: <a href='https://github.com/kariemoorman/didactic-diy/tree'>Didactic-DIY</a></p>
 
 ---
 

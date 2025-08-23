@@ -8,6 +8,7 @@ categories: ["edu"]
 image: "../media/images/brave-logo.png"
 tags: ["linux", "brave"]
 author: "Karie Moorman"
+page_type: pages
 ---
 
 
