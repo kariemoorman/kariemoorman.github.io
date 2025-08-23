@@ -5,7 +5,7 @@ subtitle: "ETL Workflow for Reddit"
 summary: "Proof-of-Concept data pipeline using Reddit APIs and local storage."
 date:   2023-09-03 15:45:31 +0700
 categories: ["edu"]
-image: "/media/images/datapipeline.png"
+image: "https://github.com/kariemoorman/kariemoorman.github.io/blob/master/media/images/datapipeline.png"
 tags: ["dataeng", "etl", "reddit"]
 author: "Karie Moorman"
 ---
