@@ -5,7 +5,7 @@ subtitle: "Multimodal Content Analysis Tool"
 summary: "Video scraping and multimodal content analysis tool for TikTok videos."
 date:   2023-10-08 21:03:01 +0700
 categories: ["edu"]
-image: "/media/images/tiktok.png"
+image: "https://github.com/kariemoorman/kariemoorman.github.io/blob/master/media/images/tiktok.png"
 tags: ["tiktok", "osint", "face-detection", "object-detection"]
 author: "Karie Moorman"
 ---

@@ -5,7 +5,7 @@ subtitle: "Multimodal Content Analysis Tool"
 summary: "A tool for data-mining Reddit platform, including text and user analysis."
 date:   2023-09-04 21:03:01 +0700
 categories: ["edu"]
-image: "/media/images/reddit-recon.png"
+image: "https://github.com/kariemoorman/kariemoorman.github.io/blob/master/media/images/reddit-recon.png"
 tags: ["reddit", "osint", "data-mining"]
 author: "Karie Moorman"
 ---

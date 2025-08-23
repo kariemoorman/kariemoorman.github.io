@@ -5,7 +5,7 @@ subtitle: "Binary Classification Task: Ad Purchases"
 summary: "Using logistic regression to predict ads purchase events across customer classes."
 date:   2023-09-11 20:45:31 +0700
 categories: ["edu"]
-image: "/media/images/logreg.png"
+image: "https://github.com/kariemoorman/kariemoorman.github.io/blob/master/media/images/logreg.png"
 tags: ["classification", "regression"]
 author: "Karie Moorman"
 ---
