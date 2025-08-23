@@ -4,7 +4,6 @@
 
 /*  Import partials from `sass_dir` (defaults to `_sass`) */
 
-@use "base" as *;
 @use "layout" as *;
 @use "syntax-highlighting";
 @use "color" as *;
@@ -21,6 +20,12 @@ $spacing-unit:     30px;
 $content-width:    800px;
 $on-palm:          600px;
 $on-laptop:        800px;
+
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
 
 
 
