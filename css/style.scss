@@ -4,10 +4,10 @@
 
 /*  Import partials from `sass_dir` (defaults to `_sass`) */
 
-@use "base";
+@use "base" as *;
 @use "layout";
 @use "syntax-highlighting";
-@use "color";
+@use "color" as *;
 
 $base-font-family: "PT Sans", Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
