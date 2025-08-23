@@ -12,7 +12,6 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.kariemoorman.com" # the base hostname & protocol for your site
 github_username: kariemoorman
 linkedin_username: karie-m-82002447
-email:  kariemoorman@proton.me
 permalink: /:year/:month/:day/:title
 
 theme-dark: false #Set to true to change to dark website theme
