@@ -5,7 +5,7 @@ subtitle: "Image Processing on MacOS"
 summary: "A MacOS command-line application for extracting text, objects, and faces from image files using Apple Vision and CoreML APIs."
 date:   2025-07-20 21:03:01 +0700
 categories: ["edu"]
-image: "https://github.com/kariemoorman/kariemoorman.github.io/blob/master/media/images/imagextract.png"
+image: "../media/images/imagextract.png"
 tags: ["image", "ocr", "object-detection", "face-detection"]
 author: "Karie Moorman"
 ---

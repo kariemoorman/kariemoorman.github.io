@@ -5,7 +5,7 @@ subtitle: "Git Repository of Data Sci Tutorials"
 summary: "Collection of proof-of-concept projects across data engineering, science & analytics, for practice and utility."
 date:   2023-08-01 06:15:31 +0700
 categories: ["edu"]
-image: "https://github.com/kariemoorman/kariemoorman.github.io/blob/master/media/images/didactic-diy.png"
+image: "../media/images/didactic-diy.png"
 tags: ["datasci", "dataeng"]
 author: "Karie Moorman"
 ---
