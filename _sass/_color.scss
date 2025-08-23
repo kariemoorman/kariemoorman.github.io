@@ -105,11 +105,6 @@ body.light {
     font-size: small;
   }
 
-  /* Icons */
-  .icon > svg path {
-    fill: $l-grey-color-dark; // $l-grey-color;
-  }
-
   /* Site header */
   .site-header {
     // border-top-color: $l-grey-color-dark;
@@ -242,11 +237,6 @@ body.dark {
   code {
     border-color: $d-grey-color;
     background-color: $d-code;
-  }
-
-  /* Icons */
-  .icon > svg path {
-    fill: $d-grey-color;
   }
 
   /* Site header */
