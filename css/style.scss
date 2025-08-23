@@ -161,16 +161,42 @@ pre {
 .icon {
     > svg {
         display: inline-block;
-        width: 28px;
-        height: 28px;
+        width: 30px;
+        height: 30px;
         vertical-align: middle;
-        // padding-right: 10px;
     }
 }
 
+// .icon svg {
+//   filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.8));
+//   transition: filter 0.3s ease;
+// }
+
+.icon--github {
+  border-radius: 20%;
+  box-shadow:
+    -1px -1px 1px rgba(255, 255, 255, 0.6),
+     1px -1px 1px rgba(255, 255, 255, 0.6),
+    -1px  1px 1px rgba(255, 255, 255, 0.6),
+     1px  1px 1px rgba(255, 255, 255, 0.6),
+     0 0 8px rgba(255, 255, 255, 0.7);
+}
+
+.icon--linkedin {
+  display: inline-block;
+  border-radius: 20%;
+  box-shadow:
+    -1px -1px 1px rgba(255, 255, 255, 0.6),
+     1px -1px 1px rgba(255, 255, 255, 0.6),
+    -1px  1px 1px rgba(255, 255, 255, 0.6),
+     1px  1px 1px rgba(255, 255, 255, 0.6),
+     0 0 8px rgba(255, 255, 255, 0.7);
+}
+
+
 .icon svg:hover {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
 }
 
 .icon img:hover {
@@ -178,8 +204,31 @@ pre {
   height: 38px;
 }
 
+.icon--github {
+  position: relative;
+  display: inline-block;
+}
+
+.icon--github::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 28px;
+  height: 28px;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.icon--github svg {
+  position: relative;
+  z-index: 1;
+}
+
 .post {
-  font-family: "Source Sans Pro";
+  font-family: "PT Sans";
   font-size: 18px;
   font-weight: 300;
   padding-top: 0;
@@ -224,8 +273,6 @@ pre {
 }
 .postContent {
   text-align: center;
- // margin-left: 8%;
- // margin-right: 8%;
 }
 .postDate {
   float: left;
@@ -266,6 +313,7 @@ pre {
 /* Page content */
 .page-content {
   padding: 0;
+  // min-height: 65vh;
 }
 .page-heading {
   font-size: 20px;

@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<body class="about">
+<div class="wrapper">
+<article class="post">
+  <header style="margin-top: 20px;">
+  {%if page.tagline%}
+  <div class="page-tagline">
+    <span><em>{{page.tagline}}</em></span>
+  </div>
+  {% endif %}
+</header>
+  <div class="post-content">
+    {{ content }}
+  </div>
+</article>
+</div>
+</body>
