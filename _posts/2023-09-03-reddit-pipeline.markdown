@@ -1,11 +1,9 @@
 ---
 layout: learning
 title:  "Building a Data Pipeline"
-subtitle: "ETL Workflow for Reddit"
-summary: "Proof-of-Concept data pipeline using Reddit APIs and local storage."
+subtitle: "Local ETL Workflow for Reddit"
 date:   2023-09-03 15:45:31 +0700
 categories: ["edu"]
-image: "/media/images/datapipeline.png"
 tags: ["dataeng", "etl", "reddit"]
 author: "Karie Moorman"
 ---

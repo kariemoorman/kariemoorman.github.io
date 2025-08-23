@@ -1,15 +1,13 @@
 ---
 layout: default
 ---
-<body class="project">
-<div class="wrapper">
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
     <div class="post-content-container">
 <header class="post-header" style="padding-top:25px;">
 <div class="post-title" itemprop="name headline"><a class="post-title-link"  href="{{page.url}}">{{ page.title }}</a></div>
 
 
-<div align="center">
+<center>
   {% if page.subtitle %}
   <div class="post-subtitle"><span>{{ page.subtitle }}</span></div>
   {% endif %}
@@ -28,7 +26,7 @@ layout: default
 {%endfor%}
 {% endif %}
 </div>
-</div>
+</center>
 </header>
 
 <hr style="background-color:lightgrey !important; height: 1.2px; ">
@@ -49,5 +47,4 @@ layout: default
 </div>
 
 </article>
-</div>
-</body>
+<script src="/js/style.js"></script>
