@@ -50,7 +50,7 @@ body.light {
 
 
   /* Links */
-  a {
+  a:not(.no-style-links) {
     color:  $l-link-color !important; font-weight: 400;
 
     &:visited {
