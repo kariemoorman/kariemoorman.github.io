@@ -1068,18 +1068,18 @@
   .footer-section {
     // width: 100%;
     // border-top: 1px solid;
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     // padding: 0.5rem 0;
-    // justify-content: flex-end;
-    // height: 100px;
-        border-top: 1px solid;
+    justify-content: flex-end;
+    min-height: 100px;
+    border-top: 1px solid;
     position: sticky;
     width: 100%;
     height:auto;
     top: 100%;
-    display:block;
+    // display: block;
     padding: 20px 0;
     margin: 0 auto; 
   }
