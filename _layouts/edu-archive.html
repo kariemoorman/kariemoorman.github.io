@@ -2,7 +2,7 @@
 layout: page
 ---
 
-<div style="margin-top: 60px;"></div>
+<div class="edu-div">
 <div class="edu-archive-grid">
 {% for post in site.posts %}
 {% for cat in post.categories %}
@@ -12,10 +12,10 @@ layout: page
 <div class ="edu-archive-list">
     <a class="edu-post" href="{{site.url}}{{site.baseurl}}{{post.url}}">
 <div>
-<div class="postDate" style="color: #111 !important;">
+<!-- <div class="postDate" style="color: #111 !important;">
 <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>
 </div>
-<br>
+<br> -->
 
 <div>
 <span class="eduTitle">{{post.title}}</span>
@@ -26,13 +26,15 @@ layout: page
 
 <!-- <div class="postExt">{{learning.excerpt | truncate: 100}}</div> -->
 
-<div class = 'eduTag'>
+<!-- <div class = 'eduTag'>
     {% for tag in post.tags %}
     <span style="background-color:rgb(249, 251, 252, .5);"> #{{ tag }}</span> &nbsp;
-    <!-- <span style="background-color:rgb(249, 251, 252, .5);"> &nbsp; #{{ tag }} &nbsp; </span> &nbsp; -->
+    <span style="background-color:rgb(249, 251, 252, .5);"> &nbsp; #{{ tag }} &nbsp; </span> &nbsp;
     {%endfor%}
-</div>
+</div> -->
 
+<img src={{post.image}}/>
+<div class="project-description">{{post.summary}}</div>
 
 </div></a>
 </div>
@@ -46,4 +48,4 @@ layout: page
 <div class="page-description"><h2>{{ page.description }}</h2></div>
 {% endif %}
 {% endif %}
-<div style="margin-bottom: 30px;"></div>
+</div>
