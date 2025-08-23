@@ -3,6 +3,8 @@
  */
 
 @charset "utf-8";
+@use "sass:color";
+@use "base" as *;
 
 /* Light color palette */
 $l-text-color:       #111;
@@ -10,8 +12,8 @@ $l-link-color:       #aaa;
 $l-background-color: #fdfdfd;
 $l-brand-color:      #2a7ae2;
 $l-grey-color:       #828282;
-$l-grey-color-light: lighten($l-grey-color, 40%);
-$l-grey-color-dark:  darken($l-grey-color, 35%);
+$l-grey-color-light: color.adjust($l-grey-color, $lightness: 40%); 
+$l-grey-color-dark:  color.adjust($l-grey-color, $lightness: -35%);
 $l-code: #EEF;
 $l-crimson: #DC143C;
 $l-nav: $l-link-color;
@@ -23,8 +25,8 @@ $d-link-color:       #cccccc;
 $d-background-color: #191919;
 $d-brand-color:      #2a7ae2;
 $d-grey-color:       #A7A7A7;
-$d-grey-color-light: lighten($l-grey-color, 40%);
-$d-grey-color-dark:  darken($l-grey-color, 25%);
+$d-grey-color-light: color.adjust($l-grey-color, $lightness: 40%);
+$d-grey-color-dark: color.adjust($l-grey-color, $lightness: -25%);
 $d-code: #2f2f33;
 $d-crimson: #DC143C;
 $d-nav: $d-link-color;
@@ -77,7 +79,7 @@ body.light {
 
     &:hover {
         //color: darken($l-link-color, 50%) !important;
-        border-color: darken($l-link-color, 55%);
+        border-color: color.adjust($l-link-color, $lightness: -55%);
         font-weight: 500;
     }
 
@@ -85,13 +87,14 @@ body.light {
       color: $l-text-color !important; 
       &:hover {
           color: $l-text-color !important;
-          border-color: darken($l-link-color, 50%);
+          border-color: color.adjust($l-link-color, $lightness: -50%);
           // background: #ffffff7b;
           // padding:5px 5px 0px 5px;
       }
     }
     &.postLink{
-      color: darken($l-link-color, 50%) !important;
+      // color: darken($l-link-color, 50%) !important;
+      color: color.adjust($l-link-color, $lightness: -50%) !important;
 
       /*&:visited {
           color: $l-crimson !important;
@@ -99,8 +102,8 @@ body.light {
       }*/
     }
     &.post-title-link{
-      color: darken($l-link-color, 50%) !important;
-
+      // color: darken($l-link-color, 50%) !important;
+      color: color.adjust($l-link-color, $lightness: -50%) !important;
       /*&:visited {
           color: $l-crimson !important;
           border-color: $l-crimson;
@@ -210,112 +213,3 @@ body.light {
   }
 }
 
-/* Dark theme color definitions */
-body.dark {
-  color: $d-text-color;
-  background-color: $d-background-color;
-
-  /* Links */
-  a {
-    color: $d-link-color !important;
-
-    &:visited {
-        color: darken($d-brand-color, 50%);
-    }
-
-    &:hover {
-        color: darken($d-link-color, 50%) !important;
-        border-color: darken($d-link-color, 15%);
-    }
-
-    &.page-link{
-      &:hover {
-          color: $d-text-color;
-          border-color: darken($d-link-color, 50%);
-      }
-    }
-    &.postLink{
-      color: darken($d-link-color, 50%) !important;
-
-      &:visited {
-          color: $d-crimson !important;
-          border-color: $d-crimson;
-      }
-    }
-    &.post-title-link{
-      color: darken($d-link-color, 50%) !important;
-
-      &:visited {
-          color: $d-crimson !important;
-          border-color: $d-crimson;
-      }
-    }
-  }
-
-  blockquote {
-    color: $d-grey-color;
-    border-left-color: $d-grey-color-light;
-  }
-
-  /* Code formatting */
-  pre,
-  code {
-    border-color: $d-grey-color;
-    background-color: $d-code;
-  }
-
-  /* Icons */
-  // .icon > svg path {
-  //   fill: $d-grey-color;
-  // }
-
-  /* Site header */
-  .site-header {
-    border-top-color: $d-grey-color-dark;
-    border-bottom-color: $d-grey-color-light;
-  }
-
-  .site-title,
-  .site-title:visited {
-    color: $d-grey-color-light;
-  }
-
-  .site-navigation {
-    color: $d-nav;
-  }
-
-  .page-tagline {
-    color: $d-page;
-  }
-
-  .page-link {
-    color: $d-page;
-  }
-
-  .site-nav .page-link {
-    color: $d-text-color;
-  }
-
-  @include media-query($on-palm) {
-    background-color: $d-background-color;
-    border: 1px solid $d-grey-color-light;
-
-    .menu-icon > svg path {
-      fill: $d-grey-color-dark;
-    }
-  }
-
-  /* Page content */
-  .post-meta {
-    color: $d-grey-color;
-  }
-
-  /* Site footer */
-  .site-footer {
-    border-top-color: $d-grey-color-light;
-  }
-
-  .footer-col-wrapper {
-    color: $d-grey-color;
-  }
-}
