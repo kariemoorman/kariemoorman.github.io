@@ -1,8 +1,8 @@
 
 /*  Import partials from `sass_dir` (defaults to `_sass`) */
-@use "base" as *;
+@use "base";
 @use "syntax-highlighting";
-@use "color" as *;
+@use "color";
 
 
 
