@@ -3,10 +3,15 @@
 ---
 
 /*  Import partials from `sass_dir` (defaults to `_sass`) */
+@import "base";
+@import "layout";
+@import "syntax-highlighting";
+@import "color";
 
-@use "layout" as *;
-@use "syntax-highlighting";
-@use "color" as *;
+// @use "base" as *;
+// @use "layout" as *;
+// @import "syntax-highlighting";
+// @use "color" as *;
 
 $base-font-family: "PT Sans", Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
