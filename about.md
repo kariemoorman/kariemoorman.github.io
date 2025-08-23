@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-
+<div class="wrapper">
 <div class='manual-container'>
 <div class="manual-content">
 <div class="manual-title">Current Topics of Interest</div>
@@ -90,6 +90,7 @@ Linguistics @ <a href="https://lx.berkeley.edu/" target="_blank">University of C
 <div class="manual-subtitle">Karuk Language Project</div>
 <div class='img'><a href="https://linguistics.berkeley.edu/~karuk/index.php" target="_blank"><img id='karuk'></a></div>
 <div><p>The <a href="http://linguistics.berkeley.edu/~karuk/resources.php" target="_blank">Karuk Language Project</a> is a language documentation and revitalization effort in collaborative with the Karuk Tribe and the Survey of California and Other Indian Languages at UC Berkeley. The effort includes digitization of field notes and learning about the Karuk language and culture through linguistic research and teaching.</p></div>
+</div>
 </div>
 </div>
 </div>
