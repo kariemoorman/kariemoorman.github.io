@@ -19,6 +19,8 @@ ENV/
 env.bak/
 venv.bak/
 .rbenv
+.bundle/
+vendor/
 
 # OS files 
 .DS_Store
