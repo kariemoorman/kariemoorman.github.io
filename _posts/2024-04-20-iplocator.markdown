@@ -8,15 +8,18 @@ categories: ["edu"]
 image: "../media/images/ip_locator.png"
 tags: ["ipv4", "osint", "geolocation", "flask"]
 author: "Karie Moorman"
+page_type: pages
 ---
 
 
 <h3 align='center'>Table of Contents</h3>
 <div class='tbl'>
-<ul style='display: flex; flex-wrap: row; gap: 30px; margin-left: 10px; justify-content: center;'>
+<div class='centered-list'>
+<ul>
 <li><a href='#intro'>Overview</a></li>
 <li><a href='#example'>Example</a></li>
 </ul>
+</div>
 </div>
 
 --- 
@@ -25,7 +28,7 @@ author: "Karie Moorman"
 
 <p align='center'><img src="/media/images/ip_locator.png" width='50%'></p>
 
-<p align='center'>Github: <a href='https://github.com/kariemoorman/IPLocator' target='_blank'>https://github.com/kariemoorman/IPLocator</a></p>
+<p align='center'>Github: <a href='https://github.com/kariemoorman/IPLocator' target='_blank'>IPLocator</a></p>
 <div class='page-conf'>
 <p>IPLocator extracts metadata including geolocation information from domain names and IPv4 addresses.</p>
 </div>

@@ -8,6 +8,7 @@ categories: ["edu"]
 image: "../media/images/reddit-recon.png"
 tags: ["reddit", "osint", "data-mining"]
 author: "Karie Moorman"
+page_type: pages
 ---
 
 <p align='center'><img src="/media/images/reddit-recon.png" width='50%'></p>

@@ -8,17 +8,20 @@ categories: ["edu"]
 image: "../media/images/imagextract.png"
 tags: ["image", "ocr", "object-detection", "face-detection"]
 author: "Karie Moorman"
+page_type: pages
 ---
 
 
 <h3 align='center'>Table of Contents</h3>
 <div class='tbl'>
-<ul style='display: flex; flex-wrap: row; gap: 30px; margin-left: 10px; justify-content: center;'>
+<div class='centered-list'>
+<ul>
 <li><a href='#intro'>Overview</a></li>
 <li><a href='#model'>Models</a></li>
 <li><a href='#swift'>Compilation</a></li>
 <li><a href='#example'>Example</a></li>
 </ul>
+</div>
 </div>
 
 --- 
@@ -26,7 +29,7 @@ author: "Karie Moorman"
 <div class='page-conf'>
 <h3 id='intro' align='center'>Overview</h3>
 <p align='center'><img src='/media/images/imagextract.png' width='50%'></p>
-<p align='center'>Github: <a href='https://github.com/kariemoorman/imagextract' target='_blank'>https://github.com/kariemoorman/imagextract</a></p>
+<p align='center'>Github: <a href='https://github.com/kariemoorman/imagextract' target='_blank'>ImagExtract</a></p>
 <p>ImagExtract is a MacOS command-line application for extracting text, objects, and faces from image files using Apple Vision and CoreML APIs. Users provide an input image (JPG, PNG, TIFF, PDF) and extracted information is output in a directory.</p>
 </div>
 

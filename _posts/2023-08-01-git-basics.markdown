@@ -8,6 +8,7 @@ categories: ["edu"]
 image: "../media/images/git.png"
 tags: ["git", "version control"]
 author: "Karie Moorman"
+page_type: pages
 ---
 
 <center> 

@@ -8,6 +8,7 @@ categories: ["edu"]
 image: "../media/images/api.png"
 tags: ["api", "http", "flask"]
 author: "Karie Moorman"
+page_type: pages
 ---
 
 <h3 align='center'>Table of Contents</h3>

@@ -8,14 +8,17 @@ categories: ["edu"]
 image: "../media/images/tiktok.png"
 tags: ["tiktok", "osint", "face-detection", "object-detection"]
 author: "Karie Moorman"
+page_type: pages
 ---
 
 <h3 align='center'>Table of Contents</h3>
 <div class='tbl'>
-<ul style='display: flex; flex-wrap: row; gap: 30px; margin-left: 10px; justify-content: center;'>
+<div class='centered-list'>
+<ul>
 <li><a href='#intro'>Overview</a></li>
 <li><a href='#example'>Example</a></li>
 </ul>
+</div>
 </div>
 
 --- 
@@ -24,7 +27,7 @@ author: "Karie Moorman"
 
 <p align='center'><img src='/media/images/tiktok.png' width='50%'></p>
 
-<p align='center'>Github: <a href='https://github.com/kariemoorman/tiktok-analyzer' target='_blank'>https://github.com/kariemoorman/tiktok-analyzer</a></p>
+<p align='center'>Github: <a href='https://github.com/kariemoorman/tiktok-analyzer' target='_blank'>Tiktok-Analyzer</a></p>
 
 <div class='page-conf'>
 <p>Tiktok Analyzer is a video scraping and multimodal content analysis tool. Search & download Tiktok videos by username and/or video tag, and analyze video contents. Transcribe video speech to text and perform NLP analysis tasks (e.g., keyword and topic discovery; emotion/sentiment analysis). Isolate audio signal and perform signal processing analysis tasks (e.g., pitch, prosody and sentiment analysis). Isolate visual stream and perform image tasks (e.g., object detection, face detection).</p>
