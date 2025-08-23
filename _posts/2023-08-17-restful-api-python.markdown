@@ -2,8 +2,10 @@
 layout: learning
 title:  "RESTful API in Flask"
 subtitle: "Database Interactions via HTTP(S)"
+summary: "Proof-of-Concept REST API design and implementation using Flask."
 date:   2023-08-17 21:03:01 +0700
 categories: ["edu"]
+image: "/media/images/api.png"
 tags: ["api", "http", "flask"]
 author: "Karie Moorman"
 ---

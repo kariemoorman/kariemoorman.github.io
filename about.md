@@ -6,16 +6,15 @@ permalink: /about/
 
 
 <div class='manual-container'>
-<div class="manual-title">Current Topics of Interest</div>
 <div class="manual-content">
+<div class="manual-title">Current Topics of Interest</div>
 <p class='wide'> Ethics | Privacy & Security | Human-Computer Interaction | Dis/Misinformation | DevSecOps | Supply Chain Optimization | Classification & Recommender Systems | Cryptography | Quantum Technology </p>
 </div>
 </div>
 
 <div class='manual-container'>
-<div class="manual-title">Certifications</div>
 <div class="manual-content">
-
+<div class="manual-title">Certifications</div>
 <div class="certrow">
   <div class="certcolumn" title='January 2024'>
     <a href='https://www.comptia.org/certifications/security' target="_blank"><img id='comptia-sec' alt="comtpia-sec" src='/media/images/certifications/secplus.png'></a>
@@ -24,22 +23,24 @@ permalink: /about/
 </div>
 
 <div class='manual-container'>
-<div class="manual-title">Educational Background</div>
 <div class="manual-content">
-<p>I studied <a href="http://cogsci.ucmerced.edu" target="_blank">Cognitive and Information Sciences</a> as a graduate student and Eugene Cota Robles fellow at <a href="https://s.hdnux.com/photos/21/12/47/4499926/3/920x920.jpg" target="_blank">UC Merced</a>. As an undergraduate student, I studied all sorts of things including linguistics at <a href='../media/images/uc-berkeley-campus.jpg' target="_blank">UC Berkeley</a>. My undergraduate and graduate studies focused primarily on the formation of meaning via interactions between language, cognition, and ideology from a cognitive and functional perspective. I researched sociocultural identity as mediated by language using corpus-based and behavioral methods.</p>
+<div class="manual-title">Educational Background</div>
+<p>Cognitive & Information Sciences @ <a href="https://cogsci.ucmerced.edu" target="_blank">University of California, Merced</a><br>
+Linguistics @ <a href="https://lx.berkeley.edu/" target="_blank">University of California, Berkeley</a></p>
+<p>My undergraduate and graduate studies focused primarily on the formation of meaning via interactions between language, cognition, and ideology from a cognitive and functional perspective. I researched sociocultural identity as mediated by language using corpus-based and behavioral methods.</p>
 </div>
 </div>
 
 <div class='manual-container'>
-<div class="manual-title">Academic Research Topics</div>
 <div class="manual-content"> 
+<div class="manual-title">Academic Research Topics</div>
 <p class='wide'> Bias, Language & Social Group Dynamics | Social & Political Ideology | Cognitive, Cultural & Linguistic Variation | Computational Linguistics | Neurolinguistics | Psycholinguistics | Evolutionary Anthropology </p>
 </div>
 </div>
 
 <div class='manual-container'>
-<div class="manual-title">Academic Research Methods</div>
 <div class="manual-content"> 
+<div class="manual-title">Academic Research Methods</div>
 <p class='wide'>Classification | Clustering | Topic Modeling | Linear & Non-Linear Regression (GLMM; HLM; SEM) | Time-Series Analysis | Causal Inference | Behavioral Experimentation </p>
 </div>
 </div>
@@ -92,5 +93,3 @@ permalink: /about/
 </div>
 </div>
 </div>
-
-
