@@ -2,32 +2,13 @@
 layout: learning
 title: "Virtual Machines"
 subtitle:  "(Almost) Any OS on a Single Device"
-summary: "Collection of resources for setting up VMs on MacOS, Linux, and Windows machines."
 date: 2023-10-02 15:45:31 +0530
 categories: ["edu"]
-image: "/media/images/vms.png"
 tags: ["vm", "linux", "mac", "windows"]
 author: "Karie Moorman"
 ---
 
-
-<h3 align='center'>Table of Contents</h3>
-<div class='tbl'>
-<ul style='display: flex; flex-wrap: row; gap: 30px; margin-left: 10px; justify-content: center;'>
-<li><a href='#intro'>Overview</a></li>
-<li><a href='#utm'>UTM</a></li>
-<li><a href='#par'>Parallels</a></li>
-<li><a href='#kvm'>KVM</a></li>
-<li><a href='#vb'>VirtualBox</a></li>
-<li><a href='#vmw'>VMWare</a></li>
-</ul>
-</div>
-
---- 
-
 <div class='content-pad'>
-
-<h3 id='intro' align='center'>Overview</h3>
 <p>Virtual machines (VMs) are software-based emulations of physical computers. They enable you to run multiple operating systems on a single physical machine (i.e., a host) using a virtualization layer or hypervisor. Virtualization allows users to create and manage isolated environments, each with its own operating system and software, within a single physical server or computer.</p>
 <p>Virtual machines (VMs) offers several significant benefits:</p>
 <ul>
@@ -44,8 +25,21 @@ author: "Karie Moorman"
 <p>Popular virtual emulators include UTM, KVM, VirtualBox, VMWare, and Parallels.</p>
 </div>
 
----
+--- 
 
+<h3 align='center'>Table of Contents</h3>
+<div class='tbl'>
+<ul style='display: flex; flex-wrap: row; gap: 30px; margin-left: 10px; justify-content: center;'>
+<li><a href='#utm'>UTM</a></li>
+<li><a href='#par'>Parallels</a></li>
+<li><a href='#kvm'>KVM</a></li>
+<li><a href='#vb'>VirtualBox</a></li>
+<li><a href='#vmw'>VMWare</a></li>
+
+</ul>
+</div>
+
+---
 <h3 align='center' id='utm'>UTM</h3>
 
 <div>
