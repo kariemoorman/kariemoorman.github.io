@@ -3,10 +3,10 @@
 ---
 
 /*  Import partials from `sass_dir` (defaults to `_sass`) */
-@use "base" as *;
-@use "layout";
-@use "syntax-highlighting";
-@use "color";
+@use "../_sass/base" as *;
+@use "../_sass/layout";
+@use "../_sass/syntax-highlighting";
+@use "../_sass/color";
 
 /* Reset some basic elements */
 body, h1, h2, h3, h4, h5, h6,
