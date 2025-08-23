@@ -3,16 +3,12 @@
 
   {% include head.html %}
 
-  <body class="{% if site.theme-dark %} dark {% else %} light {% endif %} ">
-  
+  <body class="{% if site.theme-dark %} dark {% else %}light{% endif %} {{ page.page_type }}">
     {% include header.html %}
-
     <div class="page-content">
         {{ content }}
     </div>
-
     {% include footer.html %}
 
   </body>
-
 </html>

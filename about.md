@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+page_type: about
 ---
 
 <div class="wrapper">
