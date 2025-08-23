@@ -14,13 +14,13 @@
 .site-header {
     // border-top: 5px solid;
      border-bottom: 1px solid;
-     min-height: 56px;
+     min-height: 36px;
      // Positioning context for the mobile navigation icon
      position: relative;
      background-color: $l-background-color;
     }
 .site-title {
-     font-size: 60px;
+     font-size: clamp(45px, 5vw,60px);
      font-weight: 100;
      font-family: 'PT Sans';
      text-transform: capitalize;
@@ -141,10 +141,8 @@
     display: block;
     position: relative;
     padding: 10px;
-    @include media-query($on-palm) {
-      width: 90%;
-    }
   }
+  
 .container-grid {
     display: grid;
     grid-template-areas: 
@@ -433,10 +431,10 @@
 /* ***** EDUCATION ARCHIVE ***** */
 /* ***************************** */
 .edu-div {
-  max-width: -webkit-calc(#{$content-width} * 1.15);
-  max-width: calc(#{$content-width} * 1.15);
+  max-width: -webkit-calc(#{$content-width} * 1.25);
+  max-width: calc(#{$content-width} * 1.25);
   margin: 60px auto 30px auto;
-  @include media-query(1000px) {
+  @include media-query(1200px) {
     max-width: -webkit-calc(#{$content-width});
     max-width: calc(#{$content-width});
   }
@@ -471,7 +469,7 @@
   // border-radius: 15px;
     display: flex;
     flex-direction: column;
-    margin: 15px;
+    margin: 10px;
     border-radius: 8px;
     padding:  10px 5px;
     // background-color: rgba(87, 87, 191, 0.2);
@@ -500,17 +498,14 @@
 .eduTitle { 
   color: $l-text-color !important;
   font-weight: 400;
-  font-size: 20px;
-  @include media-query($on-laptop) {
-    font-size: 19px;
-  }
-  text-align: left;
+  font-size: clamp(18px, 2.25vw, 22px);
+  // text-align: left;
   text-transform: uppercase;
   padding-top: 5px;
   padding-bottom: 5px;
   letter-spacing: 1px;
-  display: block;
-  position: static;
+  // display: block;
+  // position: static;
   padding-left: 2px;
 }
 .eduSubtitle {
@@ -520,11 +515,11 @@
   @include media-query($on-laptop) {
     font-size: 15px;
   }
-  text-align: left;
+  // text-align: left;
   text-transform: uppercase;
   padding-bottom: 5px;
-  display: block;
-  position: static;
+  // display: block;
+  // position: static;
   padding-left: 2px;
 }
 .eduTag {
