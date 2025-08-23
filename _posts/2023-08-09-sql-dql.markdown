@@ -8,6 +8,7 @@ categories: ["edu"]
 image: "../media/images/sql.png"
 tags: ["sql", "dql", "set theory"]
 author: "Karie Moorman"
+page_type: pages
 ---
 
 <div class='content-pad'>

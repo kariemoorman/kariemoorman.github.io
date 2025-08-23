@@ -44,6 +44,11 @@ body.projects {
     background-size:cover;
 }
 
+body.pages {
+  background: url('../media/gifs/giphy-13.gif') repeat-y center center fixed;
+    background-size:cover;
+}
+
 /* Light theme color definitions */
 body.light {
   color: $l-grey-color-dark ; //$l-text-color
@@ -64,16 +69,16 @@ body.light {
 
   /* Links */
   a:not(.no-style-links) {
-    color:  $l-link-color !important; font-weight: 400;
+    //color:  $l-link-color !important; font-weight: 400;
 
     &:visited {
-        color: darken($l-brand-color, 50%);
+        //color: darken($l-brand-color, 50%);
     }
 
     &:hover {
-        color: darken($l-link-color, 50%) !important;
+        //color: darken($l-link-color, 50%) !important;
         border-color: darken($l-link-color, 55%);
-        font-weight: 600;
+        font-weight: 500;
     }
 
     &.page-link{

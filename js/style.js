@@ -27,3 +27,10 @@ imageContainers.forEach((container, index) => {
     updateCarousel(index);
   });
 });
+
+function toggleOverlay(container) {
+    container.classList.toggle("active");
+  }
+
+
+  

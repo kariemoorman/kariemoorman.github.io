@@ -8,6 +8,7 @@ categories: ["edu"]
 image: "../media/images/logreg.png"
 tags: ["classification", "regression"]
 author: "Karie Moorman"
+page_type: pages
 ---
 
 
