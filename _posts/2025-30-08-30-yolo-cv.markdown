@@ -408,4 +408,4 @@ Application combining object tracking with pose detection include:
   - Sports analytics: Who passed the ball, when, and how was their form?
   - Robotics: Real-time human-robot collaboration with gesture-based commands
   - Surveillance: Detect suspicious motion patterns, loitering, or aggression
-  - Animation/Mocap: Capture real human motion for games or films
+  - Animation/Motion Capture: Capture real human motion for games or films
