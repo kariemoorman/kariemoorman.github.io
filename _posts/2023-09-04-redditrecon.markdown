@@ -11,13 +11,13 @@ author: "Karie Moorman"
 page_type: pages
 ---
 
-<p align='center'><img src="/media/images/reddit-recon.png" width='50%'></p>
-
-<p align='center'>Github: <a href='https://github.com/kariemoorman/reddit-recon' target='_blank'>https://github.com/kariemoorman/reddit-recon</a></p>
 
 <div class='page-conf'>
 <p>Reddit-Recon mines Reddit data by subreddit name, keyword, and/or username, and analyzes the contents. Use Reddit-Recon to isolate important and emerging topics, trends, and keywords, monitor user sentiment, and track user activity within and across subreddits.</p>
 </div>
+
+<p align='center'>Github: <a href='https://github.com/kariemoorman/reddit-recon' target='_blank'>https://github.com/kariemoorman/reddit-recon</a></p>
+
 
 --- 
 

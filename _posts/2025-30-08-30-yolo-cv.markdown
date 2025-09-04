@@ -1,0 +1,411 @@
+---
+layout: learning
+title:  "YOLO"
+subtitle: "CV using Ultralytics YOLO models"
+summary: "Proof-of-Concept image/video processing using YOLO models for pose detection, object detection, classification, and segment extraction."
+date:   2025-08-30 21:03:01 +0700
+categories: ["edu"]
+image: "../media/images/cv.png"
+tags: ["cv", "detection", "segmentation"]
+author: "Karie Moorman"
+page_type: pages
+---
+
+
+<h3 align='center'>Table of Contents</h3>
+<div class='tbl'>
+<div class='centered-list'>
+<ul>
+<li><a href='#intro'>Overview</a></li>
+<li><a href='#model'>Models</a></li>
+<li><a href='#image-det'>Image Detection</a></li>
+<li><a href='#image-seg'>Image Segmentation</a></li>
+<li><a href='#video-det'>Video Detection</a></li>
+</ul>
+</div>
+</div>
+
+--- 
+
+<div class='page-conf'>
+<h3 id='intro' align='center'>Overview</h3>
+<p>Computer Vision (CV) is a field of artificial intelligence that enables machines to interpret and understand visual information from the world, such as images and videos. By mimicking human vision, computer vision algorithms can detect objects, recognize faces, track movements, analyze scenes, and even perform tasks like pose detection and segmentation. Extract</p>
+
+<p align='center'>Github: <a href='https://github.com/kariemoorman/didactic-diy/blob/main/tutorials/vision/yolo-cv.py' target='_blank'>YOLO-CV</a></p>
+
+</div>
+
+---
+
+<h3 id='model' align='center'>Models</h3>
+
+<h4>YOLO</h4>
+
+YOLO models are real-time object detection models known for their speed and accuracy, often converted to Core ML for on-device detection tasks. For this project we use YOLOv5m for object detection tasks.
+
+The latest model version is [YOLO11](https://docs.ultralytics.com/models/yolo11/#key-features). 
+
+5 base models are available depending on the computer vision task:
+
+- YOLO11: Detection
+- YOLO11-obb: Oriented-Detection
+- YOLO11-seg: Segmentation
+- YOLO11-cls: Classification
+- YOLO11-post: Pose-Estimation
+
+This example will make use of YOLO11, YOLO11-post, and YOLO11-seg models.
+
+
+---
+
+<h3 id='image-det' align='center'>Image Detection</h3>
+
+Off-the-shelf YOLO models perform well at pose detection and object detection across [80 predefined classes](https://docs.ultralytics.com/datasets/detect/). 
+
+
+Required Libraries: 
+
+```bash
+ultralytics
+opencv-python
+```
+
+
+Basic Python Script:
+
+```python
+
+import os
+import cv2
+from ultralytics import YOLO
+
+
+def process_image(image_filepath: str, model_type: str):
+    if not os.path.isfile(image_filepath):
+        raise ValueError(f"Invalid file path: {image_filepath}. The file does not exist or is not a valid file.")
+    
+    model_dict = {
+        'pose': "yolo11m-pose.pt",
+        'obj': "yolo11m.pt",
+        'seg': "yolo11m-seg.pt"
+    }
+
+    model_name = model_dict.get(model_type)
+
+    if model_name is None:
+        raise ValueError(f"Invalid model_type: {model_type}. Choose from 'pose', 'obj', or 'seg'.")
+    
+    model = YOLO(model_name)
+
+    filepath = os.path.splitext(os.path.basename(image_filepath))[0]
+    results = model(image_filepath)
+    for result in results:
+        annotated_image = result.plot()
+    cv2.imwrite(f"{filepath}_{model_type}.png", annotated_image)
+
+```
+
+<br>
+
+<h4>Example</h4>
+
+
+For the example we'll use the following input image:
+
+input_image='bus.jpg'
+
+<p align='center'><img src='/media/images/yolo/bus.jpg' alt='yolo-bus' width='50%'></p>
+
+<br>
+
+Python Commands:
+
+```python
+
+process_image(input_image, 'obj')
+
+process_image(input_image, 'pose')
+
+```
+
+<br>
+
+Output Detection: 
+
+<div style="display: flex; flex-wrap: wrap; justify-content: space-evenly; align-items: center; max-width: 600px; gap: 10px; margin: 0 auto;">
+  <img src="/media/images/yolo/bus_obj.png" alt="OBJ" style="flex: 1 1 45%; max-width: 45%;">
+  <img src="/media/images/yolo/bus_pose.png" alt="POSE" style="flex: 1 1 45%; max-width: 45%;">
+</div>
+
+<br>
+
+Using object and pose detection, we can understand features represented in an image such as class location and density, orientation and directionality, in an automated and scalable fashion.
+
+<br>
+
+
+---
+
+<h3 id='image-seg' align='center'>Image Segmentation</h3>
+
+Using YOLO11-seg model, individual objects segmented can be extracted and saved as independent images. 
+
+
+Required Libraries: 
+
+```bash
+numpy
+pillow
+ultralytics
+opencv-python
+```
+
+Basic Python Script:
+
+```python
+
+import os
+import cv2
+import numpy as np
+from PIL import Image, ImageDraw
+from ultralytics import YOLO
+
+def extract_image_objs(image_filepath: str, background_type: str ='transparent'):
+    if not os.path.isfile(image_filepath):
+        raise ValueError(f"Invalid file path: {image_filepath}. The file does not exist or is not a valid file.")
+    
+    if background_type not in ['black', 'transparent']:
+        raise ValueError(f"Invalid background_type: {background_type}. Please select 'transparent' or 'black'.")
+
+    filepath = os.path.splitext(os.path.basename(image_filepath))[0]
+
+    model = YOLO("yolo11m-seg.pt")
+
+    results = model.predict(image_filepath)
+    result = results[0]
+    masks = result.masks
+    class_names = result.names
+    img = cv2.imread(image_filepath)
+    if masks is not None:
+        for j, mask in enumerate(masks):
+            mask_array = mask.data[0].numpy()
+            mask_resized = cv2.resize(mask_array, (img.shape[1], img.shape[0]))
+            binary_mask = np.uint8(mask_resized * 255)
+            if background_type == 'black':
+                mask_img = np.zeros_like(img)
+                mask_img[binary_mask == 255] = img[binary_mask == 255]
+            elif background_type == 'transparent':
+                mask_img = cv2.cvtColor(img, cv2.COLOR_BGR2BGRA)
+                mask_img[:, :, 3] = 0
+                mask_img[binary_mask == 255, :3] = img[binary_mask == 255]
+                mask_img[binary_mask == 255, 3] = 255
+            class_idx = result.boxes.cls[j]
+            class_name = class_names[int(class_idx)]
+            output_filename = f'{filepath}_{class_name}_{j}_{background_type}.png'
+            cv2.imwrite(output_filename, mask_img)
+            print(f"Saved extracted object {j} as {output_filename}")
+    else:
+        print(f"No masks found for result")
+
+```
+
+<br>
+
+The python function above (`extract_image_objs`) processes an image and extracts object segment `masks` using a YOLO model. 
+
+The YOLO model generates predicted segmentation `masks` for the objects detected in the image. These `masks` are binary arrays that highlight the regions of the image corresponding to each detected object, allowing for precise object segmentation and extraction.
+
+For each mask detected, the function resizes the mask to match the input image's dimensions. It then defines a binary mask (`binary_mask = np.uint8(mask_resized * 255)`) which converts the mask to an unsigned 8-bit integer format, which is standard for image data. After resizing, the mask might still have values between 0 and 1 (floating-point), so multiplying by 255 scales the mask values to the full 8-bit range (0-255). The result is a binary mask where non-zero values (the detected object) are 255, and the rest are 0.
+
+Depending on specified `background_type`, the function either creates a mask with a `black` or `transparent` background. 
+
+For `black` background, a new image is created (`mask_img = np.zeros_like(img)`) initialized to zeros (black), with the same dimensions and data type as the original image. Then the pixels from the original image are copied into the new image, , but only where `binary_mask` is 255 (`mask_img[binary_mask == 255] = img[binary_mask == 255]`). The object parts of the image are kept, and everything else remains black.
+
+For `transparent` background adds an alpha channel. The original image is converted from BGR (3-channel) format to BGRA (4-channel) format using OpenCV (`mask_img = cv2.cvtColor(img, cv2.COLOR_BGR2BGRA)`). The extra channel, A (alpha), represents the transparency of the image. The alpha channel is set to 0, making the image fully transparent by default (`mask_img[:, :, 3] = 0`). For every pixel where `binary_mask` is 255 (i.e., object detected), the color channels (RGB) from the original image are copied (`mask_img[binary_mask == 255, :3] = img[binary_mask == 255]`). For the same pixels where the mask is 255, the alpha channel is set to 255, making those pixels fully visible (`mask_img[binary_mask == 255, 3] = 255`). The result is an image where the detected object is visible, and the background is transparent.
+
+The object mask is saved as a PNG file with a name indicating the class name, mask index, and background type.
+
+<br>
+
+<h4>Example</h4>
+
+For the example we'll use the same input image:
+
+input_image='bus.jpg'
+
+<p align='center'><img src='/media/images/yolo/bus.jpg' alt='yolo-bus' width='50%'/></p>
+
+
+Python Commands: 
+
+```python 
+extract_image_objs(input_image, 'black')
+
+extract_image_objs(input_image, 'transparent')
+```
+
+<br>
+
+Output Segments: 
+
+<div style="display: flex; flex-wrap: wrap; justify-content: space-evenly; align-items: center; max-width: 600px; gap: 10px; margin: 0 auto;">
+  <img src="/media/images/yolo/bus_bus_0_black.png" alt="Segment1B" style="flex: 1 1 45%; max-width: 45%;">
+  <img src="/media/images/yolo/bus_bus_0_transparent.png" alt="Segment1T" style="flex: 1 1 45%; max-width: 45%;">
+  <img src="/media/images/yolo/bus_person_1_black.png" alt="Segment2B" style="flex: 1 1 45%; max-width: 45%;">
+  <img src="/media/images/yolo/bus_person_1_transparent.png" alt="Segment2T" style="flex: 1 1 45%; max-width: 45%;">
+  <img src="/media/images/yolo/bus_person_2_black.png" alt="Segment3T" style="flex: 1 1 45%; max-width: 45%;">
+  <img src="/media/images/yolo/bus_person_2_transparent.png" alt="Segment3T" style="flex: 1 1 45%; max-width: 45%;">
+  <img src="/media/images/yolo/bus_person_3_black.png" alt="Segment4T" style="flex: 1 1 45%; max-width: 45%;">
+  <img src="/media/images/yolo/bus_person_3_transparent.png" alt="Segment4T" style="flex: 1 1 45%; max-width: 45%;">
+  <img src="/media/images/yolo/bus_person_4_black.png" alt="Segment5B" style="flex: 1 1 45%; max-width: 45%;">
+  <img src="/media/images/yolo/bus_person_4_transparent.png" alt="Segment5T" style="flex: 1 1 45%; max-width: 45%;">
+</div>
+
+<br>
+
+Using these mask segments, we can perform a wide variety of interesting qualitative and quantitative analyses, including figure-ground organization, occlusion analysis, model attention and saliency, position tracking, class frequency and distribution.
+
+These masks can also power higher-level analyses:
+- Behavioral analysis (e.g., pedestrian intent, group dynamics)
+- Anomaly detection (e.g., strange objects appearing in restricted zones)
+- Simulation input (e.g., for robotics or autonomous systems)
+- Data augmentation (e.g., cut-paste recombination of objects)
+
+<br>
+
+---
+
+
+<h3 id='video-det' align='center'>Video Detection</h3>
+
+Similar to image processing, video-based pose and object detection analyzes each frame individually, annotates it, and compiles the annotated frames into a video format.
+
+
+Required Libraries: 
+
+```bash
+ultralytics
+opencv-python
+```
+
+
+Basic Python Script: 
+
+```python
+
+import os
+import cv2
+from ultralytics import YOLO
+
+def process_video(video_filepath: str):
+    if not os.path.isfile(video_filepath):
+        raise ValueError(f"Invalid file path: {video_filepath}. The file does not exist or is not a valid file.")
+
+    filepath = os.path.splitext(os.path.basename(video_filepath))[0]
+    model = YOLO("yolo11n-pose.pt") 
+
+    cap = cv2.VideoCapture(video_filepath)  
+
+    frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+    frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+    fps = cap.get(cv2.CAP_PROP_FPS)
+
+    output_filepath = f"{filepath}_pose.mp4"
+    out = cv2.VideoWriter(output_filepath, 
+                        cv2.VideoWriter_fourcc(*'mp4v'), fps, 
+                        (frame_width, frame_height))
+
+    while cap.isOpened():
+        ret, frame = cap.read()
+        if not ret:
+            break
+        
+        results = model(frame, show=False, verbose=False)
+
+        if results:
+            result = results[0]
+            annotated_frame = result.plot()
+            people_count = sum(1 for cls in result.boxes.cls if cls == 0) 
+            cv2.putText(annotated_frame, f"Person Count: {people_count}", (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2, cv2.LINE_AA)
+            out.write(annotated_frame)
+
+    cap.release()
+    out.release()
+    cv2.destroyAllWindows()
+
+```
+
+<br>
+
+<h4>Example</h4>
+
+For the example we'll use the same input image:
+
+input_video='a_man_running.mp4'
+
+<p align='center'><video width="640" height="360" controls>
+  <source src="/media/images/yolo/a_man_running.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video></p>
+
+<br>
+
+Python Command:
+
+```python
+
+process_video(input_video)
+
+```
+
+<br>
+
+To add original audio to output video:
+
+```python
+
+ffmpeg -i a_man_running.mp4 -i a_man_running_pose.mp4 -c:v copy -c:a aac -map 0:v:0 -map 1:a:0 -shortest a_man_running_pose_with_audio.mp4
+
+```
+ 
+
+
+<br>
+
+Output Detection: 
+
+
+<p align='center'><img src='/media/images/yolo/a_man_running_pose_fast.gif' width="640" height="360"></p>
+
+
+<br> 
+
+Object tracking applications include: 
+- Trajectory Analysis: Understand how objects move across time (e.g., person walking, vehicle turning)
+- Behavior Prediction: Analyze object paths to anticipate future actions (e.g., crossing the street)
+- Flow Estimation: Measuring entry/exit rates in zones (e.g., store entrances, highways)
+- Object Interaction Detection: Detecting when objects come close, collide, or interact.
+- Re-identification: Tracking the same object across multiple cameras or scenes.
+
+Pose detection applications include:
+- Human Activity Recognition: Classifying actions like walking, running, sitting, and waving (e.g., for gesture control, fitness apps, surveillance)
+- Motion Quality Analysis: Measuring precision, range of motion, or joint angles (e.g., physical therapy, sports coaching, ergonomics)
+- Fall Detection: Detect abnormal poses like sudden collapse (e.g., for elderly care, hospital monitoring)
+- Gait Analysis: Analyzing walking patterns (e.g., for medical diagnostics or identity verification)
+- Augmented Reality (AR): Overlay graphics that respond to user pose (e.g., filters, motion-driven avatars)
+
+Application combining object tracking with pose detection include:
+- Track individuals and what they’re doing:
+  - Follow Person A across frames and know they are "walking" → "waving" → "falling"
+
+- Analyze interactions between people or objects:
+  - Detect group behavior, mimicry, or unsafe proximity (e.g., in factories)
+
+- Build detailed behavior models:
+  - Pose sequences over time = action signature → train models to classify or predict behavior
+
+- Power advanced applications:
+  - Sports analytics: Who passed the ball, when, and how was their form?
+  - Robotics: Real-time human-robot collaboration with gesture-based commands
+  - Surveillance: Detect suspicious motion patterns, loitering, or aggression
+  - Animation/Mocap: Capture real human motion for games or films
