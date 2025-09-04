@@ -28,10 +28,11 @@ page_type: pages
 
 <div class='page-conf'>
 <h3 id='intro' align='center'>Overview</h3>
-<p align='center'><img src='/media/images/imagextract.png' width='50%'></p>
-<p align='center'>Github: <a href='https://github.com/kariemoorman/imagextract' target='_blank'>ImagExtract</a></p>
+
 <p>ImagExtract is a MacOS command-line application for extracting text, objects, and faces from image files using Apple Vision and CoreML APIs. Users provide an input image (JPG, PNG, TIFF, PDF) and extracted information is output in a directory.</p>
 </div>
+
+<p align='center'>Github: <a href='https://github.com/kariemoorman/imagextract' target='_blank'>ImagExtract</a></p>
 
 
 ---
@@ -219,11 +220,11 @@ G
 <br>
 - YOLO Object Detection:
 
-<div style="display: flex; flex-wrap: wrap; max-width: 400px;">
-  <img src="/media/images/test-image/Object0.png" alt="Image 1" style="width: 50%;">
-  <img src="/media/images/test-image/Object1.png" alt="Image 2" style="width: 50%;">
-  <img src="/media/images/test-image/Object2.png" alt="Image 3" style="width: 50%;">
-  <img src="/media/images/test-image/Object3.png" alt="Image 4" style="width: 50%;">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-evenly; align-items: center; max-width: 600px; gap: 10px; margin: 0 auto;">
+  <img src="/media/images/test-image/Object0.png" alt="Image 1" style="flex: 1 1 45%; max-width: 45%; height: 220px;">
+  <img src="/media/images/test-image/Object1.png" alt="Image 2" style="flex: 1 1 45%; max-width: 45%; height: 220px;">
+  <img src="/media/images/test-image/Object2.png" alt="Image 3" style="flex: 1 1 45%; max-width: 45%; height: 220px;">
+  <img src="/media/images/test-image/Object3.png" alt="Image 4" style="flex: 1 1 45%; max-width: 45%; height: 220px;">
 </div>
 
 <br>

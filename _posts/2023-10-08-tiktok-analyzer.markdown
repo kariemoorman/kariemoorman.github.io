@@ -25,13 +25,11 @@ page_type: pages
 
 <h3 id='intro' align='center'>Overview</h3>
 
-<p align='center'><img src='/media/images/tiktok.png' width='50%'></p>
-
-<p align='center'>Github: <a href='https://github.com/kariemoorman/tiktok-analyzer' target='_blank'>Tiktok-Analyzer</a></p>
-
 <div class='page-conf'>
 <p>Tiktok Analyzer is a video scraping and multimodal content analysis tool. Search & download Tiktok videos by username and/or video tag, and analyze video contents. Transcribe video speech to text and perform NLP analysis tasks (e.g., keyword and topic discovery; emotion/sentiment analysis). Isolate audio signal and perform signal processing analysis tasks (e.g., pitch, prosody and sentiment analysis). Isolate visual stream and perform image tasks (e.g., object detection, face detection).</p>
 </div>
+
+<p align='center'>Github: <a href='https://github.com/kariemoorman/tiktok-analyzer' target='_blank'>Tiktok-Analyzer</a></p>
 
 ---
 
