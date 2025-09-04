@@ -29,5 +29,3 @@ vendor/
 .jekyll-cache/
 _site
 
-#temp
-_learnings/

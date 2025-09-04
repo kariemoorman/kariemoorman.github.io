@@ -26,12 +26,11 @@ page_type: pages
 
 <h3 id='intro' align='center'>Overview</h3>
 
-<p align='center'><img src="/media/images/ip_locator.png" width='50%'></p>
-
-<p align='center'>Github: <a href='https://github.com/kariemoorman/IPLocator' target='_blank'>IPLocator</a></p>
 <div class='page-conf'>
 <p>IPLocator extracts metadata including geolocation information from domain names and IPv4 addresses.</p>
 </div>
+
+<p align='center'>Github: <a href='https://github.com/kariemoorman/IPLocator' target='_blank'>IPLocator</a></p>
 
 --- 
 
