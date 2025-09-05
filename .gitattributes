@@ -1,1 +1,2 @@
 media/images/yolo/a_man_running_pose_fast.gif filter=lfs diff=lfs merge=lfs -text
+media/images/yolo/a_man_running_pose_fast-rs.gif filter=lfs diff=lfs merge=lfs -text
