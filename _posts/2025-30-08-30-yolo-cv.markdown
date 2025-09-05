@@ -375,7 +375,7 @@ ffmpeg -i a_man_running.mp4 -i a_man_running_pose.mp4 -c:v copy -c:a aac -map 0:
 Output Detection: 
 
 
-<p align='center'><img src='/media/images/yolo/a_man_running_pose_fast.gif' width="640" height="360"></p>
+<p align='center'><img src='https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXN4OHU3dGZiZ2ZpcTdzbHl1bWZ4MWNxMWVob2xxaHl4Zjk0cmg5YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nUHnnxPCbB7mLYyx1t/giphy.gif' width="640" height="360"></p>
 
 
 <br> 
