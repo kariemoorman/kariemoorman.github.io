@@ -397,15 +397,13 @@ Pose detection applications include:
 Application combining object tracking with pose detection include:
 - Track individuals and what they’re doing:
   - Follow Person A across frames and know they are "walking" → "waving" → "falling"
+  - Animation/Motion Capture: Capture real human motion for games or films
 
 - Analyze interactions between people or objects:
   - Detect group behavior, mimicry, or unsafe proximity (e.g., in factories)
+  - Sports analytics: Who passed the ball, when, and how was their form?
 
 - Build detailed behavior models:
   - Pose sequences over time = action signature → train models to classify or predict behavior
-
-- Power advanced applications:
-  - Sports analytics: Who passed the ball, when, and how was their form?
-  - Robotics: Real-time human-robot collaboration with gesture-based commands
   - Surveillance: Detect suspicious motion patterns, loitering, or aggression
-  - Animation/Motion Capture: Capture real human motion for games or films
+  - Robotics: Real-time human-robot collaboration with gesture-based commands
