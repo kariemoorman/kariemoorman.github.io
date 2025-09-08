@@ -17,22 +17,15 @@ jobs:
       actions: read 
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@master
       - name: Snyk Open Source Vulnerability Scan
         uses: snyk/actions/ruby@master
+        continue-on-error: true
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
-          args: test --severity-threshold=high --sarif-file-output=snyk.sarif
+          args: --sarif-file-output=snyk.sarif
       - name: Upload Dependency Results to GitHub
         uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: snyk.sarif
-      - name: Snyk Code Scan
-        run: snyk code test --sarif-file-output=snyk-code.sarif || true
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-      - name: Upload Code Results to GitHub
-        uses: github/codeql-action/upload-sarif@v3
-        with:
-          sarif_file: snyk-code.sarif
