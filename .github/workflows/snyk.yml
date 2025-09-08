@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Snyk Open Source Vulnerability Scan
-        uses: snyk/actions/ruby@v1
+        uses: snyk/actions/ruby@master
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
