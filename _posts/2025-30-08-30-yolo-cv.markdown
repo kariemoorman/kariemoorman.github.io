@@ -492,7 +492,7 @@ Model performance on predicting trees in an unseen image:
 
 <p align='center'><img src='/media/images/yolo/predict_trees.jpg' alt='tree-predict' width='60%'></p>
 
-Preliminary inspection of the image shows a few insights:  
+Preliminary inspection of the image provides a few insights:  
 - trees are detected
 - bounding boxes are a little big, and include multiple trees
 - not all trees present in the image are detected by the model
