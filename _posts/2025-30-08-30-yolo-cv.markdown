@@ -479,7 +479,7 @@ results = base_model.train(data=data_yaml, epochs=100, batch=16, imgsz=640, devi
 
 ```
 
-To enable training on Apple silicon chips, I use `mps`.
+To enable training on Apple silicon, I use `mps`.
 
 If model training is interrupted (e.g., the latest MacOS suddenly crashes...), the model can be resumed using the following specification: 
 
@@ -497,7 +497,7 @@ Preliminary inspection of the image shows a few insights:
 - bounding boxes are a little big, and include multiple trees
 - not all trees present in the image are detected by the model
 
-This points to a potential gap in labeling of training data. It may be helpful to create training data that provides the level of detail we want the model to learn. It could also mean the model needs more time to learn to delineate between trees.
+This points to a potential gap in labeling of training data. It may be helpful to create/improve training data that provides the level of detail we want the model to learn. It could also mean the model needs more epochs to learn to delineate between trees.
 
 <br>
 
