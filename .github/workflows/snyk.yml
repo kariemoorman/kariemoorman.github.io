@@ -1,23 +1,31 @@
-name: Snyk Security Code Scan
+name: Snyk & Deploy
 
 on:
   push:
-    branches: ["master" ]
+    branches: ["master"]
   pull_request:
     branches: ["master"]
+  workflow_dispatch:
 
 permissions:
   contents: read
+  pages: write
+  id-token: write
+  security-events: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   snyk:
     permissions:
       contents: read
       security-events: write
-      actions: read 
+      actions: read
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v4
       - name: Snyk Open Source Vulnerability Scan
         uses: snyk/actions/ruby@master
         continue-on-error: true
@@ -29,3 +37,31 @@ jobs:
         uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: snyk.sarif
+
+  build:
+    needs: snyk
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    needs: build
+    if: ${{ success() }}
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4        
