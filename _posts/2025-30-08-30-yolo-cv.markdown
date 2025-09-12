@@ -481,7 +481,7 @@ results = base_model.train(data=data_yaml, epochs=100, batch=16, imgsz=640, devi
 
 To enable training on Apple silicon, I use `mps`.
 
-If model training is interrupted (e.g., the latest MacOS suddenly crashes...), the model can be resumed using the following specification: 
+If model training is interrupted (e.g., the latest MacOS suddenly crashes...), it can be resumed using the following specification: 
 
 ```
 train_model = YOLO("runs/detect/train/weights/last.pt")
