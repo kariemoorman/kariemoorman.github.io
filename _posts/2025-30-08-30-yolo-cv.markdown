@@ -509,7 +509,7 @@ Ideally the model shows a steady decrease in the loss (e.g., training loss, vali
 
 If training loss is oscillating or not decreasing smoothly, this could indicate the model is making too large of updates to its parameters (i.e., high learning rate). If the training loss is decreasing very slowly, and it appears like the model is taking too long to learn or converge, this could be due to low learning rate.
 
-Additionally, if training loss is decreasing while validation loss increases, this is a sign of overfitting. However, if training loss and validation loss both decreasing (or stabilizing) in tandem, this suggests that the model is generalizing well and learning useful features that apply to both the training and validation data. 
+If training loss is decreasing while validation loss increases, this is a sign of overfitting. However, if training loss and validation loss both decrease (or stabilize) in tandem, this suggests that the model is generalizing well and learning useful features that apply to both the training and validation data. 
 
 If the model shows low accuracy and high loss during training, this could indicate the model is not able to fit the training data well. Similarly, if the model shows low accuracy and high loss during validation, this suggests the model is unable to generalize the unseen data (i.e., underfitting).
 
