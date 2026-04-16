@@ -2,7 +2,7 @@
 layout: learning
 title:  "Agentic RAG"
 subtitle: "Intelligence for Autonomous Agents"
-summary: "Boosting pentesting performance in RedAmon using a hybrid vector and graph-based pentesting knowledge system."
+summary: "Boosting AI pentesting performance in RedAmon using a hybrid vector and graph-based pentesting knowledge system."
 date:   2026-04-10 21:02:01 +0700
 categories: ["edu"]
 image: "../media/images/agentic_rag/agent_rag.png"
