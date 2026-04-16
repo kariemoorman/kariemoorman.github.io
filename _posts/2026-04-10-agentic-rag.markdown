@@ -80,9 +80,9 @@ The agent architecture relies on Tavily web search for external knowledge retrie
 
 <p><b>The Solution: Local-First Hybrid Retrieval</b></p>
 
-To address this gap, I built a local-first hybrid retrieval system using vector and graph knowledge bases, with a web search fallback mechanism for cases where local context is insufficient. This architecture directly addresses each of the bottlenecks described above:
+To address this gap, I built a local-first hybrid retrieval system using vector and graph knowledge bases, with a web search fallback mechanism for cases where local context is insufficient. This solution directly addresses each of the bottlenecks described above:
 
-- **Latency Reduction**: Frequently accessed security knowledge is stored locally, enabling retrieval in under 100ms and eliminating most runtime web search calls.
+- **Latency**: Frequently accessed security knowledge is stored locally, enabling retrieval in under 100ms and eliminating most runtime web search calls.
 
 - **Result Quality**: The knowledge base is curated from authoritative sources—NVD, ExploitDB, OWASP, and official tool documentation—providing structured, actionable information instead of unfiltered web content.
 
