@@ -2,7 +2,7 @@
 layout: learning
 title:  "Agentic RAG"
 subtitle: "Intelligence for Autonomous Agents"
-summary: "Boosting pentesting performance in RedAmon using hybrid vector and graph-based pentesting knowledge system."
+summary: "Boosting pentesting performance in RedAmon using a hybrid vector and graph-based pentesting knowledge system."
 date:   2026-04-10 21:02:01 +0700
 categories: ["edu"]
 image: "../media/images/agentic_rag/agent_rag.png"
@@ -81,7 +81,6 @@ The agent architecture relies on Tavily web search for external knowledge retrie
 <p><b>The Solution: Local-First Hybrid Retrieval</b></p>
 
 To address this gap, I built a local-first hybrid retrieval system using vector and graph knowledge bases, with a web search fallback mechanism for cases where local context is insufficient. This architecture directly addresses each of the bottlenecks described above:
-I built a local-first hybrid retrieval system using vector and graph knowledge bases (FAISS + Neo4j), with web search as a fallback when local context is insufficient.
 
 - **Latency Reduction**: Frequently accessed security knowledge is stored locally, enabling retrieval in under 100ms and eliminating most runtime web search calls.
 
@@ -109,11 +108,9 @@ This local-first design reduces latency (sub-200ms vs 2–5 seconds for web sear
 
 **Query Latency < 200ms on CPU**: (no GPU assumed). Achieved by keeping FAISS in-process (mmap'd flat index) and Neo4j fulltext on localhost.
 
-**Offline-Capable Bootstrap**: The `lite` profile builds entirely from committed source caches in the git repo—no network required after clone.
+**Profile-Scoped Ingestion**: Four profiles (`cpu-lite`, `lite`, `standard`, `full`) control which sources are ingested. Defined in `kb_config.yaml`, not hardcoded.
 
 **Incremental Updates**: Two-layer deduplication (file-level hash cache + chunk-level content manifest) means a daily `kb-update-nvd` re-embeds only genuinely new or modified content.
-
-**Profile-Scoped Ingestion**: Four profiles (`cpu-lite`, `lite`, `standard`, `full`) control which sources are ingested. Defined in `kb_config.yaml`, not hardcoded.
 
 **Single Source of Truth**: All KB tunables—embedder model, chunking limits, reranker settings, source boosts, ingestion profiles—are defined in `kb_config.yaml`. Per-deployment overrides via environment variables or CLI arguments are supported, but the YAML file remains authoritative.
 
@@ -123,7 +120,7 @@ This local-first design reduces latency (sub-200ms vs 2–5 seconds for web sear
 
 <h3 id='ingest' align='center'>Data Ingestion Pipeline</h3>
 
-The ingestion pipeline transforms raw security data—tarballs, API responses, CSV dumps—into embedded, indexed chunks stored in FAISS and Neo4j. It enforces security boundaries at every external touchpoint, deduplicates at both file and chunk levels to minimize redundant embedding, and writes state atomically to prevent corruption on crash or kill.
+The ingestion pipeline transforms raw security data (tarballs, API responses, CSV dumps—into embedded) indexed chunks stored in FAISS and Neo4j. It enforces security boundaries at every external touchpoint, deduplicates at both file and chunk levels to minimize redundant embedding, and writes state atomically to prevent corruption on crash or kill.
 
 <p align='center'><img src="{{ '/media/images/agentic_rag/data_ingestion_pipeline.png' | relative_url }}" height='800px' width='auto'></p>
 
