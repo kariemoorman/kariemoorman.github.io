@@ -1,0 +1,33 @@
+---
+layout: learning
+title:  "GH0STB1T"
+subtitle: "A Secure Steganography Toolkit"
+summary: "An multi-format steganography toolkit with built-in LLM integration (MCP Server & Skill), enabling seamless, hidden data exchange between humans and AI systems."
+date:   2026-04-10 11:09:01 +0700
+categories: ["edu"]
+image: "../media/images/ghostbit.png"
+tags: ["steganography", "file-hiding", "container", "audit"]
+author: "Karie Moorman"
+page_type: pages
+---
+
+
+<!-- <h3 align='center'>Table of Contents</h3>
+<div class='tbl'>
+<div class='centered-list'>
+<ul>
+<li><a href='#intro'>Overview</a></li>
+</ul>
+</div>
+</div>
+
+---  -->
+
+<div class='page-conf'>
+<h3 id='intro' align='center'>Overview</h3>
+
+<p>GH0STB1T is a multi-format steganography toolkit that conceals encrypted files in audio and image carriers. It combines modern authenticated cryptography (Argon2id + AES-256-GCM) with native MCP server and LLM skill integration, so humans and AI agents can use it interchangeably.</p>
+
+</div>
+
+<p align='center'>Github: <a href='https://github.com/kariemoorman/ghostbit' target='_blank'>GH0STB1T</a></p>

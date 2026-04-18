@@ -51,6 +51,8 @@ page_type: pages
 
 </div>
 
+<br>
+
 ---
 
 <h3 id='redamon' align='center'><img src="{{ '/media/images/agentic_rag/redamon.png' | relative_url }}" width='25'>RedAmon<img src="{{ '/media/images/agentic_rag/redamon.png' | relative_url }}" width='25' style="transform: scaleX(-1);"></h3>
