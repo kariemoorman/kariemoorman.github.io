@@ -715,7 +715,7 @@
 
 .post-content-container {
     width: 100%; 
-    background-color: rgba(223, 226, 230, 0.88) ; // rgb(237, 241, 243) ; // rgb(227, 233, 242) ;// #f4efea; // #fdfcfb ; // #fdfdfd;  
+    background-color: rgba(223, 226, 230, 0.95) ; // rgb(237, 241, 243) ; // rgb(227, 233, 242) ;// #f4efea; // #fdfcfb ; // #fdfdfd;  
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
     }
 .post-content-container {
@@ -858,8 +858,7 @@
 .post-content-container table, th, td {
     border: 1px solid $l-grey-color;
     border-collapse: collapse;
-    //padding: 5px;
-    padding-left: 5px;
+    padding: 5px;
     font-size: 16px;
     line-height: 1.25;
     @include media-query($on-laptop) {
