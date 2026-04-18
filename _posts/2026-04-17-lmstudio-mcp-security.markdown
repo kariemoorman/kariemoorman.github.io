@@ -146,7 +146,7 @@ The timestamp in `/tmp/mcp-test.log` lands within the 1-second window between "C
 The behavior itself is well-known and is by design at the MCP protocol level (Anthropic confirmed in the OX advisory that sanitization is the integrator's responsibility). The concern specific to LM Studio is the **lack of UI friction** at the point where the risk materializes:
 
 - A malicious or typosquatted MCP server entry (e.g., added manually, by an "Add to LM Studio" deeplink, or by any process with write access to `mcp.json`) runs unconditionally on the next enable AND every subsequent launch.
-- A real attacker would `nohup` / `setsid` / `fork` before producing invalid JSON-RPC, allowing the spawned child to **survive after LM Studio kills the bridge**. This makes `mcp.json` itself a free persistence mechanism: anything with write access to it gains boot-equivalent reliability without needing a separate persistence implant.
+- A real attacker would `nohup` / `setsid` / `fork` before producing invalid JSON-RPC, allowing the spawned child to **survive after LM Studio kills the bridge**. A more skilled attack would ensure the handshake succeeds. This makes `mcp.json` itself a free persistence mechanism: anything with write access to it gains boot-equivalent reliability without needing a separate persistence implant.
 - The toggle being a real opt-out (verified above) is the **only** defense, and it places the entire burden on the user to never enable a malicious entry, including entries added via deeplinks where the user only sees a friendly name.
 
 <br>
