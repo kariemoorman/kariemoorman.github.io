@@ -100,7 +100,7 @@ The hybrid design prioritizes fast, curated local knowledge while preserving web
 
 <h3 id='architecture' align='center'>Architecture</h3>
 
-The Knowledge Base sits between the agent's reasoning loop and external information sources. When the agent needs security knowledge—tool syntax, exploitation techniques, CVE details—it issues a `web_search` call that first queries the local KB. The KB returns ranked, deduplicated results from curated sources (e.g., GTFOBins, LOLBAS, NVD, ExploitDB, OWASP, Nuclei, internal tool docs). If local results score below a confidence threshold, the query falls through to Tavily web search, with results merged and sanitized before returning to the agent.
+The Knowledge Base sits between the agent's reasoning loop and external information sources. When the agent needs security knowledge (e.g., tool syntax, exploitation techniques, CVE details), it issues a `web_search` call that first queries the local KB. The KB returns ranked, deduplicated results from curated sources (e.g., GTFOBins, LOLBAS, NVD, ExploitDB, OWASP, Nuclei, internal tool docs). If local results score below a confidence threshold, the query falls through to Tavily web search, with results merged and sanitized before returning to the agent.
 
 Under the hood, the KB is a hybrid retrieval system combining dense vector search (FAISS) with sparse keyword search (Neo4j Lucene BM25) via Reciprocal Rank Fusion (RRF). Vector search handles semantic similarity (e.g., `"how do I escalate privileges on Linux?"`), while BM25 handles exact-match lookups that pentesters do constantly (e.g., CVE IDs, CLI flags, binary names). The KB shares Neo4j with the agent's recon graph, enabling Cypher queries that join live target data—domains, ports, services—with KB knowledge like CVEs affecting detected software versions.
 
@@ -122,7 +122,7 @@ This local-first design reduces latency (sub-200ms vs 2–5 seconds for web sear
 
 <h3 id='ingest' align='center'>Data Ingestion Pipeline</h3>
 
-The ingestion pipeline transforms raw security data (tarballs, API responses, CSV dumps—into embedded) indexed chunks stored in FAISS and Neo4j. It enforces security boundaries at every external touchpoint, deduplicates at both file and chunk levels to minimize redundant embedding, and writes state atomically to prevent corruption on crash or kill.
+The ingestion pipeline transforms raw security data (e.g., tarballs, API responses, CSV dumps) into embedded, indexed chunks stored in FAISS and Neo4j. It enforces security boundaries at every external touchpoint, deduplicates at both file and chunk levels to minimize redundant embedding, and writes state atomically to prevent corruption on crash or kill.
 
 <p align='center'><img src="{{ '/media/images/agentic_rag/data_ingestion_pipeline.png' | relative_url }}" height='800px' width='auto'></p>
 
