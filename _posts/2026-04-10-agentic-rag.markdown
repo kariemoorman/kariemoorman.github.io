@@ -86,7 +86,7 @@ To address this gap, I built a local-first hybrid retrieval system using vector 
 
 - **Latency**: Frequently accessed security knowledge is stored locally, enabling retrieval in under 100ms and eliminating most runtime web search calls.
 
-- **Result Quality**: The knowledge base is curated from authoritative sources—NVD, ExploitDB, OWASP, and official tool documentation—providing structured, actionable information instead of unfiltered web content.
+- **Result Quality**: The knowledge base is curated from authoritative sources (NVD, ExploitDB, OWASP, and official tool documentation) providing structured, actionable information instead of unfiltered web content.
 
 - **Coverage Gaps**: Continuous ingestion pipelines keep the local database current with newly published vulnerabilities from NVD, closing the gap between LLM training cutoffs and real-world security events.
 
@@ -100,9 +100,9 @@ The hybrid design prioritizes fast, curated local knowledge while preserving web
 
 <h3 id='architecture' align='center'>Architecture</h3>
 
-The Knowledge Base sits between the agent's reasoning loop and external information sources. When the agent needs security knowledge (e.g., tool syntax, exploitation techniques, CVE details), it issues a `web_search` call that first queries the local KB. The KB returns ranked, deduplicated results from curated sources (e.g., GTFOBins, LOLBAS, NVD, ExploitDB, OWASP, Nuclei, internal tool docs). If local results score below a confidence threshold, the query falls through to Tavily web search, with results merged and sanitized before returning to the agent.
+The Knowledge Base (KB) sits between the agent's reasoning loop and external information sources. When the agent needs security knowledge (e.g., tool syntax, exploitation techniques, CVE details), it issues a `web_search` call that first queries the local KB. The KB returns ranked, deduplicated results from curated sources (e.g., GTFOBins, LOLBAS, NVD, ExploitDB, OWASP, Nuclei, internal tool docs). If local results score below a confidence threshold, the query falls through to Tavily web search, with results merged and sanitized before returning to the agent.
 
-Under the hood, the KB is a hybrid retrieval system combining dense vector search (FAISS) with sparse keyword search (Neo4j Lucene BM25) via Reciprocal Rank Fusion (RRF). Vector search handles semantic similarity (e.g., `"how do I escalate privileges on Linux?"`), while BM25 handles exact-match lookups that pentesters do constantly (e.g., CVE IDs, CLI flags, binary names). The KB shares Neo4j with the agent's recon graph, enabling Cypher queries that join live target data—domains, ports, services—with KB knowledge like CVEs affecting detected software versions.
+Under the hood, the KB is a hybrid retrieval system combining dense vector search (FAISS) with sparse keyword search (Neo4j Lucene BM25) via Reciprocal Rank Fusion (RRF). Vector search handles semantic similarity (e.g., `"how do I escalate privileges on Linux?"`), while BM25 handles exact-match lookups that pentesters do constantly (e.g., CVE IDs, CLI flags, binary names). The KB shares Neo4j with the agent's recon graph, enabling Cypher queries that join live target data (e.g., domains, ports, services) with KB knowledge like CVEs affecting detected software versions.
 
 This local-first design reduces latency (sub-200ms vs 2–5 seconds for web search), improves result quality (curated sources vs unfiltered web content), and enables offline operation for lightweight profiles.
 
@@ -114,7 +114,7 @@ This local-first design reduces latency (sub-200ms vs 2–5 seconds for web sear
 
 **Incremental Updates**: Two-layer deduplication (file-level hash cache + chunk-level content manifest) means a daily `kb-update-nvd` re-embeds only genuinely new or modified content.
 
-**Single Source of Truth**: All KB tunables—embedder model, chunking limits, reranker settings, source boosts, ingestion profiles—are defined in `kb_config.yaml`. Per-deployment overrides via environment variables or CLI arguments are supported, but the YAML file remains authoritative.
+**Single Source of Truth**: All KB tunable settings (e.g., embedder model, chunking limits, reranker settings, source boosts, ingestion profiles) are defined in `kb_config.yaml`. Per-deployment overrides via environment variables or CLI arguments are supported, but the YAML file remains authoritative.
 
 <br>
 
@@ -283,14 +283,14 @@ After Layer 1 filters out unchanged files, each source client's `to_chunks()` me
 
 **Batch Embedding**
 
-New and modified chunks from Layer 2 are batched and passed to the embedder (`intfloat/e5-large-v2, 1024 dimensions`). The embedder prepends `"passage: "` to each chunk's content per e5's asymmetric encoding protocol. Batching amortizes model load time and maximizes GPU/CPU throughput—typical batch sizes are 64-128 chunks depending on available memory.
+New and modified chunks from Layer 2 are batched and passed to the embedder (`intfloat/e5-large-v2, 1024 dimensions`). The embedder prepends `"passage: "` to each chunk's content per e5's asymmetric encoding protocol. Batching amortizes model load time and maximizes GPU/CPU throughput. Typical batch sizes are 64-128 chunks depending on available memory.
 Vectors are L2-normalized before insertion so FAISS inner-product computes cosine similarity. The embedder is instantiated once per ingestion run and reused across all sources to avoid repeated model loads.
 
 **Write to FAISS and Neo4j**
 
 FAISS and Neo4j writes happen in sequence, not in parallel, to simplify error handling and rollback.
-- **FAISS**: `index.add()` appends the new vectors to the flat index. A parallel `chunk_ids.json` file maintains the mapping from FAISS vector position to `chunk_id`. Both files are written atomically via `atomic_write_bytes` and `atomic_write_json—write` to a sibling tempfile, then `os.replace()` into place. An integrity manifest (SHA256, or HMAC-SHA256 if `KB_INDEX_HMAC_KEY` is set) is written alongside `index.faiss` and verified on load to detect tampering or corruption.
-- **Neo4j**: Each chunk is upserted via `MERGE` on `chunk_id` with a `SET` clause for properties. Per-source sublabels (`:NVDChunk`, `:GTFOBinsChunk`, etc.) are applied for query filtering. Property indexes on `chunk_id`, `source`, and source-specific fields (e.g., `cvss_score` for NVD) enable fast lookups. The `MERGE` + `SET` pattern ensures idempotency—re-running ingestion with identical chunks produces no duplicates and no property drift.
+- **FAISS**: `index.add()` appends the new vectors to the flat index. A parallel `chunk_ids.json` file maintains the mapping from FAISS vector position to `chunk_id`. Both files are written atomically via `atomic_write_bytes` and `atomic_write_json` write to a sibling tempfile, then `os.replace()` into place. An integrity manifest (SHA256, or HMAC-SHA256 if `KB_INDEX_HMAC_KEY` is set) is written alongside `index.faiss` and verified on load to detect tampering or corruption.
+- **Neo4j**: Each chunk is upserted via `MERGE` on `chunk_id` with a `SET` clause for properties. Per-source sublabels (`:NVDChunk`, `:GTFOBinsChunk`, etc.) are applied for query filtering. Property indexes on `chunk_id`, `source`, and source-specific fields (e.g., `cvss_score` for NVD) enable fast lookups. The `MERGE` + `SET` pattern ensures idempotency. Re-running ingestion with identical chunks produces no duplicates and no property drift.
 
 <br> 
 
@@ -380,7 +380,7 @@ The result is a knowledge base that evolves alongside the security ecosystem. Th
 
 <p><b>General</b></p>
 
-- **Why `kb_config.yaml` as the single source of truth?** The system has three potential configuration surfaces: the YAML file, per-project webapp settings (stored in PostgreSQL), and environment variables. Earlier, `project_settings.py` had hardcoded fallback values for KB knobs (e.g., `KB_MMR_LAMBDA: 0.7`) that silently overrode the YAML on every agent run. The current design uses `None` sentinels in `project_settings.py` — the orchestrator only overwrites a KB attribute when the project setting is non-`None`. This makes `kb_config.yaml` authoritative for all KB tuning, with per-project overrides reserved for when the webapp UI eventually exposes them.
+- **Why `kb_config.yaml` as the single source of truth?** The system has three potential configuration surfaces: the YAML file, per-project webapp settings (stored in PostgreSQL), and environment variables. Earlier, `project_settings.py` had hardcoded fallback values for KB knobs (e.g., `KB_MMR_LAMBDA: 0.7`) that silently overrode the YAML on every agent run. The current design uses `None` sentinels in `project_settings.py`. The orchestrator only overwrites a KB attribute when the project setting is non-`None`. This makes `kb_config.yaml` authoritative for all KB tuning, with per-project overrides reserved for when the webapp UI eventually exposes them.
 
 - **Why committed source caches for the lite profile?** The `lite` profile is optimized for developer experience: clone the repo, run `./redamon.sh install`, and have a working KB in ~30 seconds with no internet access. This means the raw source files for GTFOBins (~86 KB), LOLBAS (~1 MB), and OWASP (~2 MB) are committed to git. The tradeoff is ~3 MB of repo size for a fully offline bootstrap. NVD, nuclei, and ExploitDB are excluded from git because they're too large (35-200 MB) and change frequently enough that committed copies would cause constant merge churn.
 
