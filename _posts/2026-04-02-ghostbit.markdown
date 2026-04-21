@@ -5,23 +5,27 @@ subtitle: "A Secure Steganography Toolkit"
 summary: "An multi-format steganography toolkit with built-in LLM integration (MCP Server & Skill), enabling seamless, hidden data exchange between humans and AI systems."
 date:   2026-04-10 11:09:01 +0700
 categories: ["edu"]
-image: "../media/images/ghostbit.png"
+image: "../media/images/ghostbit/ghostbit.png"
 tags: ["steganography", "file-hiding", "container", "audit"]
 author: "Karie Moorman"
 page_type: pages
 ---
 
 
-<!-- <h3 align='center'>Table of Contents</h3>
+<h3 align='center'>Table of Contents</h3>
 <div class='tbl'>
 <div class='centered-list'>
 <ul>
 <li><a href='#intro'>Overview</a></li>
+<li><a href='#method'>Methodology</a></li>
+<li><a href='#design'>System Design</a></li>
+<li><a href='#architecture'>Architecture</a></li>
+<li><a href='#example'>Examples</a></li>
 </ul>
 </div>
 </div>
 
----  -->
+---
 
 <div class='page-conf'>
 <h3 id='intro' align='center'>Overview</h3>
@@ -31,3 +35,319 @@ page_type: pages
 </div>
 
 <p align='center'>Github: <a href='https://github.com/kariemoorman/ghostbit' target='_blank'>GH0STB1T</a></p>
+
+---
+
+<h3 id='method' align='center'>Methodology</h3>
+
+#### Information Security
+
+**Information Security** is a multidisciplinary field, primarily rooted in computer science, concerned with protecting information from unauthorized access, use, disclosure, disruption, modification, or destruction. It focuses on ensuring the core principles of confidentiality, integrity, and availability across systems and data.
+
+**Cryptography** is the practice of securing information by transforming it so that only intended parties can understand it. This typically involves techniques such as encryption, hashing, and digital signatures to ensure confidentiality, integrity, and authenticity. Even if an attacker can access the data, they cannot feasibly interpret or use it without the proper keys.
+
+**Steganography** is the practice of hiding the existence of information by embedding it within ordinary, non-secret data (e.g., images, audio, or text), so that observers don’t realize a message is being sent at all.
+
+Cryptography makes data unreadable but visible (i.e., you can see something is encrypted). Steganography makes data invisible in plain sight (i.e., you don’t realize anything is hidden). Cryptography and steganography are often used together: encrypt the message first, then hide it so even if it’s discovered, it’s still protected.
+
+#### Reverse Engineering 
+
+**Reverse engineering** is the process of analyzing a system to understand how it works by examining its structure, behavior, or outputs, in order to reconstruct its logic, design, and/or functionality.
+
+When developing software, it is generally good practice to survey existing solutions to understand their capabilities and limitations before deciding to build your own. In this spirit, I reverse engineered a subset of audio and image steganography toolkits to evaluate the current quality of available tools and determine the extent to which they can be relied upon versus when custom implementations are warranted.
+
+Static analysis tools I used include <a href='https://github.com/nationalsecurityagency/ghidra' target='_blank'>Ghidra</a>, <a href='https://github.com/lauriewired/ghidramcp' target='_blank'>GhidraMCP</a>, and <a href='https://github.com/radareorg/radare2' target='_blank'>radare2</a>. 
+
+**DISCLAIMER:** *Reverse engineering software may be restricted by applicable license agreements, end-user license terms, or other contractual or legal obligations.*
+
+In this particular case, this reverse engineering exercise is classified as "fair use" (see <a href='https://www.eff.org/issues/coders/reverse-engineering-faq#faq5' target='_blank'>EFF Coders' Rights Project Reverse Engineering FAQ</a>).
+
+#### Findings
+
+- Majority of existing toolkits are written in Java or .NET and are primarily intended for use on Windows systems.
+- Most tooling relies primarily on LSB (Least Significant Bit) steganography, making them particularly vulnerable to compression artifacts and statistical detection methods.
+- Many longstanding steganography tools (e.g., OpenStego, DeepSound, SilentEye) rely on outdated or weak cryptographic constructions, leaving hidden data vulnerable to attack. Common issues include:
+  - Weak key derivation approaches, such as direct hashing of passwords using MD5, SHA-1, or SHA-256 without proper key stretching (e.g., PBKDF2, bcrypt, or scrypt).
+  - Legacy encryption modes such as AES-CBC without authenticated encryption, leaving ciphertext vulnerable to tampering and manipulation.
+
+Despite the identified security risks, it is clear that steganography tools continue to be actively used. This sustained demand highlights an opportunity for a modernized solution that improves usability and security while supporting both human users and LLM-assisted workflows.
+
+<br>
+
+---
+
+<h3 id='design' align='center'>System Design</h3>
+
+#### Architectural Modernization
+
+The first goal is to migrate from platform-dependent Java and .NET codebases to a unified Python solution. Benefits include:
+
+- **Platform Independence:** Eliminates platform-specific runtime dependencies, ensuring portability across heterogeneous computing environments (Windows, macOS, and Linux).
+
+- **Memory Efficiency:** Eliminates JVM heap overhead, reducing baseline memory consumption and enabling efficient operation on resource-constrained systems while maintaining full functionality.
+
+- **Auditability:** Eliminates reliance on platform-specific cryptographic APIs or closed-source runtime components in favor of open-source Python cryptography, enabling independent security audits and transparent verification of the implementation.
+
+- **Type Safety:** This implementation targets Python 3.13+ to leverage modern type annotations and static analysis capabilities, ensuring type safety across the entire codebase.
+
+#### Security Modernization 
+
+The second goal is to pair existing steganography protocols with modern, audited cryptographic standards to ensure secure information hiding. I chose Argon2id key derivation (64MB memory, 3 iterations, parallelism=4) and AES-256-GCM encryption (96-bit random nonce, 128-bit authentication tag) to provide authenticated encryption with confidentiality, integrity, and authenticity. Benefits include:
+
+- **NIST/FIPS Compliant Cryptography:** Transition to algorithms approved by national security standards (Argon2id, AES-256-GCM); the same cryptographic primitives used in TLS 1.3, Signal, Bitwarden, and enterprise security systems.
+
+- **Uncrackable Passwords:** Legacy SHA-256 allows attackers to test billions of passwords per second on modern GPUs. Argon2id slows attackers to only thousands of tests per second, making brute-force attacks impractical (memory-hard by design). Even weak passwords (8 characters) gain years of protection against brute-force attacks.
+
+- **Tamper Detection & Integrity Verification:** Legacy AES-CBC allows for undetected tampering, bit-flipping attacks, and payload manipulation. AES-GCM cryptographically authenticates every byte of hidden data. Any modification (e.g., a single bit flip) causes immediate decryption failure. It is now mathematically impossible to alter data without detection.
+
+- **Elimination of Padding Oracle Vulnerabilities:** Legacy AES-CBC with PKCS#7 padding is vulnerable to adaptive chosen-ciphertext attacks. Attackers can decrypt data without the password by observing error messages. AES-GCM uses authenticated encryption: no padding, no oracle, constant-time failure.
+
+Additionally, each file is assigned a unique 128-bit random salt to prevent rainbow table attacks and ensure that identical passwords produce distinct derived keys.
+
+#### LLM Integration 
+
+The third goal is to implement a solution that both humans and AI can use interchangeably. AI agents can leverage GH0STB1T for secure information share via Skills and MCP Server.
+
+**Skills**
+
+Skill markdown documents for audio and image steganography workflows are specialized for 3 distinct use cases (general use, carrier capacity calculation, troubleshooting):
+- **Audio/Image Steganography:** Usage guide with examples
+- **Audio/Image Capacity:** Capacity planning and optimization strategies
+- **Audio/Image Troubleshooting:** Common issues and solutions
+
+**MCP Server**
+
+GH0STB1T MCP server surfaces 10 total tools (5 actions per carrier type): 
+- **encode:** encode a secret file into a carrier file (audio or image)
+- **decode:** decode and extract a secret file from a carrier file (audio or image)
+- **capacity:** calculate the capacity of a carrier file (audio or image)
+- **analyze:** analyze an image/audio file for hidden data
+- **generate:** generate sample files (audio/image carrier files, secret text files)
+
+MCP Servers also require an additional layer of security to prevent LLMs from accessing the passwords used to encrypt/decrypt secret files encoded in digital media. For this reason, users must first prepare a password file, either encrypted using SOPS or plaintext (with read-only permissions).
+
+
+<br>
+
+---
+
+<h3 id='architecture' align='center'>Architecture</h3>
+
+
+#### Audio Steganography
+
+GH0STB1T's audio pipeline hides arbitrary files inside lossless audio carriers using LSB substitution, with optional AES-256-GCM encryption and Argon2id key derivation. Secret data is wrapped in a container so the decoder can recover payloads without any out-of-band information.
+
+**Encode**
+
+<p align='center'><img src="{{ '/media/images/ghostbit/audio_encoding.png' | relative_url }}"></p>
+
+GH0STB1T's audio encoder pipeline accepts carrier files in WAV, FLAC, MP3, M4A, and AIFF formats. Non-WAV inputs are transcoded internally so embedding always operates on lossless PCM samples. 
+
+Secret files of any type are wrapped in a DSSF header, optionally encrypted, and hidden via LSB substitution across the audio samples at a user-selectable quality mode (low / normal / high) that trades capacity against imperceptibility.
+
+A metadata block embedded at the start of the stego file records the quality mode, KDF version, salt, and a key-verification tag so the decoder can reconstruct the payload without any out-of-band information. 
+
+The output is written back to any of the supported lossless formats (WAV, FLAC, M4A, AIFF). MP3 output is intentionally disallowed, since re-compression would destroy the LSB payload. The result is an augmented audio file auditorally indistinguishable from its source.
+
+**Decode**
+
+
+<p align='center'><img src="{{ '/media/images/ghostbit/audio_decoding.png' | relative_url }}"></p>
+
+GH0STB1T's audio decoder pipeline accepts stego files in WAV, FLAC, M4A, or AIFF, transcoding to PCM when needed. It begins by scanning the audio samples for a specific marker (e.g., DSC2 / DSCF magic), from which it recovers the embedded quality mode, encryption flag, salt, and key-verification tag. No password, output path, or format hint is required from the user up front. 
+
+If the payload is encrypted, the decoder re-derives the key via Argon2id using the stored salt and verifies it against the key-check block before any bytes are read; an incorrect password fails immediately rather than producing garbled output. 
+
+The decoder then walks the sample stream, parses each file's DSSF header (magic, filename, size), reads LSB bits at the detected quality mode, decrypts if necessary, and writes each recovered file to the output directory under its original name.
+
+#### Image Steganography
+
+GH0STB1T's image pipeline hides arbitrary files inside image carriers using format-specific embedding algorithms (LSB, PALETTE, or SVG_XML), with optional AES-256-GCM encryption and Argon2id key derivation. Secret data is wrapped in a container so the decoder can recover payloads without any out-of-band information.
+
+**Encode**
+
+<p align='center'><img src="{{ '/media/images/ghostbit/image_encoding.png' | relative_url }}"></p>
+
+GH0STB1T's image encoder pipeline supports PNG, BMP, TIFF, JPEG, GIF, WEBP, AVIF, HEIC, and SVG carriers, dispatching to one of three algorithms based on format: 
+- LSB for raster images (PNG / BMP / TIFF / JPEG / WEBP / AVIF / HEIC)
+- PALETTE for GIF (embedding into the color table's low bits)
+- SVG_XML for vector images (base64-encoded payload stored as an XML comment). 
+
+Secret files of any type are concatenated with per-file IMGF headers, zlib-compressed, optionally encrypted with AES-256-GCM under an Argon2id-derived key, and wrapped in a container whose header records the algorithm, salt, nonce, and payload length. 
+
+For LSB embedding, a randomized pixel shuffle keyed by a seed stored in the image prevents linear scans from revealing the payload boundaries, and capacity is checked against the carrier's dimensions before any write occurs.
+
+The output is saved in a lossless format, preserving bit-level fidelity (PNG, BMP, TIFF, GIF, SVG). The result is an augmented image visually indistinguishable from the source.
+
+**Decode**
+
+<p align='center'><img src="{{ '/media/images/ghostbit/image_decoding.png' | relative_url }}"></p>
+
+GH0STB1T's image decoder pipeline dispatches on the carrier's format to the same algorithm used at encode time: 
+- LSB reads the randomized-shuffle seed from the first pixels, reverses the pixel permutation, and reconstructs payload bytes from the RGB low bits
+- PALETTE reads from the GIF color-table LSBs
+- SVG_XML extracts the base64-encoded comment from the SVG source
+
+The recovered bytes are parsed as a container whose header supplies the algorithm, salt, nonce, encryption flag, and payload length. 
+
+If encrypted, the payload is decrypted with AES-256-GCM using an Argon2id-derived key. The GCM authentication tag and key-commitment AAD guarantee that any tampering or incorrect password fails loudly rather than silently returning corrupt data. 
+
+The authenticated plaintext is zlib-decompressed, then walked entry-by-entry: each IMGF record yields a filename and size, and each extracted file is written to the output directory.
+
+
+#### LLM Integration
+
+**Skills**
+
+<p align='center'><img src="{{ '/media/images/ghostbit/llm_skills.png' | relative_url }}"></p>
+
+GH0STB1T ships with three skill documents per modality (audio/image): steganography cli usage, capacity planning, and troubleshooting. Each skill is stored as a plain SKILL.md file alongside the code they describe. 
+
+At runtime, an `AudioSkillLoader / ImageSkillLoader` reads these files on demand, parses the markdown into a lightweight object (exposing the H1 title, H2 section lookups, and fenced code examples), and returns a concatenated markdown string via `get_audio_llm_context() / get_image_llm_context()`. 
+
+The context is accessible through two surfaces: a Python API for code that embeds an LLM directly, and MCP resource endpoints (`ghostbit://skills/audio`, `ghostbit://skills/image`, plus per-skill URIs) for standards-based LLM clients.
+
+GH0STB1T deliberately does not auto-inject the context. The caller decides whether to use it as a system prompt, RAG retrieval target, or user message. This keeps the integration transparent and token-budget aware. 
+ 
+The design is intentionally minimal: no vector database, no compilation, no templating DSL. The source of truth is the markdown itself, so skills can be updated, reviewed, and audited the same way any other documentation is.
+
+The LLM learns from the skill information to both inform the end user of GH0STB1T CLI functionality and troubleshooting and to effectively execute the GH0STB1T CLI itself.
+
+
+**MCP Server**
+
+<p align='center'><img src="{{ '/media/images/ghostbit/mcp_server.png' | relative_url }}"></p>
+
+The MCP server surfaces GH0STB1T's core operations as five standardized tools per modality (audio/image) (10 total tools): encode, decode, capacity, analyze, and a carrier-generator. Each tool is exposed over STDIO with JSON-RPC 2.0, and registered via FastMCP's decorator-based dispatch. 
+
+Every incoming request flows through a five-stage security pipeline before touching any user data: 
+- input sanitization (rejecting null bytes, control characters, and shell metacharacters),
+- path normalization (resolving .. and symlinks to absolute real paths),
+- symlink rejection,
+- a configurable filesystem sandbox that rejects any path not resolving inside GHOSTBIT_ALLOWED_DIRS,
+- and extension/size validation (1 GB hard cap per file). 
+
+Passwords are handled out-of-band: the LLM only ever passes an environment-variable name or file path. A server-side `resolve_password()` function reads the actual secret from the environment, a plaintext file, or an in-memory SOPS decryption. This ensures the password never enters the model's context. 
+
+During tool execution, each tool call instantiates a fresh stateless `AudioMultiFormatCoder / ImageMultiFormatCoder` wrapped in a stdout-capture shield to prevent CLI output from corrupting the JSON-RPC stream. Argon2id + AES-256-GCM run inside this layer.
+
+Crucially, the Coder only ever sees paths that have already cleared the filesystem sandbox. GHOSTBIT_ALLOWED_DIRS is enforced at the request boundary (post-normalization), effectively restricting the Coder from read/write operations outside the operator-designated allowlist, even if a downstream bug tries. The sandbox is an input-side invariant, not a runtime check. This makes the filesystem sandbox a high-value gate. 
+
+Responses are sanitized down to category-level error messages and metadata-only success payloads: no stack traces, no file contents, no credentials. 
+
+The tool_result is written to stdout as JSON-RPC, read by the MCP client, and re-injected into the model's conversation as the next turn. At this point the LLM can summarize the result for the user, chain into another tool call, or ask a follow-up question. GH0STB1T itself never talks to the model directly; the client is the sole intermediary.
+
+The result is an MCP integration that's ergonomic for AI agents while preserving the same cryptographic and filesystem guarantees as the CLI.
+
+
+<br>
+
+---
+
+<!-- <h3 id='command' align='center'>Commands</h3>
+
+
+#### CLI 
+
+**Create a set of sample files**:
+
+```bash
+ghostbit image test 
+```
+
+**Encode a secret file into an image**:
+
+```bash
+ghostbit image encode -i <carrier_image_filepath> -s <secret_filepath> -p
+```
+
+**Decode a secret file from an image**:
+
+```bash
+ghostbit image decode -i <encoded_image_filepath> -p
+```
+
+**Analyze an image file for hidden data**:
+
+```bash
+ghostbit image analyze -i <image_filepath>
+```
+
+**Check capacity of an image file**:
+
+```bash
+ghostbit image capacity -i <image_filepath> 
+```
+
+
+#### MCP Server
+
+
+**Create a set of sample files**:
+
+```bash
+"Use generate_audio_carrier to create a WAV file at /path/to/outputdir/carrier.wav with duration 5 seconds, frequency 440 Hz, sample rate 44100, and 1 channel"
+```
+
+**Encode a secret file into an audio file**:
+
+```bash
+"Use audio_encode to hide /path/to/directory/test_document.txt inside /path/to/outputdir/carrier.wav, save output to /path/to/output/encoded_audio.wav, quality 'normal', password_file='~/.ghostbit-password'"
+```
+
+**Decode and extract a secret file from an audio file**:
+
+```bash
+"Use audio_decode to decode /path/to/output/encoded_audio.wav, write output to /path/to/output/decoded, use password_file='~/.ghostbit-password'"
+```
+
+**Analyze an audio file**:
+
+```bash
+"Use audio_analyze on /path/to/output/encoded_audio.wav with password_file='~/.ghostbit-password'"
+```
+
+**Check capacity of an audio file**:
+
+```bash
+"Use audio_capacity to check how much data /path/to/output/carrier.wav can hide with quality 'normal'"
+``` 
+
+--- -->
+
+<h3 id='example' align='center'>Examples</h3>
+
+
+<table>
+<tr>
+<td align="center" style='width:10%'><b>File Type</b></td>
+<td align="center"><b>Before</b></td>
+<td align="center"><b>After</b></td>
+</tr>
+<tr>
+<td align="center"><b>Static GIF</b></td>
+<td align='center'><img src="{{ '/media/images/ghostbit/test_static.gif' | relative_url }}" alt="Original carrier"/></td>
+<td align='center'><img src="{{ '/media/images/ghostbit/test_static_encoded.gif' | relative_url }}" alt="Stego image"/></td>
+</tr>
+<tr>
+<td align="center"><b>Animated GIF</b></td>
+<td align='center'><img src="{{ '/media/images/ghostbit/test_animated.gif' | relative_url }}" alt="Original carrier"/></td>
+<td align='center'><img src="{{ '/media/images/ghostbit/test_animated_encoded.gif' | relative_url }}" alt="Stego image"/></td>
+</tr>
+<tr>
+<td align="center"><b>PNG</b></td>
+<td align='center'><img src="{{ '/media/images/ghostbit/test_image.png' | relative_url }}" alt="Original carrier"/></td>
+<td align='center'><img src="{{ '/media/images/ghostbit/test_image_encoded_dwt.png' | relative_url }}" alt="Stego image"/></td>
+</tr>
+<tr>
+<td align="center"><b>WEBP</b></td>
+<td align='center'><img src="{{ '/media/images/ghostbit/test_image.webp' | relative_url }}" alt="Original carrier"/></td>
+<td align='center'><img src="{{ '/media/images/ghostbit/test_image_encoded.webp' | relative_url }}" alt="Stego image"/></td>
+</tr>
+<tr>
+<td align="center"><b>SVG</b></td>
+<td align='center'><img src="{{ '/media/images/ghostbit/test_image.svg' | relative_url }}" alt="Original carrier"/></td>
+<td align='center'><img src="{{ '/media/images/ghostbit/test_image_encoded.svg' | relative_url }}" alt="Stego image"/></td>
+</tr>
+</table>
