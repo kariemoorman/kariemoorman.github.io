@@ -202,9 +202,21 @@ Below are a set of suggested mitigations that will increase safety for users of 
 - **Refuse undeclared sockets on STDIO servers**: Do not let the child open any network sockets unless its manifest declares the need.
 
 **Tier 4: Ecosystem-Level (i.e., Anthropic)**
-- **MCP server signing**: Standardize a signature format so clients can verify the binary against a publisher key.
-- **Manifest-declared capabilities**: Server declares "I need network", "I need filesystem under X", "I exec subprocesses". Client enforces.
-- **Per-server UID**: Each MCP server runs as its own dedicated low-privilege account, not as the user.
+
+Ox Security defines the required fix from Anthropic as follows: 
+"Anthropic could implement manifest-only execution or a command allowlist in the official SDKs, a single protocol-level change that would instantly propagate protection to every downstream library and project" ([source](https://www.ox.security/blog/the-mother-of-all-ai-supply-chains-critical-systemic-vulnerability-at-the-core-of-the-mcp/)).
+
+This solution may not be best, for at least two reasons: 
+1. An allowlist at the SDK level is a breaking change that doesn't actually solve the problem. Today command accepts any executable; that's the documented contract. Every host (e.g., Cursor, Claude Desktop, LM Studio, LibreChat) depends on launching arbitrary binaries: uvx, npx, docker, user-authored servers. A hardcoded allowlist breaks legitimate deployments immediately, and gets worked around trivially (symlinks, wrapper scripts, renaming binaries), pushing the problem downstream rather than fixing it. The SDK becomes the bottleneck without being the solution.
+2. Manifests and signing are correct, but they belong one layer up. The SDK receives a `StdioServerParameters` and spawns a process. It has no idea whether that object came from a user clicking "install" in a trusted marketplace, a hand-edited config file, a signed manifest, or an LLM's prompt injection. Only the host (i.e., the application embedding the SDK) has that trust context. Forcing manifest verification into the SDK would mean inventing a manifest format that the MCP spec doesn't define, creating a de-facto standard that other SDKs (TypeScript, Kotlin, Go) would have to reverse-engineer or ignore. That's a spec-level decision, not a library decision.
+
+Instead, the SDK could reliably provide:
+- **Hook Points**: Add a pre-spawn `command_validator` and a post-handshake `capability_validator` so that every host can plug in its own policy (e.g., allowlist, manifest check, user prompt, signing verification) in one place. These hooks fire before any subprocess is spawned and before any tool calls are allowed, giving hosts a guaranteed decision point that can't be accidentally bypassed.
+- **MCP protocol specification**: Propose additions to the MCP protocol specification (i.e., the cross-language standard that all SDKs implement and all hosts build against) that define a manifest format, signing scheme, and OS capability vocabulary. Once ratified, hosts can adopt and enforce these through the same hooks without waiting for another SDK release.
+
+This way, the SDK doesn't pick a policy (i.e., no hardcoded rules, no signed manifest requirements). Instead, it makes policy enforcement trivial for those who have the context to enforce it: `stdio_client()` calls the host's validator before spawning any process, and the host decides what's allowed based on its own trust model. A host might require marketplace signatures. A host might prompt the user. An enterprise deployment might enforce a centrally-managed allowlist. The SDK guarantees the decision point exists; the host makes the call.
+
+MCP Server authors declare what they are and what they need (via manifests). Hosts decide whether to trust those declarations. The SDK makes sure the host gets asked.
 
 <br>
 
