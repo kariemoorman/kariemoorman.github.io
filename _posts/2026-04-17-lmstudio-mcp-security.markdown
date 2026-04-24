@@ -61,54 +61,51 @@ This audit empirically reproduces the behavior on LM Studio using a deliberately
 
 #### Reproduction
 
-1. Open LM Studio, add this entry to `mcp.json`
-```json
-{
+<ol>
+  <li>
+    <p>Open LM Studio, add this entry to <code>mcp.json</code>:</p>
+    <pre><code>{
   "mcpServers": {
     "rce-timing-test": {
       "command": "sh",
       "args": [
         "-c",
-        "date '+%Y-%m-%dT%H:%M:%S' >> /tmp/mcp-test.log; echo not-a-real-mcp-server"
+        "date '+%Y-%m-%dT%H:%M:%S' &gt;&gt; /tmp/mcp-test.log; echo not-a-real-mcp-server"
       ]
     }
   }
-}
-```
-
-The `echo not-a-real-mcp-server` line is deliberately invalid MCP JSON-RPC, guaranteeing the handshake fails.
-
-2. Enable the server in LM Studio's MCP UI
-
-3. Observe `/tmp/mcp-test.log` in Terminal:
-```
-$ tail -f /tmp/mcp-test.log
+}</code></pre>
+    <p>The <code>echo not-a-real-mcp-server</code> line is deliberately invalid MCP JSON-RPC, guaranteeing the handshake fails.</p>
+  </li>
+  <li>
+    <p>Enable the server in LM Studio's MCP UI.</p>
+  </li>
+  <li>
+    <p>Observe <code>/tmp/mcp-test.log</code> in Terminal:</p>
+    <pre><code>$ tail -f /tmp/mcp-test.log
 2026-04-17T12:43:39
 2026-04-17T12:52:09   ← enabled the server
 2026-04-17T12:53:54
 2026-04-17T12:53:59
 2026-04-17T12:54:36   ← LM Studio quit and reopened
-2026-04-17T12:55:46   ← LM Studio re-launched the server
-```
-
-4. Observe LM Studio logs at the same time
-```
-2026-04-17 12:55:46 [DEBUG] [LMSAuthenticator][Client=plugin:installed:mcp/rce-timing-test] Client created.
+2026-04-17T12:55:46   ← LM Studio re-launched the server</code></pre>
+  </li>
+  <li>
+    <p>Observe LM Studio logs at the same time:</p>
+    <pre><code>2026-04-17 12:55:46 [DEBUG] [LMSAuthenticator][Client=plugin:installed:mcp/rce-timing-test] Client created.
 2026-04-17 12:55:47 [ERROR] [Plugin(mcp/rce-timing-test)] stderr: [MCPBridge/unexpected]
                             Bridge process failed: MCP error -32000: Connection closed
-2026-04-17 12:55:47 [DEBUG] [LMSAuthenticator][Client=plugin:installed:mcp/rce-timing-test] Client disconnected.
-```
-
-5. Perform cleanup
-- remove rce-timing-test from `mcp.json`
-- remove log file:
-```bash
-rm /tmp/mcp-test.log
-```
-
-The timestamp in `/tmp/mcp-test.log` lands within the 1-second window between "Client created" and "Bridge process failed". The command ran. The handshake then failed. LM Studio surfaced the bridge failure but did not prevent (and could not have prevented) the command's execution.
+2026-04-17 12:55:47 [DEBUG] [LMSAuthenticator][Client=plugin:installed:mcp/rce-timing-test] Client disconnected.</code></pre>
+  </li>
+  <li>
+    <p>Perform cleanup &mdash; remove <code>rce-timing-test</code> from <code>mcp.json</code>, then remove the log file:</p>
+    <pre><code>rm /tmp/mcp-test.log</code></pre>
+  </li>
+</ol>
 
 #### Observed Behavior
+
+The timestamp in <code>/tmp/mcp-test.log</code> lands within the 1-second window between "Client created" and "Bridge process failed". The command ran. The handshake then failed. LM Studio surfaced the bridge failure but did not prevent (and could not have prevented) the command's execution.
 
 <div style="display: flex; justify-content: center;">
 <table>
