@@ -1,6 +1,6 @@
 ---
 layout: learning
-title:  "dockerAudit"
+title:  "containerAudit"
 subtitle: "A Container Security Auditing Toolkit"
 summary: "A Golang-based container security auditing toolkit, with Trivy and Snyk CVE scanning integration. Aligned with CIS Docker Benchmark v1.8+, NIST SP 800-190, and DoDI 8510.01 RMF controls."
 date:   2026-04-10 20:05:01 +0700
@@ -34,15 +34,15 @@ Dockerfile → image → compose → Kubernetes manifests (and Helm charts) → 
 
 <p>This fragmentation creates gaps in visibility and compliance coverage. For AI agents, it increases orchestration overhead, driving more tool calls, higher token consumption, and larger context windows.</p>
 
-<p>To address this friction point, I created dockerAudit, a unified, compliance-first container security auditing toolkit.</p>
+<p>To address this friction point, I created containerAudit, a unified, compliance-first container security auditing toolkit.</p>
 
-<p>dockerAudit scans the full container lifecycle: Dockerfile and Docker Compose files, Docker images, Kubernetes manifests (with Helm rendering), and Terraform, against 80+ controls, returning actionable, interpretable findings mapped to CIS Docker Benchmark, NIST SP 800-53, NIST SP 800-190, ISO 27001, SOC 2, and DISA CCI. Its purpose is to produce one report that satisfies both an auditor and a platform engineer, from a single scan, in formats CI systems already understand (SARIF, JUnit, Markdown, JSON, table).</p>
+<p>containerAudit scans the full container lifecycle: Dockerfile and Docker Compose files, Docker images and containers, Kubernetes manifests (with Helm rendering), and Terraform, against 80+ controls, returning actionable, interpretable findings mapped to CIS Docker Benchmark, NIST SP 800-53, NIST SP 800-190, ISO 27001, SOC 2, and DISA CCI. Its purpose is to produce one report that satisfies both an auditor and a platform engineer, from a single scan, in formats CI systems already understand (SARIF, JUnit, Markdown, JSON, table).</p>
 
-<p>dockerAudit is designed for AI pentesting agents, security engineers running pre-merge checks in CI, platform teams hardening deployments before rollout, and compliance staff producing audit artifacts from the same underlying data. It runs self-hosted, requires no cloud account, and is suitable for air-gapped and regulated environments.</p>
+<p>containerAudit is designed for AI pentesting agents, security engineers running pre-merge checks in CI, platform teams hardening deployments before rollout, and compliance staff producing audit artifacts from the same underlying data. It runs self-hosted, requires no cloud account, and is suitable for air-gapped and regulated environments.</p>
 
 </div>
 
-<p align='center'>Github: <a href='https://github.com/kariemoorman/dockeraudit/' target='_blank'>dockeraudit</a></p>
+<p align='center'>Github: <a href='https://github.com/kariemoorman/containeraudit/' target='_blank'>containeraudit</a></p>
 
 ---
 
@@ -50,7 +50,7 @@ Dockerfile → image → compose → Kubernetes manifests (and Helm charts) → 
 
 ```
  ┌──────────────────┐    ┌────────────────────┐    ┌────────────────────┐
- │  cmd/dockeraudit │───▶│  internal/scanner  │───▶│ internal/reporter  │
+ │cmd/containeraudit│───▶│  internal/scanner  │───▶│ internal/reporter  │
  │    (cobra CLI)   │    │  (per-target scan) │    │ (5 output formats) │
  └──────────────────┘    └─────────┬──────────┘    └────────────────────┘
                                    │
@@ -141,7 +141,7 @@ The operational dimension that determines where a control is executed, how its f
     </tr>
     <tr>
       <td><strong>External-tool-delegated</strong></td>
-      <td>Execution is forwarded to Trivy or Snyk. dockeraudit parses the tool's JSON and converts findings into the common <code>Finding</code> shape. Missing tool → <code>SKIPPED</code> with install hint.</td>
+      <td>Execution is forwarded to Trivy or Snyk. containeraudit parses the tool's JSON and converts findings into the common <code>Finding</code> shape. Missing tool → <code>SKIPPED</code> with install hint.</td>
       <td>Zero-to-many <code>FAIL</code> findings per file, or a single <code>PASS</code>/<code>SKIPPED</code>.</td>
       <td><code>K8S-003</code> (Trivy config), <code>TF-009</code> (Trivy IaC), <code>IMAGE-003</code> (Trivy/Snyk CVEs)</td>
     </tr>
@@ -162,11 +162,11 @@ This is the reason the user may see only one line for a given control in a scan 
 
 <h3 id='modes' align='center'>Scan Modes</h3>
 
-dockerAudit currently supports 4 scan modes: `docker`, `image`, `k8s`, and `terraform`.
+containerAudit currently supports 4 scan modes: `docker`, `image`, `k8s`, and `terraform`.
 
 #### docker
 
-`dockeraudit docker` 
+`containeraudit docker` 
 
 Scans Dockerfiles and Docker Compose files for security misconfigurations.
 
@@ -180,7 +180,7 @@ Automatically detects file type:
 
 **Usage:**
 ```
-  dockeraudit docker [PATH...] [flags]
+  containeraudit docker [PATH...] [flags]
 ```
 
 **Flags:**
@@ -196,15 +196,15 @@ Automatically detects file type:
 
 **Examples:**
   ```
-  dockeraudit docker ./
-  dockeraudit docker Dockerfile docker-compose.yml --format json
-  dockeraudit docker ./app/ ./infra/ --fail-on critical
+  containeraudit docker ./
+  containeraudit docker Dockerfile docker-compose.yml --format json
+  containeraudit docker ./app/ ./infra/ --fail-on critical
   ```
 
 
 #### image
 
-`dockeraudit image` 
+`containeraudit image` 
 
 Scans Docker images for security misconfigurations and vulnerabilities.
 
@@ -212,7 +212,7 @@ Checks include non-root USER and runAsUser in config, digest pinning, plaintext 
 
 **Usage:**
 ```
-  dockeraudit image [IMAGE...] [flags]
+  containeraudit image [IMAGE...] [flags]
 ```
 
 **Flags:**
@@ -230,14 +230,14 @@ Checks include non-root USER and runAsUser in config, digest pinning, plaintext 
 
 **Examples:**
 ```
-  dockeraudit image nginx:latest
-  dockeraudit image myapp:v1.0 --format json -o results.json
+  containeraudit image nginx:latest
+  containeraudit image myapp:v1.0 --format json -o results.json
 ```
 
 
 #### k8s
 
-`dockeraudit k8s` 
+`containeraudit k8s` 
 
 Scans Kubernetes manifests including Helm charts (auto-rendered via helm template before scanning) for security misconfigurations and vulnerabilities.
 
@@ -246,7 +246,7 @@ Checks include pod security context, resource limits, host namespace and hostPat
 
 **Usage:**
 ```
-  dockeraudit k8s [PATH...] [flags]
+  containeraudit k8s [PATH...] [flags]
 ```
 
 **Flags:**
@@ -262,15 +262,15 @@ Checks include pod security context, resource limits, host namespace and hostPat
 
 **Examples:**
 ```
-  dockeraudit k8s ./manifests/
-  dockeraudit k8s helm_charts/
-  dockeraudit k8s deployment.yaml service.yaml --format markdown
+  containeraudit k8s ./manifests/
+  containeraudit k8s helm_charts/
+  containeraudit k8s deployment.yaml service.yaml --format markdown
 ```
 
 
 #### terraform
 
-`dockeraudit terraform` 
+`containeraudit terraform` 
 
 Scans Terraform files for container security misconfigurations and vulnerabilities.
 
@@ -278,7 +278,7 @@ Checks include S3 public access and versioning, ECR tag immutability and scan-on
 
 **Usage:**
 ```
-  dockeraudit terraform [PATH...] [flags]
+  containeraudit terraform [PATH...] [flags]
 ```
 
 **Flags:**
@@ -294,8 +294,8 @@ Checks include S3 public access and versioning, ECR tag immutability and scan-on
 
 **Examples:**
 ```
-  dockeraudit terraform ./infrastructure/
-  dockeraudit terraform ./aws/ ./gcp/ --format json
+  containeraudit terraform ./infrastructure/
+  containeraudit terraform ./aws/ ./gcp/ --format json
 ```
 
 <br> 
