@@ -77,14 +77,14 @@ The development environment contains the core infrastructure of the agent harnes
 
 The Network Operations module oversees provisioning, management, and monitoring of the infrastructure on which multi-agent systems run. The Network Fabric defines the connectivity and segmentation between agents, services, and modules.
 
-The Hypervisor Operations module manages the virtualization layer beneath that fabric, allocating and isolating the compute on which workloads run. NetCore translates a project specification into a concrete deployment, validating the spec against policy before provisioning. Each project is instantiated into its own network segment and isolated compute boundary. Isolation is enforced continuously at the fabric and runtime, enforced based on per-project workload identity, ensuring each project's environment matches its declared shape and cannot reach another.
+The Hypervisor Operations module manages the virtualization layer beneath that fabric, allocating and isolating the compute on which workloads run. NetCore translates a project specification into a concrete deployment, validating the spec against policy before provisioning. Each project is instantiated into its own network segment and isolated compute boundary. Isolation is enforced continuously at the fabric and runtime, keyed on per-project workload identity, ensuring each project's environment matches its declared shape and cannot reach another.
 
-Network Operations also serves as the infrastructure monitoring plane for the platform, collecting health and telemetry from the network fabric, the hypervisors, and the underlying compute and hosts, providing a single vantage point over the health of the substrate on which the platform runs.
+Network Operations also serves as the infrastructure monitoring plane for the platform, collecting health and telemetry from the network fabric, hypervisors, and underlying compute and hosts, providing a single vantage point over the health of the foundation on which the platform runs.
 
 
 #### Agent Orchestration
 
-The Agent Orchestration module acts as the harness's coordination layer, mediating between interactive agents and the platform's tools and services. It decomposes a project into tasks, assigns work across agents, routes messages between them, and assembles their results. Security, observability, and resilience are treated as first-class concerns in the orchestration design, embedded in the coordination model rather than layered over it.
+The Agent Orchestration module acts as the harness's coordination layer, mediating between interactive agents, tools and services. It decomposes a project into tasks, assigns work across agents, routes messages between them, and assembles their results. Security, observability, and resilience are treated as first-class concerns in the orchestration design, embedded in the coordination model rather than layered over it.
 
 Agents are provider-agnostic: local and external models are interchangeable behind a common interface, with fallback chains and circuit breakers maintaining availability when a provider degrades.
 
@@ -108,31 +108,31 @@ Core development tools available to to every Agent in a project development proc
 
 The Artifactory is a centralized repository that contains validated software packages, containers, LLM and ML models, and other build artifacts. It acts as the single gated source from which projects pull dependencies. 
 
-Artifacts enter only after passing validation (e.g., provenance and signature checks, vulnerability and license scanning, evaluation against the experimentation platform's metrics), undergo versioning, and become immutable once published. Consumers (i.e., humans, agents, skills, MCP servers, and CI pipelines) resolve dependencies exclusively through the Artifactory rather than arbitrary external registries, giving the system a controlled supply chain with a single point for access control, audit, and revocation.
+Artifacts are validated before entry (e.g., provenance and signature checks, vulnerability and license scanning, evaluation against the experimentation platform's metrics), versioned on acceptance, and immutable once published. Consumers (i.e., humans, agents, skills, MCP servers, CI pipelines) resolve dependencies exclusively through the Artifactory rather than arbitrary external registries, giving the system a controlled supply chain with a single point for access control, audit, and revocation.
 
 #### Identity Access Managment
 
-The Identity Access Management Module is the authority for credentials and access across the platform. It issues, stores, rotates, and revokes the secrets that agents, skills, MCP servers, and human operators present to reach resources and services. Callers authenticate against the platform identity provider and request access at point of use, and the module issues short-lived, narrowly scoped, dynamically generated credentials valid only for the specific resource, action, and window the caller's grant allows. 
+The Identity Access Management Module is the authority for credentials and access across the platform. It issues, stores, rotates, and revokes the secrets that agents, skills, MCP servers, and human operators present to access resources and services. Callers authenticate against the platform identity provider and request access at point of use, and the module issues short-lived, narrowly scoped, dynamically generated credentials valid only for the specific resource, action, and window the caller's grant allows. 
 
 Every issuance is bound to the caller's identity and the capability scope the gateway enforces, ensuring the same least-privilege model governs human and non-human callers alike. Secrets are encrypted at rest and in transit, never exposed to the agent context or logs, and every issue, use, rotation, and revocation is recorded in an append-only audit trail. Because credentials are short-lived and centrally revocable, a leaked or compromised secret has a bounded blast radius and can be cut off without redeploying the consumers that depend on it.
 
 #### Database Operations
 
-The Database Operations module is the controlled path through which agents and human operators perform CRUD operations on databases and tables across a predefined set of supported database engines. Each operation is authorized at the gateway and executed using a short-lived, scoped credential issued by the Identity Access Management Module at point of use, so a caller reaches only the databases, tables, and actions its grant allows. Before any mutating operation, affected tables are versioned to bound data loss and allow fast rollback to a known-good state in the event an operation corrupts or destroys data.
+The Database Operations module is the controlled path through which agents and human operators perform CRUD operations against a predefined set of supported database engines. Each operation is authorized at the gateway and executed using a short-lived, scoped credential issued by the Identity Access Management Module at point of use, so a caller reaches only the databases, tables, and actions its grant allows. Before any mutating operation, affected tables are versioned to bound data loss and allow fast rollback to a known-good state in the event an operation corrupts or destroys data.
 
 #### Project Management
 
-The Project Management module scaffolds secure, production-ready project repositories. An end user specifies the project details (e.g., project use case, programming language(s), database(s), developer platform), via LLM or CLI, and a project-specific directory tree is created that includes supply chain configuration, security security controls, and templated CICD integration. Additional plugins provide access to vetted IaC reusable modules, AIML pipelines, evaluation metrics, database engines, containerization, and other reusable building blocks. This ensures every project starts from a consistent, policy-compliant baseline, reducing the chance of misconfiguration while improving development velocity.
+The Project Management module scaffolds secure, production-ready project repositories. An end user specifies the project details (e.g., project use case, programming language(s), database(s), developer platform) via LLM or CLI, and a project-specific directory tree is created that includes supply chain configuration, security controls, and templated CICD integration. Additional plugins provide access to vetted IaC reusable modules, AIML pipelines, evaluation metrics, database engines, containerization templates, and other reusable building blocks. Every project starts from a consistent, policy-compliant baseline, reducing the chance of misconfiguration and improving development velocity.
 
 #### Observability Platform
 
-The Observability Platform module serves as the application and agent-tier monitoring plane. It collects telemetry from the agents, orchestration layer, and operations modules,giving a single vantage point over how the multi-agent system is behaving. Where Network Operations answers whether the infrastructure is healthy, the Observability Platform answers whether the workloads running on it are correct, performant, and behaving as expected.
+The Observability Platform module serves as the application and agent-tier monitoring plane. It collects telemetry from the agents, orchestration layer, and operations modules, gproviding unified visibility into the runtime behavior of the multi-agent system. Where Network Operations answers whether the infrastructure is healthy, the Observability Platform answers whether the workloads running on it are correct, performant, and behaving as expected.
 
-The Observability Platform also captures application-tier security events: gateway authorization decisions and denials, credential issuance, memory-write rejections, and anomalous or out-of-policy agent activity. Together with the infrastructure-tier security events recorded by Network Operations, these feed a unified audit and correlation view, so security signals from both tiers can be analyzed together rather than in isolation.
+The Observability Platform also captures application-tier security events, e.g., gateway authorization decisions and denials, credential issuance, memory-write rejections, anomalous or out-of-policy agent activity. Together with the infrastructure-tier security events recorded by Network Operations, these feed a unified audit and correlation view, so security signals from both tiers can be analyzed together rather than in isolation.
 
 #### CICD Platform
 
-The CICD Platform module manages the build, test, and release pipeline for the platform's software projects. Driven by either a human or LLM and triggered by changes to a project, it builds artifacts, runs the project's test and validation suites, and promotes only artifacts that pass into the Artifactory as validated, versioned, signed builds. 
+The CICD Platform module manages the build, test, and release pipeline for the platform's software projects. Driven by either a human or LLM and triggered by changes to a project, it builds artifacts, runs the project's test and validation suites, and promotes only artifacts that pass into the Artifactory as validated, versioned, signed builds. It also manages repository mirror lifecycles.
 
 Each pipeline stage is authorized at the gateway and runs with a short-lived, scoped credential issued by the Identity Access Management Module for exactly the resources that stage requires. Build authority is a separate, isolated identity from deploy authority, and no single actor or pipeline stage holds both, to help ensure any compromised build pipeline cannot unilaterally reach production.
 
@@ -141,7 +141,7 @@ Each pipeline stage is authorized at the gateway and runs with a short-lived, sc
 
 #### Skills Gateway
 
-Any skills that may be useful for a particular project are implemented via a gateway protocol. The gateway runs as a separate network service (sidecar) and acts as the single mediation point between the agent and any skill it invokes. Rather than granting skills direct access to the runtime, filesystem, or network, every skill call is issued over the local interface to the sidecar, which authenticates the caller, validates inputs against an expected schema, enforces per-skill capability scoping (i.e., least privilege), executes or proxies the skill in its own isolation boundary, sanitizes outputs before they re-enter the agent context, and logs the full I/O for audit. 
+Any skills that may be useful for a particular project are implemented via a gateway protocol. The gateway runs as a separate network service (sidecar) and acts as the single mediation point between the agent and any skill it invokes. Rather than granting skills direct access to the runtime, filesystem, or network, every skill call is issued over the local interface to the sidecar, which authenticates the caller, validates inputs against an expected schema, enforces per-skill capability scoping, executes or proxies the skill in its own isolation boundary, sanitizes outputs before they re-enter the agent context, and logs the full I/O for audit. 
 
 In this implementation, an agent never executes skill code in-process or holds skill credentials. Running out-of-process isolates skill logic from the host and allows a skill be independently sandboxed, resource-limited, swapped, or restarted without changing callers. This also ensures any crashing, hanging, compromised, or misbehaving skill cannot corrupt the agent's memory, inherit its privileges, or reach resources it was never authorized to touch.
 
@@ -149,9 +149,9 @@ In this implementation, an agent never executes skill code in-process or holds s
 
 Any MCP servers that may be useful for a particular project are implemented via a gateway protocol. This gateway acts as a centralized broker and policy enforcement point between the agent and the set of available MCP servers, presenting a unified interface so the agent does not hold direct connections or credentials to individual servers. 
 
-The agent connects only to the gateway (sidecar) over a local, mutually authenticated channel. The gateway owns all upstream connections, credentials, and transport to the individual servers. It handles connection management, authentication and credential injection, request routing and tool-name namespacing (avoiding collisions across servers), input validation, response filtering, rate limiting, and normalization of transport differences to provide a single chokepoint for authorization decisions, allow/deny lists, and audit logging across all servers. 
+The agent connects only to the gateway (sidecar) over a local, mutually authenticated channel. The gateway owns all upstream connections, credentials, and transport to the individual servers. It handles connection management, authentication and credential injection, request routing and tool-name namespacing (avoiding collisions across servers), input validation, response filtering, rate limiting, and normalization of transport differences. This consolidation creates a single chokepoint for authorization decisions, allow/deny lists, and audit logging across all servers.
 
-Because it is network-isolated from both the agent and the upstream servers, it can sit in its own network segment with tightly scoped egress, terminating the agent's trust boundary at a controlled hop.
+The gateway occupies its own network segment with tightly scoped egress, separating the agent from upstream servers and terminating the agent's trust boundary at a single, controlled hop.
 
 
 #### Experimentation Platform
@@ -173,4 +173,4 @@ Results are captured per run and persisted for regression tracking over time. Ex
 
 - **What languages is the agent harness built in?** Python, Go, Rust, C++.
 
-- **What is the deployment/infra toolchain?** Terraform, Ansible, k3s, Helm, ArgoCD.
+- **What is the deployment/infrastructure toolchain?** Terraform, Ansible, k3s, Helm, ArgoCD.
